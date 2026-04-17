@@ -242,6 +242,203 @@
         {"code": "<video controls><source src=\"v.mp4\"></video>", "output": "Kontrol butonlu video oynatıcı"},
         {"code": "<audio controls><source src=\"s.mp3\"></audio>", "output": "Ses çalar kontrolleri"}
       ]
+    },
+    {
+      "id": "html-11",
+      "title": "Inline ve Block Elementler",
+      "content": "HTML elementleri iki gruba ayrılır: block (blok) ve inline (satır içi). Block elementler her zaman yeni satırda başlar ve tam genişliği kaplar. Inline elementler satır içinde devam eder, sadece içerikleri kadar yer kaplar. Bu farkı anlamak CSS ile çalışırken çok önemlidir.",
+      "example": "<!-- Block elementler -->\n<div style=\"background:#dfe6e9\">Ben bir div'im (block)</div>\n<p style=\"background:#b2bec3\">Ben bir paragrafım (block)</p>\n<h2 style=\"background:#74b9ff\">Ben bir h2'yim (block)</h2>\n\n<!-- Inline elementler -->\n<span style=\"background:#fd79a8\">Span</span>\n<a href=\"#\" style=\"background:#fdcb6e\">Link</a>\n<strong style=\"background:#55efc4\">Kalın</strong>",
+      "output": "Block elementler alt alta tam genişlikte renkli kutular oluşturur. Inline elementler yan yana dizilir, sadece metin kadar yer kaplar.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "Block element", "explanation": "div, p, h1-h6, ul, ol, li, table, form — her biri yeni satırda başlar."},
+        {"code": "Inline element", "explanation": "span, a, strong, em, img, input — satır içinde devam eder."},
+        {"code": "display: block", "explanation": "CSS ile inline bir elementi block yapabilirsin."},
+        {"code": "display: inline", "explanation": "CSS ile block bir elementi inline yapabilirsin."},
+        {"code": "display: inline-block", "explanation": "Hem satır içinde hem de genişlik/yükseklik verilebilen hibrit tür."}
+      ],
+      "practice": [
+        {"code": "<span style=\"background:yellow\">A</span><span style=\"background:pink\">B</span>", "output": "A ve B yan yana renkli kutular"},
+        {"code": "<div style=\"background:lightblue\">Tam genişlik</div>", "output": "Tam genişlik mavi kutu"},
+        {"code": "<span style=\"display:block;background:orange\">Block span</span>", "output": "Block gibi davranan span"}
+      ]
+    },
+    {
+      "id": "html-12",
+      "title": "HTML Yorumları ve Özel Karakterler",
+      "content": "Yorumlar kodun içine açıklama eklemek için kullanılır, tarayıcı onları göstermez. Özel karakterler (HTML entities) tarayıcının yanlış yorumlayabileceği karakterleri güvenli şekilde yazmak için kullanılır. Örneğin < ve > işaretleri doğrudan yazılırsa HTML etiketi sanılabilir.",
+      "example": "<!-- Bu bir yorum satırıdır, görünmez -->\n<!-- Birden fazla\n     satır da olabilir -->\n\n<p>Büyük işareti: &gt;</p>\n<p>Küçük işareti: &lt;</p>\n<p>Ve işareti: &amp;</p>\n<p>Tırnak: &quot;</p>\n<p>Boşluk: Kelime&nbsp;Kelime</p>\n<p>Telif: &copy; 2024</p>\n<p>Euro: &euro;</p>",
+      "output": "Her paragrafta ilgili özel karakterler görünür: >, <, &, \", boşluk, © ve €.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<!-- ... -->", "explanation": "Yorum satırı. Tarayıcı göstermez, geliştirici açıklamaları için kullanılır."},
+        {"code": "&lt;", "explanation": "< (küçüktür) işareti. HTML etiketi sanılmaması için bu şekilde yazılır."},
+        {"code": "&gt;", "explanation": "> (büyüktür) işareti."},
+        {"code": "&amp;", "explanation": "& (ve) işareti."},
+        {"code": "&nbsp;", "explanation": "Kırılmayan boşluk. Normal boşluğun aksine satır başına geçmez."},
+        {"code": "&copy;", "explanation": "© telif hakkı sembolü."},
+        {"code": "&euro;", "explanation": "€ euro sembolü."}
+      ],
+      "practice": [
+        {"code": "<p>1 &lt; 2 ve 3 &gt; 2</p>", "output": "1 < 2 ve 3 > 2"},
+        {"code": "<p>&copy; 2024 Codeia</p>", "output": "© 2024 Codeia"},
+        {"code": "<p>Kelime&nbsp;&nbsp;Boşluk</p>", "output": "Kelime  Boşluk (çift boşluk)"}
+      ]
+    },
+    {
+      "id": "html-13",
+      "title": "id ve class Özellikleri",
+      "content": "id ve class, HTML elementlerine kimlik vermek için kullanılır. id sayfada TEK bir elemana verilir — benzersizdir. class ise birden fazla elemana verilebilir. Her ikisi de CSS ile stil vermek ve JavaScript ile element seçmek için kullanılır. Bu iki özellik modern web geliştirmenin temelidir.",
+      "example": "<!-- id - benzersiz -->\n<h1 id=\"ana-baslik\">Ana Başlık</h1>\n<p id=\"giris-metni\">Giriş paragrafı</p>\n\n<!-- class - tekrarlanabilir -->\n<p class=\"vurgu\">Önemli metin 1</p>\n<p class=\"vurgu\">Önemli metin 2</p>\n<p class=\"vurgu mavi\">Hem vurgu hem mavi</p>\n\n<style>\n  #ana-baslik { color: darkblue; }\n  .vurgu { font-weight: bold; }\n  .mavi { color: blue; }\n</style>",
+      "output": "Ana başlık koyu mavi renkte. 'Önemli metin 1' ve '2' kalın yazı. Son metin hem kalın hem mavi.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "id=\"isim\"", "explanation": "Sayfada tek olmalıdır. CSS'de # ile, JS'de getElementById ile seçilir."},
+        {"code": "class=\"isim\"", "explanation": "Birden fazla elemanda kullanılabilir. CSS'de . ile seçilir."},
+        {"code": "class=\"a b\"", "explanation": "Bir elemana birden fazla class boşlukla ayrılarak verilebilir."},
+        {"code": "#id-adi { }", "explanation": "CSS'de id seçici. # işareti kullanılır."},
+        {"code": ".class-adi { }", "explanation": "CSS'de class seçici. Nokta işareti kullanılır."}
+      ],
+      "practice": [
+        {"code": "<p id=\"tek\">Benzersiz</p>", "output": "id=\"tek\" olan paragraf"},
+        {"code": "<p class=\"kirmizi\">Metin</p>", "output": "class=\"kirmizi\" olan paragraf"},
+        {"code": "<p class=\"kalin buyuk\">İki class</p>", "output": "İki farklı class alan paragraf"}
+      ]
+    },
+    {
+      "id": "html-14",
+      "title": "HTML5 Input Türleri",
+      "content": "HTML5 ile birlikte çok sayıda yeni input türü eklendi. Bunlar kullanıcıya özel klavye açar, veri doğrulama yapar ve deneyimi iyileştirir. Telefon numarası için tel, tarih için date, renk seçici için color gibi özel inputlar artık native olarak desteklenmektedir.",
+      "example": "<form>\n  <p>Tarih: <input type=\"date\"></p>\n  <p>Saat: <input type=\"time\"></p>\n  <p>Sayı: <input type=\"number\" min=\"0\" max=\"100\"></p>\n  <p>Telefon: <input type=\"tel\" placeholder=\"0555 555 55 55\"></p>\n  <p>Renk: <input type=\"color\" value=\"#1A6FD4\"></p>\n  <p>Aralık: <input type=\"range\" min=\"0\" max=\"100\"></p>\n  <p>Arama: <input type=\"search\" placeholder=\"Ara...\"></p>\n  <p>Dosya: <input type=\"file\"></p>\n</form>",
+      "output": "Tarih seçici, saat seçici, sayı kutusu, telefon alanı, renk paleti, kaydırma çubuğu, arama kutusu ve dosya yükleme alanı görünür.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "type=\"date\"", "explanation": "Tarih seçici açar. Tarayıcı native takvim gösterir."},
+        {"code": "type=\"time\"", "explanation": "Saat seçici. Saat:dakika formatında giriş alır."},
+        {"code": "type=\"number\"", "explanation": "Sayısal giriş. min ve max ile aralık sınırlanabilir."},
+        {"code": "type=\"color\"", "explanation": "Renk paleti açar. Seçilen rengi hex olarak döndürür."},
+        {"code": "type=\"range\"", "explanation": "Kaydırma çubuğu. min, max ve step özellikleri alır."},
+        {"code": "type=\"file\"", "explanation": "Dosya seçme dialogu açar. accept ile dosya türü sınırlanabilir."},
+        {"code": "min ve max", "explanation": "Sayı ve tarih inputları için minimum ve maksimum değer sınırı."}
+      ],
+      "practice": [
+        {"code": "<input type=\"color\" value=\"#ff0000\">", "output": "Kırmızı seçili renk paleti"},
+        {"code": "<input type=\"range\" min=\"0\" max=\"10\">", "output": "0-10 arası kaydırma çubuğu"},
+        {"code": "<input type=\"number\" min=\"1\" max=\"5\">", "output": "1-5 arası sayı giriş kutusu"}
+      ]
+    },
+    {
+      "id": "html-15",
+      "title": "Veri Doğrulama (Validation)",
+      "content": "HTML5 formlarına JavaScript kullanmadan veri doğrulama eklenebilir. required, minlength, maxlength, pattern gibi özellikler girişi kontrol eder. Form gönderildiğinde tarayıcı bu kuralları otomatik kontrol eder ve hatalı alanları işaretler.",
+      "example": "<form>\n  <!-- Zorunlu alan -->\n  <input type=\"text\" required\n    placeholder=\"Zorunlu alan\">\n\n  <!-- Minimum uzunluk -->\n  <input type=\"text\"\n    minlength=\"3\" maxlength=\"20\"\n    placeholder=\"3-20 karakter\">\n\n  <!-- Regex pattern -->\n  <input type=\"text\"\n    pattern=\"[A-Za-z]{3,}\"\n    placeholder=\"Sadece harf (min 3)\">\n\n  <!-- Email doğrulama -->\n  <input type=\"email\"\n    placeholder=\"Geçerli email girin\">\n\n  <button type=\"submit\">Gönder</button>\n</form>",
+      "output": "Dört input alanı ve Gönder butonu. Boş veya hatalı alanlarla gönderilmeye çalışılınca tarayıcı otomatik hata mesajı gösterir.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "required", "explanation": "Alan zorunludur. Boş bırakılırsa form gönderilmez."},
+        {"code": "minlength=\"3\"", "explanation": "En az 3 karakter girilmesi zorunludur."},
+        {"code": "maxlength=\"20\"", "explanation": "En fazla 20 karakter girilebilir."},
+        {"code": "pattern=\"[A-Za-z]+\"", "explanation": "Regex deseni. Sadece belirtilen formattaki girişlere izin verir."},
+        {"code": "type=\"email\"", "explanation": "E-posta formatını otomatik doğrular. @ ve alan adı zorunludur."},
+        {"code": "novalidate", "explanation": "form etiketine eklenerek tarayıcı doğrulaması devre dışı bırakılır."}
+      ],
+      "practice": [
+        {"code": "<input type=\"text\" required placeholder=\"Dolu olmalı\">", "output": "Boş bırakılınca hata veren alan"},
+        {"code": "<input type=\"email\" placeholder=\"mail@site.com\">", "output": "Email formatı doğrulayan alan"},
+        {"code": "<input type=\"text\" maxlength=\"5\" placeholder=\"Max 5 harf\">", "output": "5 karakterden fazla yazılamayan alan"}
+      ]
+    },
+    {
+      "id": "html-16",
+      "title": "details ve summary Etiketleri",
+      "content": "details ve summary etiketleri JavaScript kullanmadan açılır-kapanır içerik oluşturur. SSS (sıkça sorulan sorular) sayfaları, yardım bölümleri ve uzun içerikler için idealdir. Tıklanınca details içindeki içerik açılır, tekrar tıklanınca kapanır.",
+      "example": "<details>\n  <summary>HTML nedir? (tıkla)</summary>\n  <p>HTML, web sayfalarının iskeletini oluşturan\n  işaretleme dilidir. 1991'de icat edilmiştir.</p>\n</details>\n\n<details open>\n  <summary>CSS nedir?</summary>\n  <p>CSS, HTML elementlerinin görünümünü\n  belirleyen stil dilidir.</p>\n</details>\n\n<details>\n  <summary>JavaScript nedir?</summary>\n  <p>JavaScript, web sayfalarını dinamik ve\n  etkileşimli yapan programlama dilidir.</p>\n</details>",
+      "output": "Üç soru başlığı. İlki kapalı, ikincisi 'open' özelliği sayesinde açık, üçüncüsü kapalı başlar. Tıklanınca açılıp kapanır.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<details>", "explanation": "Açılır-kapanır içerik kapsayıcısı. JavaScript gerektirmez."},
+        {"code": "<summary>", "explanation": "details içinde her zaman görünen başlık kısmı. Tıklanınca içeriği açar."},
+        {"code": "open", "explanation": "details etiketine eklenerek içeriğin varsayılan olarak açık gelmesini sağlar."}
+      ],
+      "practice": [
+        {"code": "<details><summary>Başlık</summary><p>İçerik</p></details>", "output": "Tıklanınca açılan içerik"},
+        {"code": "<details open><summary>Açık</summary><p>Görünür</p></details>", "output": "Varsayılan açık içerik"}
+      ]
+    },
+    {
+      "id": "html-17",
+      "title": "figure ve figcaption",
+      "content": "figure etiketi resim, diyagram, kod bloğu gibi bağımsız içerikleri sarar. figcaption ise bu içeriğe açıklama ekler. Semantik olarak resmi ve açıklamasını birlikte tanımlar. Ekran okuyucular ve arama motorları bu ilişkiyi doğru anlar.",
+      "example": "<figure>\n  <img \n    src=\"https://picsum.photos/400/250\"\n    alt=\"Doğa fotoğrafı\"\n    style=\"width:100%; border-radius:8px\">\n  <figcaption>\n    🌿 Doğanın güzelliği — Pixabay\n  </figcaption>\n</figure>\n\n<figure>\n  <pre><code>\nfunction selamla(isim) {\n  return `Merhaba ${isim}!`;\n}\n  </code></pre>\n  <figcaption>JavaScript fonksiyon örneği</figcaption>\n</figure>",
+      "output": "İlk figür: Resim ve altında italik açıklama metni. İkinci figür: Kod bloğu ve altında açıklama.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<figure>", "explanation": "Bağımsız içerik bloğu. Resim, grafik, kod, alıntı gibi içerikler için kullanılır."},
+        {"code": "<figcaption>", "explanation": "figure içindeki içeriğin açıklaması. figure'ın ilk veya son çocuğu olabilir."},
+        {"code": "<pre>", "explanation": "Preformatted text — girintiler ve boşluklar korunarak gösterilir."},
+        {"code": "<code>", "explanation": "Satır içi kod için kullanılır. Genellikle monospace fontla gösterilir."}
+      ],
+      "practice": [
+        {"code": "<figure><img src=\"https://picsum.photos/200/100\" alt=\"\"><figcaption>Açıklama</figcaption></figure>", "output": "Resim ve altında açıklama metni"},
+        {"code": "<code>console.log()</code>", "output": "Monospace fontlu kod metni"}
+      ]
+    },
+    {
+      "id": "html-18",
+      "title": "progress ve meter Etiketleri",
+      "content": "progress etiketi bir işlemin ne kadar tamamlandığını gösterir. Yükleme çubuğu, form ilerleme göstergesi gibi durumlarda kullanılır. meter etiketi ise belirli bir aralıktaki değeri görsel olarak gösterir. Pil seviyesi, dosya kullanımı, puan gibi durumlarda idealdir.",
+      "example": "<!-- progress - tamamlanma yüzdesi -->\n<p>Yükleniyor:</p>\n<progress value=\"70\" max=\"100\">70%</progress>\n\n<p>Tamamlanmadı:</p>\n<progress max=\"100\">Belirsiz</progress>\n\n<!-- meter - ölçüm değeri -->\n<p>Disk kullanımı:</p>\n<meter value=\"6\" min=\"0\" max=\"10\"\n  low=\"3\" high=\"8\" optimum=\"5\">\n  6/10\n</meter>\n\n<p>Puan:</p>\n<meter value=\"85\" min=\"0\" max=\"100\"\n  low=\"50\" high=\"75\" optimum=\"100\">\n  85/100\n</meter>",
+      "output": "%70 dolu ilerleme çubuğu, belirsiz animasyonlu çubuk, disk kullanım göstergesi ve puan göstergesi görünür. Değere göre renk değişir (yeşil/sarı/kırmızı).",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<progress value max>", "explanation": "İlerleme çubuğu. value mevcut değer, max toplam değerdir."},
+        {"code": "<meter value min max>", "explanation": "Ölçüm göstergesi. Aralık içindeki değeri görsel olarak gösterir."},
+        {"code": "low=\"3\"", "explanation": "Bu değerin altı düşük kabul edilir (sarı/kırmızı gösterilir)."},
+        {"code": "high=\"8\"", "explanation": "Bu değerin üstü yüksek kabul edilir."},
+        {"code": "optimum=\"5\"", "explanation": "En ideal değer. Bu değere yakınsa yeşil gösterilir."}
+      ],
+      "practice": [
+        {"code": "<progress value=\"50\" max=\"100\"></progress>", "output": "Yarı dolu ilerleme çubuğu"},
+        {"code": "<meter value=\"3\" min=\"0\" max=\"10\"></meter>", "output": "Düşük seviye ölçüm göstergesi"}
+      ]
+    },
+    {
+      "id": "html-19",
+      "title": "data-* Özel Özellikler",
+      "content": "data-* özellikleri HTML elementlerine özel veri depolamak için kullanılır. JavaScript ile bu verilere kolayca erişilir. Görünmez veri saklamak, elemanı tanımlamak veya JavaScript'e bilgi geçirmek için idealdir. Herhangi bir isim verilebilir: data-id, data-renk, data-kullanici gibi.",
+      "example": "<!-- Ürün kartı - data ile gizli bilgi -->\n<div class=\"urun\"\n  data-id=\"142\"\n  data-fiyat=\"299.99\"\n  data-stok=\"15\"\n  data-kategori=\"elektronik\"\n  style=\"border:1px solid #ccc;padding:12px;border-radius:8px\">\n  <h3>Kablosuz Kulaklık</h3>\n  <p>Fiyat: 299.99 TL</p>\n  <button onclick=\"bilgiGoster(this)\">Detay</button>\n</div>\n\n<script>\nfunction bilgiGoster(btn) {\n  const kart = btn.closest('.urun');\n  const id = kart.dataset.id;\n  const stok = kart.dataset.stok;\n  alert(`ID: ${id} | Stok: ${stok}`);\n}\n</script>",
+      "output": "Ürün kartı görünür. 'Detay' butonuna basınca 'ID: 142 | Stok: 15' yazan bir alert açılır.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "data-isim=\"deger\"", "explanation": "Özel veri özelliği. data- ile başlayan herhangi bir isim kullanılabilir."},
+        {"code": "dataset.isim", "explanation": "JavaScript'te data-isim özelliğine erişmek için kullanılır. data- öneki otomatik kaldırılır."},
+        {"code": "btn.closest('.sinif')", "explanation": "Butona en yakın üst elemanı seçer. Parent'i bulmak için kullanılır."},
+        {"code": "data-id", "explanation": "Elemana benzersiz ID atamak için. Veritabanı ID'si gibi bilgiler saklanır."}
+      ],
+      "practice": [
+        {"code": "<p data-renk=\"mavi\">Metin</p>", "output": "Görünmez data-renk özelliği olan paragraf"},
+        {"code": "<button data-id=\"5\">Tıkla</button>", "output": "ID bilgisi saklayan buton"}
+      ]
+    },
+    {
+      "id": "html-20",
+      "title": "Proje: Kişisel Portfolyo Sayfası",
+      "content": "Şimdiye kadar öğrendiğin tüm HTML bilgisini kullanarak gerçek bir portfolyo sayfası oluşturacaksın. header, nav, main, section, article, aside, footer, form ve tüm diğer etiketleri bir arada kullanacaksın. Bu proje HTML'i ne kadar öğrendiğini görmek için harika bir fırsattır.",
+      "example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"description\" content=\"Yazılımcı portfolyosu\">\n  <title>Portfolyom | Geliştirici</title>\n</head>\n<body>\n\n<header>\n  <h1>👨‍💻 Ayaz Yılmaz</h1>\n  <nav>\n    <a href=\"#hakkimda\">Hakkımda</a>\n    <a href=\"#projeler\">Projeler</a>\n    <a href=\"#beceriler\">Beceriler</a>\n    <a href=\"#iletisim\">İletişim</a>\n  </nav>\n</header>\n\n<main>\n\n  <section id=\"hakkimda\">\n    <h2>Hakkımda</h2>\n    <figure>\n      <img src=\"https://picsum.photos/120/120\" alt=\"Profil\">\n      <figcaption>Ayaz Yılmaz — Yazılım Geliştirici</figcaption>\n    </figure>\n    <p>Merhaba! Web geliştirme tutkunu biriyim.\n    HTML, CSS ve JavaScript öğreniyorum.</p>\n  </section>\n\n  <section id=\"projeler\">\n    <h2>Projeler</h2>\n    <article>\n      <h3>Hava Durumu Uygulaması</h3>\n      <p>JavaScript ile gerçek API'dan veri çeken uygulama.</p>\n      <a href=\"#\">Projeyi Gör →</a>\n    </article>\n    <article>\n      <h3>Codeia Öğrenme Platformu</h3>\n      <p>Flutter ile geliştirilen mobil eğitim platformu.</p>\n      <a href=\"#\">Projeyi Gör →</a>\n    </article>\n  </section>\n\n  <section id=\"beceriler\">\n    <h2>Beceriler</h2>\n    <p>HTML: <progress value=\"80\" max=\"100\"></progress></p>\n    <p>CSS: <progress value=\"65\" max=\"100\"></progress></p>\n    <p>JavaScript: <progress value=\"40\" max=\"100\"></progress></p>\n  </section>\n\n  <section id=\"iletisim\">\n    <h2>İletişim</h2>\n    <form>\n      <label for=\"ad\">Adınız:</label>\n      <input type=\"text\" id=\"ad\" required placeholder=\"Adınız\">\n      <label for=\"mail\">E-posta:</label>\n      <input type=\"email\" id=\"mail\" required placeholder=\"mail@ornek.com\">\n      <label for=\"mesaj\">Mesaj:</label>\n      <textarea id=\"mesaj\" rows=\"4\" required></textarea>\n      <button type=\"submit\">Gönder</button>\n    </form>\n  </section>\n\n</main>\n\n<footer>\n  <p>&copy; 2024 Ayaz Yılmaz. Tüm Hakları Saklıdır.</p>\n</footer>\n\n</body>\n</html>",
+      "output": "Tam bir portfolyo sayfası: Üstte isim ve yatay menü, profil fotoğrafı ve tanıtım, proje kartları, ilerleme çubuklu beceri listesi, iletişim formu ve footer.",
+      "video": {"url": "https://www.youtube.com/embed/dQw4w9WgXcQ", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<section id=\"bolum\">", "explanation": "Her bölüme id vererek nav bağlantılarıyla sayfada atlama yapılır."},
+        {"code": "<article>", "explanation": "Her proje kartı bağımsız içerik olduğu için article kullanıldı."},
+        {"code": "<progress value=\"80\" max=\"100\">", "explanation": "Beceri seviyesini görsel olarak gösteren ilerleme çubuğu."},
+        {"code": "required", "explanation": "Formdaki zorunlu alanlar. Boş bırakılırsa gönderim engellenir."},
+        {"code": "&copy;", "explanation": "Footer'daki © telif hakkı sembolü."}
+      ],
+      "practice": [
+        {"code": "<a href=\"#hakkimda\">Hakkımda</a>", "output": "Sayfadaki #hakkimda bölümüne atlayan bağlantı"},
+        {"code": "<progress value=\"75\" max=\"100\"></progress>", "output": "%75 dolu beceri çubuğu"},
+        {"code": "<article><h3>Proje</h3><p>Açıklama</p></article>", "output": "Başlık ve açıklamalı proje kartı"}
+      ]
     }
   ]
 }
