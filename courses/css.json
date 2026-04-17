@@ -5,74 +5,204 @@
     {
       "id": "css-01",
       "title": "CSS Nedir ve Nasıl Kullanılır?",
-      "content": "CSS (Cascading Style Sheets), HTML elemanlarının görünümünü belirleyen stil dilidir. Renk, boyut, konum, animasyon gibi tüm görsel özellikler CSS ile kontrol edilir. HTML sayfanın iskeleti ise CSS sayfanın kıyafetidir.",
-      "example": "/* 1. YÖNTEM: HTML içinde style etiketi */\n<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    h1 {\n      color: #1A6FD4;\n      font-size: 36px;\n      text-align: center;\n    }\n    p {\n      color: #555555;\n      font-size: 16px;\n      line-height: 1.6;\n    }\n  </style>\n</head>\n<body>\n  <h1>Merhaba CSS!</h1>\n  <p>Bu metnin rengi ve boyutu CSS ile ayarlandı.</p>\n</body>\n</html>",
-      "output": "Sayfada büyük, mavi renkte ve ortalanmış 'Merhaba CSS!' başlığı görünür. Altında gri renkli, rahat okunabilir aralıklı bir paragraf yer alır.",
-      "detail": "CSS'i HTML'e bağlamanın 3 yolu:\n\n1. Harici CSS dosyası (EN İYİ YÖNTEM):\n<link rel='stylesheet' href='style.css'>\nCSS ayrı bir .css dosyasında tutulur. Birden fazla sayfada kullanılabilir.\n\n2. Dahili CSS (style etiketi):\n<style> etiketi head bölümüne yazılır. Sadece o sayfa için geçerlidir.\n\n3. Inline CSS (style özelliği):\n<h1 style='color:blue'>Başlık</h1>\nDoğrudan elemana yazılır. Bakımı zordur, kullanılması önerilmez.\n\nCSS Yazım Kuralları:\nseçici {\n  özellik: değer;\n  özellik: değer;\n}\n\nÖrnek:\nh1 {\n  color: red;\n  font-size: 24px;\n}\n\n• Özellik ve değer arası iki nokta (:)\n• Her satır noktalı virgül (;) ile biter\n• Tüm blok süslü parantez ({}) içine alınır\n• /* Yorum satırı */"
+      "content": "CSS (Cascading Style Sheets), HTML elementlerinin görünümünü belirleyen stil dilidir. Renk, boyut, konum, animasyon gibi tüm görsel özellikler CSS ile kontrol edilir. HTML sayfanın iskeleti ise CSS sayfanın kıyafetidir.",
+      "example": "/* style.css */\nh1 {\n  color: #1A6FD4;\n  font-size: 36px;\n  text-align: center;\n}\n\np {\n  color: #555555;\n  font-size: 16px;\n  line-height: 1.6;\n}",
+      "output": "Büyük, mavi, ortalanmış başlık ve altında gri, rahat okunabilir paragraf.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "/* yorum */", "explanation": "CSS yorum satırı. Tarayıcı görmez, açıklama için kullanılır."},
+        {"code": "h1 { }", "explanation": "Seçici — hangi elemana stil uygulanacağını belirtir. Süslü parantez içine özellikler yazılır."},
+        {"code": "color: #1A6FD4;", "explanation": "Yazı rengini HEX formatında belirler. Her satır noktalı virgülle biter."},
+        {"code": "font-size: 36px;", "explanation": "Yazı boyutunu piksel cinsinden belirler."},
+        {"code": "text-align: center;", "explanation": "Metni yatayda ortalar. left, right, justify de kullanılabilir."},
+        {"code": "line-height: 1.6;", "explanation": "Satır yüksekliği. 1.5-1.8 arası okunabilirlik için idealdir."}
+      ],
+      "practice": [
+        {"code": "<p style=\"color:red\">Kırmızı metin</p>", "output": "Kırmızı renkli metin"},
+        {"code": "<p style=\"font-size:24px\">Büyük metin</p>", "output": "24 piksel boyutunda metin"},
+        {"code": "<p style=\"text-align:center\">Ortalanmış</p>", "output": "Sayfada ortalanmış metin"}
+      ]
     },
     {
       "id": "css-02",
-      "title": "Seçiciler (Selectors)",
-      "content": "CSS seçicileri hangi HTML elemanlarına stil uygulanacağını belirler. Etiket adı, class ve id ile belirli elemanlar seçilir. Doğru seçici kullanmak CSS'in temelidir.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  /* Etiket seçici - tüm p etiketleri */\n  p {\n    color: #333;\n    font-size: 16px;\n  }\n\n  /* Class seçici - class='vurgu' olan elemanlar */\n  .vurgu {\n    color: #E74C3C;\n    font-weight: bold;\n  }\n\n  /* ID seçici - id='baslik' olan eleman */\n  #baslik {\n    color: #1A6FD4;\n    font-size: 32px;\n    text-align: center;\n  }\n\n  /* Birden fazla seçici */\n  h1, h2, h3 {\n    font-family: Arial, sans-serif;\n  }\n\n  /* İçindeki elemanı seçme */\n  .kart p {\n    margin: 10px;\n    padding: 5px;\n  }\n</style>\n</head>\n<body>\n  <h1 id=\"baslik\">Ana Başlık</h1>\n  <p>Normal paragraf metni.</p>\n  <p class=\"vurgu\">Bu önemli bir metin!</p>\n  <div class=\"kart\">\n    <p>Kart içindeki paragraf</p>\n  </div>\n</body>\n</html>",
-      "output": "Sayfada mavi ortalanmış büyük başlık, altında normal gri paragraf, altında kırmızı kalın 'Bu önemli bir metin!' ve en altta kart içinde kenarlıklı paragraf görünür.",
-      "detail": "Seçici türleri detaylı:\n\n• Etiket seçici: p, h1, div → O etiketteki tüm elemanları seçer. Geniş kapsamlıdır.\n\n• Class seçici: .sinif-adi → Birden fazla elemanda kullanılabilir. Bir elemanda birden fazla class olabilir: class='kart buyuk'\n\n• ID seçici: #id-adi → Sayfada TEK olmalıdır. En yüksek önceliğe sahiptir. Genellikle JavaScript ile kullanılır.\n\n• Birleşik seçici: h1, h2 → İkisine de aynı stil uygulanır.\n\n• Soyundan gelen: .kart p → .kart içindeki tüm p elemanları.\n\n• Doğrudan çocuk: .kart > p → .kart'ın sadece direkt çocuğu olan p.\n\n• Hover: button:hover → Üzerine gelinince.\n• Focus: input:focus → Tıklanınca/odaklanınca.\n• First-child: li:first-child → İlk li elemanı.\n\nÖncelik sırası (düşükten yükseğe):\nEtiket (0,0,1) < Class (0,1,0) < ID (1,0,0) < Inline style"
+      "title": "CSS Ekleme Yöntemleri",
+      "content": "CSS'i HTML'e eklemenin üç yolu vardır: harici dosya, dahili stil ve inline stil. En iyi yöntem harici CSS dosyası kullanmaktır — bakımı kolaydır ve tüm sayfalarda kullanılabilir.",
+      "example": "<!-- 1. Harici CSS (EN İYİ) -->\n<head>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n\n<!-- 2. Dahili CSS -->\n<head>\n  <style>\n    h1 { color: blue; }\n  </style>\n</head>\n\n<!-- 3. Inline CSS (KAÇIN) -->\n<h1 style=\"color: blue;\">Başlık</h1>",
+      "output": "Her üç yöntem de aynı sonucu verir — mavi renkli başlık. Ama harici yöntem en temiz kod yapısını sağlar.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<link rel=\"stylesheet\" href=\"style.css\">", "explanation": "Harici CSS dosyasını sayfaya bağlar. href ile dosya yolunu belirtirsin."},
+        {"code": "<style>...</style>", "explanation": "Dahili CSS bloğu. head bölümüne yazılır, sadece o sayfa için geçerlidir."},
+        {"code": "style=\"color:blue\"", "explanation": "Inline (satır içi) CSS. Doğrudan elemana yazılır. Bakımı çok zordur, kullanma."}
+      ],
+      "practice": [
+        {"code": "<p style=\"background:yellow;padding:8px\">Sarı arka plan</p>", "output": "Sarı arka planlı, dolgulu paragraf"},
+        {"code": "<h2 style=\"color:purple;font-style:italic\">Mor italik</h2>", "output": "Mor renkli italik başlık"}
+      ]
     },
     {
       "id": "css-03",
-      "title": "Renkler ve Tipografi",
-      "content": "CSS'de renk belirtmenin birkaç yolu vardır. Yazı tipi, boyutu, kalınlığı ve hizalaması tipografi özellikleriyle ayarlanır. İyi tipografi okunabilirliği büyük ölçüde artırır.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  body {\n    background-color: #F8F9FA;\n    font-family: 'Arial', sans-serif;\n  }\n\n  .renk-ornekleri {\n    padding: 20px;\n  }\n\n  .isim-renk { color: red; }              /* İsim */\n  .hex-renk { color: #1A6FD4; }           /* HEX */\n  .rgb-renk { color: rgb(46, 204, 113); } /* RGB */\n  .rgba-renk { color: rgba(0,0,0,0.5); }  /* RGBA - şeffaf */\n\n  .arka-plan {\n    background-color: #FFB930;\n    color: white;\n    padding: 10px;\n  }\n\n  .yazi-stili {\n    font-family: Georgia, serif;\n    font-size: 20px;\n    font-weight: bold;       /* normal, bold, 100-900 */\n    font-style: italic;      /* normal, italic */\n    text-decoration: underline; /* none, underline, line-through */\n    text-transform: uppercase;  /* uppercase, lowercase, capitalize */\n    letter-spacing: 2px;     /* Harf aralığı */\n    line-height: 1.8;        /* Satır yüksekliği */\n    text-align: center;      /* left, right, center, justify */\n  }\n</style>\n</head>\n<body>\n  <div class=\"renk-ornekleri\">\n    <p class=\"isim-renk\">İsim ile kırmızı</p>\n    <p class=\"hex-renk\">HEX ile mavi</p>\n    <p class=\"rgb-renk\">RGB ile yeşil</p>\n    <p class=\"rgba-renk\">RGBA ile yarı saydam siyah</p>\n    <div class=\"arka-plan\">Sarı arka plan, beyaz yazı</div>\n  </div>\n  <p class=\"yazi-stili\">Özel yazı stili</p>\n</body>\n</html>",
-      "output": "Sayfada farklı renklerde paragraflar görünür: kırmızı, mavi, yeşil, gri. Altında sarı arka planlı beyaz yazılı bir kutu. En altta büyük, kalın, italik, büyük harfli, ortalanmış, altı çizili metin.",
-      "detail": "Renk Formatları:\n\n• İsim: red, blue, green, white, black → Sadece temel renkler için.\n\n• HEX: #RRGGBB → En yaygın format. #1A6FD4 = kırmızı:1A, yeşil:6F, mavi:D4. Kısaltma: #fff = #ffffff.\n\n• RGB: rgb(255, 0, 0) → 0-255 arası değerler. rgb(255,0,0) = kırmızı.\n\n• RGBA: rgba(0, 0, 0, 0.5) → Son değer 0 (saydam) ile 1 (opak) arası şeffaflık.\n\n• HSL: hsl(240, 100%, 50%) → Renk açısı, doygunluk, parlaklık.\n\nTipografi:\n• font-family → Yazı tipi. Virgülle alternatifleri yaz: 'Roboto', Arial, sans-serif\n• font-size → px, em, rem, % cinsinden boyut\n• font-weight → 100(ince) - 900(kalın). bold = 700, normal = 400\n• line-height → Satır yüksekliği. 1.5-1.8 arası okunabilirlik için ideal\n• text-align → Hizalama: left, right, center, justify\n• letter-spacing → Harfler arası boşluk\n• text-decoration → Altı çizili, üstü çizili vb."
+      "title": "Seçiciler (Selectors)",
+      "content": "CSS seçicileri hangi HTML elementlerine stil uygulanacağını belirler. Etiket adı, class ve id ile belirli elementler seçilir. Doğru seçici kullanmak CSS'in temelidir.",
+      "example": "/* Etiket seçici */\np { color: #333; }\n\n/* Class seçici */\n.vurgu { color: red; font-weight: bold; }\n\n/* ID seçici */\n#baslik { font-size: 32px; text-align: center; }\n\n/* Birden fazla */\nh1, h2, h3 { font-family: Arial; }\n\n/* İçindeki eleman */\n.kart p { margin: 10px; }",
+      "output": "Her seçici sadece hedeflediği elementleri etkiler. Geri kalanlar değişmez.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "p { }", "explanation": "Etiket seçici — tüm p elementlerini seçer."},
+        {"code": ".sinif { }", "explanation": "Class seçici — class='sinif' olan tüm elementleri seçer. Nokta ile başlar."},
+        {"code": "#id { }", "explanation": "ID seçici — sayfada TEK bir element olmalı. Kare işareti ile başlar."},
+        {"code": "h1, h2 { }", "explanation": "Birden fazla seçiciyi virgülle ayırarak aynı stili uygularsın."},
+        {"code": ".kart p { }", "explanation": "Bağımlı seçici — .kart içindeki p elementlerini seçer."},
+        {"code": ":hover { }", "explanation": "Pseudo-class — elementin üzerine gelinince uygulanır."}
+      ],
+      "practice": [
+        {"code": "<p class=\"kirmizi\" style=\"\"><style>.kirmizi{color:red}</style>Kırmızı</p>", "output": "Class seçiciyle kırmızı metin"},
+        {"code": "<p style=\"color:blue\">Mavi</p><p style=\"color:blue\">Mavi 2</p>", "output": "Aynı stilde iki paragraf"}
+      ]
     },
     {
       "id": "css-04",
-      "title": "Box Model",
-      "content": "CSS Box Model, her HTML elemanının bir kutu olarak düşünülmesini sağlar. Bu kutunun dört katmanı vardır: content (içerik), padding (iç boşluk), border (kenarlık) ve margin (dış boşluk). Box Model'i anlamak CSS'in en kritik konusudur.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  * {\n    box-sizing: border-box; /* Önemli! Padding boyutu etkilemesin */\n  }\n\n  .kutu {\n    width: 300px;\n    height: 150px;\n    \n    /* İç boşluk - içerik ile kenarlık arası */\n    padding: 20px;           /* 4 taraf eşit */\n    /* padding: 10px 20px;   üst-alt  sağ-sol */\n    /* padding: 10px 20px 30px 40px; üst sağ alt sol */\n    \n    /* Kenarlık */\n    border: 2px solid #1A6FD4;\n    border-radius: 12px;    /* Köşe yuvarlama */\n    \n    /* Dış boşluk - diğer elemanlarla arası */\n    margin: 20px auto;      /* üst-alt: 20px, sağ-sol: otomatik (ortala) */\n    \n    background-color: #E8F0FF;\n    color: #1A6FD4;\n  }\n\n  .kenarlık-ornekleri div {\n    margin: 10px;\n    padding: 10px;\n    border: 3px dashed #E74C3C; /* dashed, dotted, solid, double */\n  }\n</style>\n</head>\n<body>\n  <div class=\"kutu\">\n    Bu kutunun padding'i, border'ı ve margin'i var.\n  </div>\n  \n  <div class=\"kenarlık-ornekleri\">\n    <div>Kesik kenarlıklı kutu</div>\n  </div>\n</body>\n</html>",
-      "output": "Sayfada ortada mavi kenarlıklı, yuvarlak köşeli, açık mavi arka planlı bir kutu görünür. İçerik kenarlıktan 20px içeride başlar. Kutunun etrafında boşluk var.",
-      "detail": "Box Model katmanları içten dışa:\n\n1. Content (İçerik) → Yazı veya görselin olduğu alan. width ve height bu alanı belirler.\n\n2. Padding (İç Boşluk) → İçerik ile kenarlık arasındaki boşluk. Arka plan rengi padding'e de uygulanır.\n\n3. Border (Kenarlık) → Elemana çerçeve ekler. \nSözdizimi: border: kalınlık stil renk\nÖrnek: border: 2px solid red\nStiller: solid(düz), dashed(kesik), dotted(noktalı), double(çift), none\n\n4. Margin (Dış Boşluk) → Elemanın çevresindeki boşluk. Şeffaftır, arka plan rengi olmaz. margin: auto ile blok elemanlar yatayda ortalanır.\n\nKritik: box-sizing: border-box\nVarsayılanda width sadece content'i kapsar. border-box ile padding ve border de width'e dahil edilir. Bu çok daha mantıklı çalışır.\n\nHızlı kısaltmalar:\n• margin: 10px → 4 taraf\n• margin: 10px 20px → üst-alt | sağ-sol\n• margin: 10px 20px 30px → üst | sağ-sol | alt\n• margin: 10px 20px 30px 40px → üst | sağ | alt | sol (saat yönü)"
+      "title": "Renkler ve Tipografi",
+      "content": "CSS'de renk belirtmenin birkaç yolu vardır: isim, HEX, RGB ve HSL. Yazı tipi, boyutu, kalınlığı ve hizalaması tipografi özellikleriyle ayarlanır.",
+      "example": "/* Renk formatları */\n.isim  { color: red; }\n.hex   { color: #1A6FD4; }\n.rgb   { color: rgb(26, 111, 212); }\n.rgba  { color: rgba(0, 0, 0, 0.5); }\n\n/* Tipografi */\n.yazi {\n  font-family: 'Arial', sans-serif;\n  font-size: 18px;\n  font-weight: bold;\n  font-style: italic;\n  letter-spacing: 2px;\n  line-height: 1.8;\n  text-align: center;\n  text-decoration: underline;\n  text-transform: uppercase;\n}",
+      "output": "Farklı renklerde paragraflar ve büyük harfli, altı çizili, ortalanmış, geniş aralıklı yazı stili.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "#1A6FD4", "explanation": "HEX renk kodu. RR GG BB — kırmızı, yeşil, mavi bileşenleri 00-FF arası."},
+        {"code": "rgb(26, 111, 212)", "explanation": "RGB renk. Her değer 0-255 arası. rgb(255,0,0) = kırmızı."},
+        {"code": "rgba(0,0,0,0.5)", "explanation": "RGBA — son değer şeffaflık. 0 = tamamen saydam, 1 = opak."},
+        {"code": "font-family: 'Arial', sans-serif", "explanation": "Yazı tipi. Virgülle alternatifler yazılır — Arial yoksa sans-serif kullanılır."},
+        {"code": "font-weight: bold", "explanation": "Yazı kalınlığı. bold = 700. 100 (ince) ile 900 (çok kalın) arası değer alır."},
+        {"code": "letter-spacing: 2px", "explanation": "Harfler arası boşluk."},
+        {"code": "text-transform: uppercase", "explanation": "Metni büyük harfe çevirir. lowercase = küçük, capitalize = baş harfler büyük."}
+      ],
+      "practice": [
+        {"code": "<p style=\"color:#FF6B35;font-size:20px;font-weight:bold\">Turuncu kalın</p>", "output": "Turuncu ve kalın yazı"},
+        {"code": "<p style=\"letter-spacing:4px;text-transform:uppercase\">geniş aralık</p>", "output": "GENİŞ ARALIK"},
+        {"code": "<p style=\"color:rgba(0,0,255,0.3)\">Saydam mavi</p>", "output": "Yarı saydam mavi metin"}
+      ]
     },
     {
       "id": "css-05",
-      "title": "Flexbox",
-      "content": "Flexbox (Flexible Box), elemanları satır veya sütun yönünde esnek şekilde hizalamak için tasarlanmış güçlü bir CSS layout sistemidir. Menüler, kartlar, ortalama işlemleri gibi çoğu layout problemi Flexbox ile kolayca çözülür.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  /* Temel flex container */\n  .menu {\n    display: flex;\n    justify-content: space-between; /* Yatay hizalama */\n    align-items: center;            /* Dikey hizalama */\n    background: #1A6FD4;\n    padding: 12px 20px;\n  }\n\n  .menu a {\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n  }\n\n  /* Kart dizisi */\n  .kartlar {\n    display: flex;\n    flex-wrap: wrap;     /* Sığmazsa alt satıra geç */\n    gap: 16px;           /* Kartlar arası boşluk */\n    padding: 20px;\n  }\n\n  .kart {\n    flex: 1;             /* Eşit genişlikte büyü */\n    min-width: 150px;    /* Minimum genişlik */\n    background: #F0F4FF;\n    border: 1px solid #BDC EF0;\n    border-radius: 12px;\n    padding: 16px;\n    text-align: center;\n  }\n\n  /* Tam ortaya al */\n  .merkez {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100px;\n    background: #E8F0FF;\n    border-radius: 8px;\n    margin: 20px;\n  }\n</style>\n</head>\n<body>\n  <nav class=\"menu\">\n    <span>Codeia</span>\n    <a href=\"#\">Dersler</a>\n    <a href=\"#\">Projeler</a>\n    <a href=\"#\">Profil</a>\n  </nav>\n\n  <div class=\"kartlar\">\n    <div class=\"kart\">🎯 HTML</div>\n    <div class=\"kart\">🎨 CSS</div>\n    <div class=\"kart\">⚡ JavaScript</div>\n  </div>\n\n  <div class=\"merkez\">\n    <p>Bu metin tam ortada!</p>\n  </div>\n</body>\n</html>",
-      "output": "Üstte mavi navigasyon barı (sol: Codeia logosu, sağ: Dersler Projeler Profil bağlantıları). Ortada yan yana üç eşit genişlikte pastel kart. Altta mavi alanda tam ortada metin.",
-      "detail": "Flexbox'ın temel özellikleri:\n\nKONTAYNER özellikleri (ebeveyne yazılır):\n• display: flex → Flexbox'ı aktifleştirir.\n• flex-direction: row|column → Elemanların yönü. row: yatay (varsayılan), column: dikey.\n• justify-content → Ana eksen hizalaması:\n  - flex-start: başa yasla\n  - flex-end: sona yasla\n  - center: ortala\n  - space-between: aralarında eşit boşluk\n  - space-around: etrafında eşit boşluk\n• align-items → Çapraz eksen hizalaması:\n  - flex-start: üste yasla\n  - flex-end: alta yasla\n  - center: ortala\n  - stretch: uzat (varsayılan)\n• flex-wrap: wrap → Sığmazsa alt satıra geç.\n• gap → Elemanlar arası boşluk.\n\nÇOCUK özellikleri (çocuğa yazılır):\n• flex: 1 → Eşit oranda büyü.\n• flex: 2 → Diğerlerinin 2 katı kadar yer kapla.\n• align-self → Sadece bu elemanın dikey hizalaması."
+      "title": "Box Model",
+      "content": "CSS Box Model, her HTML elementinin bir kutu olarak düşünülmesini sağlar. İçten dışa: content (içerik), padding (iç boşluk), border (kenarlık) ve margin (dış boşluk). Box Model'i anlamak CSS'in en kritik konusudur.",
+      "example": "* {\n  box-sizing: border-box;\n}\n\n.kutu {\n  width: 300px;\n  height: 150px;\n  padding: 20px;\n  border: 2px solid #1A6FD4;\n  border-radius: 12px;\n  margin: 20px auto;\n  background-color: #E8F0FF;\n}",
+      "output": "Ortada, yuvarlak köşeli, mavi kenarlıklı, açık mavi arka planlı bir kutu. Etrafında boşluk var.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "box-sizing: border-box", "explanation": "Padding ve border width'e dahil edilir — çok daha mantıklı çalışır. Her zaman ekle."},
+        {"code": "padding: 20px", "explanation": "4 taraf eşit iç boşluk. padding: 10px 20px → üst-alt 10px, sağ-sol 20px."},
+        {"code": "border: 2px solid #1A6FD4", "explanation": "Kenarlık: kalınlık, stil (solid/dashed/dotted), renk."},
+        {"code": "border-radius: 12px", "explanation": "Köşeleri yuvarlar. 50% ile tam daire yapılır."},
+        {"code": "margin: 20px auto", "explanation": "Üst-alt 20px, sağ-sol auto → blok elementi yatayda ortalar."}
+      ],
+      "practice": [
+        {"code": "<div style=\"width:100px;height:100px;background:coral;border-radius:50%\"></div>", "output": "Mercan renkli daire"},
+        {"code": "<div style=\"padding:16px;border:2px dashed navy;margin:10px\">Kutu</div>", "output": "Kesik kenarlıklı, dolgulu kutu"},
+        {"code": "<div style=\"width:200px;margin:0 auto;background:lightblue;padding:10px\">Ortalı</div>", "output": "Yatayda ortalanmış mavi kutu"}
+      ]
     },
     {
       "id": "css-06",
-      "title": "Grid",
-      "content": "CSS Grid, iki boyutlu (satır ve sütun) layout oluşturmak için kullanılan en güçlü CSS aracıdır. Flexbox tek yönde çalışırken Grid hem yatay hem dikey kontrolü bir arada sunar. Karmaşık sayfa yapıları Grid ile kolayca oluşturulur.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  /* Temel grid - 3 eşit sütun */\n  .galeri {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */\n    gap: 16px;\n    padding: 20px;\n  }\n\n  .galeri-item {\n    background: #1A6FD4;\n    color: white;\n    padding: 40px;\n    text-align: center;\n    border-radius: 8px;\n    font-size: 20px;\n  }\n\n  /* Sayfa layout */\n  .sayfa {\n    display: grid;\n    grid-template-columns: 250px 1fr;  /* Sol sabit, sağ esnek */\n    grid-template-rows: 60px 1fr 40px; /* Üst, orta, alt */\n    grid-template-areas:\n      \"header  header\"\n      \"sidebar icerik\"\n      \"footer  footer\";\n    height: 300px;\n    gap: 8px;\n    margin: 20px;\n  }\n\n  .header  { grid-area: header;  background: #1A6FD4; color: white; padding: 10px; border-radius: 6px; }\n  .sidebar { grid-area: sidebar; background: #E8F0FF; padding: 10px; border-radius: 6px; }\n  .icerik  { grid-area: icerik;  background: #F8F9FA; padding: 10px; border-radius: 6px; }\n  .footer  { grid-area: footer;  background: #333; color: white; padding: 10px; border-radius: 6px; text-align: center; }\n</style>\n</head>\n<body>\n  <div class=\"galeri\">\n    <div class=\"galeri-item\">1</div>\n    <div class=\"galeri-item\">2</div>\n    <div class=\"galeri-item\">3</div>\n    <div class=\"galeri-item\">4</div>\n    <div class=\"galeri-item\">5</div>\n    <div class=\"galeri-item\">6</div>\n  </div>\n\n  <div class=\"sayfa\">\n    <div class=\"header\">Header</div>\n    <div class=\"sidebar\">Sidebar</div>\n    <div class=\"icerik\">Ana İçerik</div>\n    <div class=\"footer\">Footer</div>\n  </div>\n</body>\n</html>",
-      "output": "Üstte 3 sütunlu mavi kutu galerisi (2 satır, 6 kutu). Altında gerçek sayfa layout'u: üstte tam genişlik mavi header, ortada sol dar kenar çubuğu ve sağda geniş içerik alanı, altta koyu footer.",
-      "detail": "Grid temel kavramlar:\n\n• display: grid → Grid'i aktifleştirir.\n\n• grid-template-columns → Sütunları tanımlar:\n  - repeat(3, 1fr) → 3 eşit sütun\n  - 200px 1fr 200px → sol sabit, orta esnek, sağ sabit\n  - repeat(auto-fill, 200px) → ekrana sığdığı kadar 200px sütun\n\n• grid-template-rows → Satırları tanımlar. Aynı şekilde çalışır.\n\n• fr birimi → 'fraction' (kesir). Kalan alanı böler. 1fr 2fr → 1/3 ve 2/3.\n\n• gap → Satır ve sütunlar arası boşluk. row-gap ve column-gap ayrı ayrı da yazılabilir.\n\n• grid-template-areas → İsimli alanlar tanımla. Görsel olarak grid'i planlaman için harika.\n\n• grid-area → Elemanı hangi alana yerleştir.\n\n• grid-column: 1 / 3 → 1. çizgiden 3. çizgiye kadar uzat (2 sütun kapla).\n• grid-row: 1 / 2 → 1. satır çizgisinden 2. satır çizgisine kadar.\n\nFlexbox mı Grid mi?\n• Tek yön (satır veya sütun) → Flexbox\n• İki yön (satır VE sütun) → Grid\n• Pratikte ikisi birlikte kullanılır."
+      "title": "Display ve Pozisyon",
+      "content": "display özelliği bir elementin nasıl görüntüleneceğini belirler. position özelliği ise elementin sayfadaki konumunu kontrol eder. Bu iki özellik CSS layout'un temelini oluşturur.",
+      "example": "/* Display */\n.block   { display: block; }\n.inline  { display: inline; }\n.inline-block { display: inline-block; }\n.none    { display: none; } /* Gizle */\n\n/* Position */\n.relative {\n  position: relative;\n  top: 10px;\n  left: 20px;\n}\n\n.absolute {\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n\n.fixed {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n}",
+      "output": "Block elementler alt alta, inline elementler yan yana dizilir. Absolute element ebeveyne göre, fixed element ekrana göre konumlanır.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "display: block", "explanation": "Yeni satırda başlar, tam genişlik kaplar. div, p, h1 varsayılan block'tur."},
+        {"code": "display: inline", "explanation": "Satır içinde devam eder, sadece içerik kadar yer kaplar. span, a varsayılan inline'dır."},
+        {"code": "display: inline-block", "explanation": "Hem satır içinde hem de width/height verilebilen hibrit."},
+        {"code": "display: none", "explanation": "Elementi tamamen gizler, alan kaplamaz."},
+        {"code": "position: relative", "explanation": "Normal akıştan top/left ile kaydırılır ama yer tutar."},
+        {"code": "position: absolute", "explanation": "En yakın relative ebeveyne göre konumlanır. Normal akıştan çıkar."},
+        {"code": "position: fixed", "explanation": "Ekrana göre sabit kalır. Scroll yapılsa bile yerinden oynamaz."},
+        {"code": "z-index", "explanation": "Üst üste gelen elementlerin sıralaması. Büyük değer üstte olur."}
+      ],
+      "practice": [
+        {"code": "<span style=\"display:inline-block;width:60px;height:60px;background:tomato\"></span>", "output": "Kırmızı kare kutu (inline-block)"},
+        {"code": "<div style=\"position:relative;height:80px;background:#eee\"><div style=\"position:absolute;bottom:0;right:0;background:blue;color:white;padding:4px\">Köşe</div></div>", "output": "Gri kutunun sağ alt köşesinde mavi 'Köşe' yazısı"}
+      ]
     },
     {
       "id": "css-07",
-      "title": "Responsive Tasarım ve Media Query",
-      "content": "Responsive tasarım, web sitesinin farklı ekran boyutlarında (telefon, tablet, masaüstü) düzgün görünmesini sağlar. CSS Media Query'leri belirli ekran boyutlarında farklı stiller uygulamayı mümkün kılar.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<style>\n  * { box-sizing: border-box; margin: 0; padding: 0; }\n\n  body { font-family: Arial; }\n\n  /* Mobil önce (Mobile First) yaklaşım */\n  .kapsayici {\n    padding: 16px;\n  }\n\n  .kartlar {\n    display: grid;\n    grid-template-columns: 1fr; /* Mobilde tek sütun */\n    gap: 16px;\n  }\n\n  .kart {\n    background: #1A6FD4;\n    color: white;\n    padding: 20px;\n    border-radius: 12px;\n    text-align: center;\n  }\n\n  .menu-mobil { display: block; padding: 10px; background: #1A6FD4; color: white; }\n  .menu-masaustu { display: none; }\n\n  /* Tablet - 768px ve üzeri */\n  @media (min-width: 768px) {\n    .kartlar {\n      grid-template-columns: repeat(2, 1fr); /* 2 sütun */\n    }\n    .menu-mobil { display: none; }\n    .menu-masaustu { display: flex; gap: 20px; padding: 16px; background: #1A6FD4; }\n    .menu-masaustu a { color: white; text-decoration: none; }\n  }\n\n  /* Masaüstü - 1024px ve üzeri */\n  @media (min-width: 1024px) {\n    .kartlar {\n      grid-template-columns: repeat(3, 1fr); /* 3 sütun */\n    }\n    .kapsayici {\n      max-width: 1200px;\n      margin: 0 auto;\n    }\n  }\n</style>\n</head>\n<body>\n  <div class=\"menu-mobil\">☰ Menü</div>\n  <nav class=\"menu-masaustu\">\n    <a href=\"#\">Ana Sayfa</a>\n    <a href=\"#\">Dersler</a>\n    <a href=\"#\">Hakkımda</a>\n  </nav>\n\n  <div class=\"kapsayici\">\n    <div class=\"kartlar\">\n      <div class=\"kart\">Kart 1</div>\n      <div class=\"kart\">Kart 2</div>\n      <div class=\"kart\">Kart 3</div>\n    </div>\n  </div>\n</body>\n</html>",
-      "output": "Dar ekranda (telefon): Hamburger menü ikonu, altında üst üste 3 mavi kart. Geniş ekranda (tablet): Yatay menü bağlantıları, 2 sütun kart dizisi. Daha geniş ekranda (masaüstü): 3 sütun kart, içerik ortalanmış.",
-      "detail": "Responsive tasarımın temelleri:\n\n1. Viewport meta etiketi → Her zaman ekle:\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>\nBu olmadan mobil cihazlar sayfayı yanlış gösterir.\n\n2. Media Query Sözdizimi:\n@media (koşul) {\n  /* Bu ekran boyutunda uygulanacak stiller */\n}\n\nYaygın kırılma noktaları (breakpoints):\n• 480px → Küçük telefon\n• 768px → Tablet / Büyük telefon\n• 1024px → Küçük masaüstü\n• 1280px → Büyük masaüstü\n\n3. Mobile First yaklaşımı (önerilen):\nÖnce telefon için yaz, sonra büyük ekranlar için min-width ile genişlet.\nBu daha verimli CSS üretir.\n\n4. Desktop First yaklaşımı:\nÖnce masaüstü için yaz, küçük ekranlar için max-width ile daralt.\n\nYaygın responsive kalıplar:\n• Menü: masaüstünde yatay, mobilde hamburger\n• Grid: masaüstünde 3 sütun, tablette 2, mobilde 1\n• Yazı boyutu: büyük ekranda daha büyük"
+      "title": "Flexbox",
+      "content": "Flexbox, elementleri satır veya sütun yönünde esnek şekilde hizalamak için tasarlanmış güçlü bir layout sistemidir. Menüler, kartlar ve ortalama işlemleri Flexbox ile kolayca çözülür.",
+      "example": "/* Flex container */\n.menu {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 16px;\n  padding: 12px;\n  background: #1A6FD4;\n}\n\n/* Flex child */\n.kart-alani {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 16px;\n}\n\n.kart {\n  flex: 1;\n  min-width: 150px;\n  padding: 16px;\n  background: #F0F4FF;\n  border-radius: 12px;\n}",
+      "output": "Üstte mavi menü barı (elemanlar sağa sola yayılmış). Altında esnek genişlikte kartlar yan yana.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "display: flex", "explanation": "Flexbox'ı aktifleştirir. Direkt çocuklar flex item olur."},
+        {"code": "justify-content", "explanation": "Ana eksen hizalaması. flex-start, flex-end, center, space-between, space-around."},
+        {"code": "align-items", "explanation": "Çapraz eksen hizalaması. flex-start, flex-end, center, stretch."},
+        {"code": "flex-wrap: wrap", "explanation": "Elementler sığmazsa alt satıra geçer."},
+        {"code": "gap: 16px", "explanation": "Flex elemanlar arası boşluk. row-gap ve column-gap ayrı da yazılabilir."},
+        {"code": "flex: 1", "explanation": "Kalan alanı eşit olarak paylaş. flex: 2 olan 1'in iki katı yer kaplar."},
+        {"code": "flex-direction: column", "explanation": "Elemanları dikey dizer. Varsayılan row'dur (yatay)."}
+      ],
+      "practice": [
+        {"code": "<div style=\"display:flex;gap:8px\"><div style=\"background:coral;padding:8px\">A</div><div style=\"background:skyblue;padding:8px\">B</div><div style=\"background:lightgreen;padding:8px\">C</div></div>", "output": "Üç renkli kutu yan yana"},
+        {"code": "<div style=\"display:flex;justify-content:center;align-items:center;height:80px;background:#eee\"><p>Orta</p></div>", "output": "Gri kutunun tam ortasında metin"}
+      ]
     },
     {
       "id": "css-08",
-      "title": "Animasyonlar ve Geçişler",
-      "content": "CSS animasyonları web sayfalarına hayat katar. transition özelliği elemanların durumlar arasında yumuşakça geçiş yapmasını sağlar. animation ve @keyframes ise daha karmaşık animasyonlar için kullanılır.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  /* Geçiş (Transition) - hover üzerine gelince */\n  .buton {\n    background: #1A6FD4;\n    color: white;\n    padding: 12px 24px;\n    border: none;\n    border-radius: 8px;\n    cursor: pointer;\n    font-size: 16px;\n    transition: all 0.3s ease; /* özellik süre hız-eğrisi */\n    display: inline-block;\n    margin: 10px;\n  }\n\n  .buton:hover {\n    background: #0F2444;\n    transform: translateY(-3px); /* 3px yukarı kaydır */\n    box-shadow: 0 8px 20px rgba(26,111,212,0.4);\n  }\n\n  /* Dönme animasyonu */\n  .donen {\n    width: 60px;\n    height: 60px;\n    background: #E74C3C;\n    border-radius: 8px;\n    margin: 20px;\n    animation: dondur 2s linear infinite;\n  }\n\n  @keyframes dondur {\n    from { transform: rotate(0deg); }\n    to   { transform: rotate(360deg); }\n  }\n\n  /* Yukarı aşağı zıplama */\n  .ziplayan {\n    width: 40px;\n    height: 40px;\n    background: #2ECC71;\n    border-radius: 50%;\n    margin: 20px;\n    animation: zipla 0.8s ease-in-out infinite alternate;\n  }\n\n  @keyframes zipla {\n    from { transform: translateY(0); }\n    to   { transform: translateY(-30px); }\n  }\n\n  /* Solma animasyonu */\n  .solan {\n    width: 100px;\n    height: 40px;\n    background: #9B59B6;\n    border-radius: 8px;\n    margin: 20px;\n    animation: sol 2s ease-in-out infinite;\n  }\n\n  @keyframes sol {\n    0%   { opacity: 1; }\n    50%  { opacity: 0.2; }\n    100% { opacity: 1; }\n  }\n</style>\n</head>\n<body>\n  <button class=\"buton\">Hover Et!</button>\n  <div class=\"donen\"></div>\n  <div class=\"ziplayan\"></div>\n  <div class=\"solan\"></div>\n</body>\n</html>",
-      "output": "Mavi buton (üzerine gelince koyulaşır, yukarı kalkar, gölge oluşur). Altında sürekli dönen kırmızı kare, yukarı aşağı zıplayan yeşil daire, sürekli solup beliren mor dikdörtgen görünür.",
-      "detail": "Geçiş ve animasyon farkı:\n\nTRANSITION → Bir tetikleyici (hover, focus vb.) ile başlar. İki durum arası geçiş yapar.\ntransition: özellik süre hız-eğrisi gecikme\ntransition: background 0.3s ease 0s\n\nHız eğrileri:\n• ease → Yavaş başla, hızlan, yavaşla (varsayılan)\n• linear → Sabit hız\n• ease-in → Yavaş başla, hızlan\n• ease-out → Hızlı başla, yavaşla\n• ease-in-out → Yavaş başla, yavaş bitir\n\nANIMATION → Sürekli veya belirli sayıda çalışır.\n@keyframes animasyon-adi {\n  0% { /* başlangıç */ }\n  50% { /* orta */ }\n  100% { /* bitiş */ }\n}\n.eleman {\n  animation: animasyon-adi süre hız tekrar yön;\n}\n\nAnimation özellikleri:\n• animation-duration → Süre (1s, 500ms)\n• animation-iteration-count → Tekrar sayısı. infinite = sonsuz\n• animation-direction → normal, reverse, alternate\n• animation-delay → Başlamadan önce bekleme\n\nTRANSFORM fonksiyonları:\n• rotate(45deg) → Döndür\n• translateX(20px) translateY(20px) → Kaydır\n• scale(1.2) → Büyüt/küçült\n• skew(10deg) → Eğ"
+      "title": "Grid",
+      "content": "CSS Grid, iki boyutlu (satır ve sütun) layout oluşturmak için en güçlü CSS aracıdır. Karmaşık sayfa yapıları Grid ile kolayca oluşturulur.",
+      "example": "/* 3 eşit sütun */\n.galeri {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 16px;\n}\n\n/* Sayfa layout */\n.sayfa {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-template-rows: 60px 1fr 40px;\n  grid-template-areas:\n    \"header  header\"\n    \"sidebar icerik\"\n    \"footer  footer\";\n  min-height: 100vh;\n}\n\n.header  { grid-area: header; }\n.sidebar { grid-area: sidebar; }\n.icerik  { grid-area: icerik; }\n.footer  { grid-area: footer; }",
+      "output": "İlk örnek: 3 sütunlu galeri. İkinci örnek: Header tam genişlik, sol sidebar dar, sağ içerik geniş, footer tam genişlik.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "display: grid", "explanation": "Grid'i aktifleştirir."},
+        {"code": "grid-template-columns: repeat(3, 1fr)", "explanation": "3 eşit sütun. repeat(n, boyut) kısayolu. fr = fraction (kesir birimi)."},
+        {"code": "1fr", "explanation": "Kalan alanın kesirli payı. 1fr 2fr → biri 1/3, diğeri 2/3 alır."},
+        {"code": "grid-template-areas", "explanation": "İsimli alanlar tanımla — görsel olarak layout planlarsın."},
+        {"code": "grid-area: header", "explanation": "Bu elementi 'header' alanına yerleştir."},
+        {"code": "grid-column: 1 / 3", "explanation": "1. çizgiden 3. çizgiye uzat — 2 sütun kaplar."}
+      ],
+      "practice": [
+        {"code": "<div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:8px\"><div style=\"background:coral;padding:20px\">1</div><div style=\"background:skyblue;padding:20px\">2</div><div style=\"background:lightgreen;padding:20px\">3</div></div>", "output": "Eşit genişlikte 3 renkli sütun"},
+        {"code": "<div style=\"display:grid;grid-template-columns:100px 1fr;gap:8px;height:80px\"><div style=\"background:#ddd\">Sol</div><div style=\"background:#eee\">Sağ geniş</div></div>", "output": "Sol dar (100px), sağ esnek alan"}
+      ]
     },
     {
       "id": "css-09",
-      "title": "Proje: Modern Kart Tasarımı",
-      "content": "CSS'in tüm güçlü özelliklerini kullanarak modern, şık bir ürün kartı tasarlayacaksın. Hover efekti, gölge, border-radius, gradient ve flexbox bir arada kullanılacak.",
-      "example": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  * { box-sizing: border-box; margin: 0; padding: 0; }\n  \n  body {\n    font-family: 'Segoe UI', Arial, sans-serif;\n    background: linear-gradient(135deg, #0A0E1A, #1A3A6F);\n    min-height: 100vh;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 24px;\n    flex-wrap: wrap;\n    padding: 40px;\n  }\n\n  .kart {\n    width: 280px;\n    background: white;\n    border-radius: 20px;\n    overflow: hidden;\n    box-shadow: 0 10px 40px rgba(0,0,0,0.3);\n    transition: all 0.3s ease;\n    cursor: pointer;\n  }\n\n  .kart:hover {\n    transform: translateY(-8px);\n    box-shadow: 0 20px 60px rgba(0,0,0,0.5);\n  }\n\n  .kart-gorsel {\n    height: 160px;\n    background: linear-gradient(135deg, #1A6FD4, #4D94E8);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 64px;\n  }\n\n  .kart-icerik {\n    padding: 20px;\n  }\n\n  .kart-etiket {\n    background: #E8F0FF;\n    color: #1A6FD4;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    padding: 4px 10px;\n    border-radius: 20px;\n    display: inline-block;\n    margin-bottom: 12px;\n  }\n\n  .kart-baslik {\n    font-size: 20px;\n    font-weight: 700;\n    color: #0A0E1A;\n    margin-bottom: 8px;\n  }\n\n  .kart-aciklama {\n    font-size: 14px;\n    color: #666;\n    line-height: 1.6;\n    margin-bottom: 16px;\n  }\n\n  .kart-alt {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding-top: 16px;\n    border-top: 1px solid #eee;\n  }\n\n  .fiyat {\n    font-size: 22px;\n    font-weight: 800;\n    color: #1A6FD4;\n  }\n\n  .satin-al {\n    background: #1A6FD4;\n    color: white;\n    border: none;\n    padding: 8px 18px;\n    border-radius: 8px;\n    font-weight: 600;\n    cursor: pointer;\n    transition: background 0.2s;\n  }\n  .satin-al:hover { background: #0F2444; }\n</style>\n</head>\n<body>\n  <div class=\"kart\">\n    <div class=\"kart-gorsel\">🎓</div>\n    <div class=\"kart-icerik\">\n      <span class=\"kart-etiket\">Kurs</span>\n      <h2 class=\"kart-baslik\">HTML & CSS Temelleri</h2>\n      <p class=\"kart-aciklama\">Sıfırdan web geliştirme öğren. 9 ders, projeler dahil.</p>\n      <div class=\"kart-alt\">\n        <span class=\"fiyat\">Ücretsiz</span>\n        <button class=\"satin-al\">Başla →</button>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"kart\">\n    <div class=\"kart-gorsel\">⚡</div>\n    <div class=\"kart-icerik\">\n      <span class=\"kart-etiket\">Pro</span>\n      <h2 class=\"kart-baslik\">JavaScript İleri</h2>\n      <p class=\"kart-aciklama\">React, API, proje geliştirme ile profesyonel seviye.</p>\n      <div class=\"kart-alt\">\n        <span class=\"fiyat\">₺299</span>\n        <button class=\"satin-al\">Satın Al →</button>\n      </div>\n    </div>\n  </div>\n</body>\n</html>",
-      "output": "Koyu gradient arka planda yan yana iki modern kart görünür. Her kartta üstte renkli alan ve emoji, altında etiket, başlık, açıklama, fiyat ve buton. Kartların üzerine gelinince yukarı kalkar ve gölgesi derinleşir.",
-      "detail": "Bu projede kullanılan önemli teknikler:\n\n• linear-gradient → İki renk arası geçiş arka plan. gradient(yön, renk1, renk2)\n• border-radius: 20px → Yuvarlak köşeler.\n• overflow: hidden → Kart içeriğinin dışarı taşmaması.\n• box-shadow: x y bulanıklık yayılma renk → Gölge efekti.\n• transition: all 0.3s ease → Tüm değişiklikler 0.3 saniyede yumuşak geçiş yapar.\n• transform: translateY(-8px) → Hover'da 8px yukarı kayar.\n• letter-spacing + text-transform → Küçük büyük harfli etiket yazısı.\n• border-top: 1px solid #eee → İnce çizgiyle bölüm ayırma.\n\nKendine ödevler:\n1. Üçüncü bir kart ekle.\n2. Kart renklerini değiştir.\n3. Fiyatın altına yıldız derecelendirmesi ekle (★★★★☆).\n4. Kart üzerine gelinince görsel bölümü büyüt (transform: scale)."
+      "title": "Responsive Tasarım",
+      "content": "Responsive tasarım, web sitesinin farklı ekran boyutlarında (telefon, tablet, masaüstü) düzgün görünmesini sağlar. CSS Media Query'leri belirli ekran boyutlarında farklı stiller uygulamayı mümkün kılar.",
+      "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n<style>\n/* Mobile First */\n.kartlar {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 16px;\n}\n\n/* Tablet */\n@media (min-width: 768px) {\n  .kartlar {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n/* Masaüstü */\n@media (min-width: 1024px) {\n  .kartlar {\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n</style>",
+      "output": "Telefonda 1 sütun, tablette 2 sütun, masaüstünde 3 sütun olarak görünür.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "viewport meta etiketi", "explanation": "Mobil uyumluluk için şart. Bu olmadan mobil cihazlar sayfayı yanlış gösterir."},
+        {"code": "@media (min-width: 768px) { }", "explanation": "768px ve üzeri ekranlar için stil. Mobile First yaklaşımı."},
+        {"code": "min-width", "explanation": "Bu genişlikten itibaren uygula. Mobile First yönteminde kullanılır."},
+        {"code": "max-width", "explanation": "Bu genişliğe kadar uygula. Desktop First yönteminde kullanılır."},
+        {"code": "Breakpoint", "explanation": "Tasarımın değiştiği ekran genişliği noktası. 480/768/1024/1280px yaygın değerler."}
+      ],
+      "practice": [
+        {"code": "<div style=\"width:100%;max-width:600px;margin:0 auto;background:#e8f0ff;padding:16px\">Maksimum 600px genişlik</div>", "output": "Dar ekranda tam genişlik, geniş ekranda 600px ile sınırlı, ortalanmış"},
+        {"code": "<img style=\"max-width:100%;height:auto\" src=\"https://picsum.photos/400/200\" alt=\"\">", "output": "Ekrana göre küçülen responsive resim"}
+      ]
+    },
+    {
+      "id": "css-10",
+      "title": "Animasyonlar ve Geçişler",
+      "content": "CSS animasyonları web sayfalarına hayat katar. transition yumuşak geçiş sağlar. animation ve @keyframes ise daha karmaşık animasyonlar için kullanılır.",
+      "example": "/* Transition — hover efekti */\n.buton {\n  background: #1A6FD4;\n  color: white;\n  padding: 12px 24px;\n  border-radius: 8px;\n  border: none;\n  transition: all 0.3s ease;\n  cursor: pointer;\n}\n\n.buton:hover {\n  background: #0F2444;\n  transform: translateY(-3px);\n  box-shadow: 0 8px 20px rgba(26,111,212,0.4);\n}\n\n/* Keyframe animasyon */\n@keyframes zipla {\n  0%   { transform: translateY(0); }\n  50%  { transform: translateY(-20px); }\n  100% { transform: translateY(0); }\n}\n\n.ziplayan {\n  animation: zipla 1s ease-in-out infinite;\n}",
+      "output": "Mavi buton üzerine gelinince koyulaşır, yukarı kalkar ve gölge oluşur. Zıplayan element sürekli yukarı aşağı hareket eder.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "transition: all 0.3s ease", "explanation": "Tüm değişiklikler 0.3 saniyede ease eğrisiyle geçiş yapar."},
+        {"code": "transform: translateY(-3px)", "explanation": "Elementi 3px yukarı taşır. translateX (yatay), rotate (döndür), scale (büyüt) de kullanılır."},
+        {"code": "box-shadow: 0 8px 20px rgba(...)", "explanation": "Gölge efekti. x-offset y-offset bulanıklık renk sırası."},
+        {"code": "@keyframes isim { }", "explanation": "Animasyon tanımı. from/to veya 0%-100% ile aşamaları belirt."},
+        {"code": "animation: isim süre eğri tekrar", "explanation": "Animasyonu elemana uygula. infinite = sonsuz tekrar."},
+        {"code": "ease-in-out", "explanation": "Yavaş başlar, ortada hızlanır, yavaş biter. Diğerleri: linear, ease, ease-in, ease-out."}
+      ],
+      "practice": [
+        {"code": "<button style=\"background:#1A6FD4;color:white;padding:10px 20px;border:none;border-radius:8px;transition:transform 0.2s\" onmouseover=\"this.style.transform='scale(1.1)'\" onmouseout=\"this.style.transform='scale(1)'\">Hover!</button>", "output": "Üzerine gelince büyüyen buton"},
+        {"code": "<div style=\"width:40px;height:40px;background:coral;border-radius:50%;animation:none\">⚡</div>", "output": "Mercan renkli daire (animasyon CSS'de tanımlanır)"}
+      ]
     }
   ]
 }
