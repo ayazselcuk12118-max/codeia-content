@@ -1,0 +1,295 @@
+{
+  "id": "video-tools",
+  "name": "Video Araçları",
+  "lessons": [
+    {
+      "id": "vt-01",
+      "title": "Adobe Premiere Pro",
+      "content": "Adobe Premiere Pro, profesyonel video düzenleme için endüstri standardı yazılımdır. YouTube içerik üreticilerinden film yapımcılarına kadar herkes kullanır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Premiere Pro Nedir?",
+          "body": "Adobe Premiere Pro, dünyanın en yaygın kullanılan profesyonel video düzenleme yazılımıdır. YouTube videolarından sinema filmlerine, reklamlardan müzik videolarına kadar her türlü video prodüksiyon için kullanılır.\n\nAdobe Creative Cloud aboneliğiyle gelir. Aylık ~700-800 TL'ye tüm Adobe uygulamalarına erişim sağlayabilir ya da sadece Premiere için ~400 TL ödenebilir. 7 günlük ücretsiz deneme sunar."
+        },
+        {
+          "type": "table",
+          "title": "Premiere Pro Sistem Gereksinimleri",
+          "headers": ["Bileşen", "Minimum", "Önerilen"],
+          "rows": [
+            ["RAM", "8 GB", "32 GB"],
+            ["GPU", "2 GB VRAM", "4 GB VRAM (NVIDIA önerilir)"],
+            ["Disk", "8 GB kurulum + proje", "SSD 500 GB+"],
+            ["CPU", "Intel 8. nesil / AMD Ryzen", "Intel 12. nesil / AMD Ryzen 7"],
+            ["Ekran", "1280x800", "4K monitör"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Premiere Pro Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Premiere Pro — üst sol: medya paneli, orta: önizleme, alt: timeline"
+        },
+        {
+          "type": "table",
+          "title": "Premiere Pro Temel Paneller",
+          "headers": ["Panel", "Ne İşe Yarar?"],
+          "rows": [
+            ["Project", "İçe aktarılan tüm medya dosyaları"],
+            ["Source Monitor", "Klip önizleme ve kırpma"],
+            ["Program Monitor", "Timeline'daki videonun önizlemesi"],
+            ["Timeline", "Klipleri düzenlediğin ana alan"],
+            ["Effects", "Video ve ses efektleri"],
+            ["Lumetri Color", "Renk düzeltme ve grading"],
+            ["Audio Mixer", "Ses kanallarını ayarla"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Premiere Pro İpuçları",
+          "items": [
+            "C — Razor Tool ile klibi kes, V — Selection Tool'a geri dön",
+            "Ctrl+M ile videoyu dışa aktar — H.264 formatı YouTube için ideal",
+            "Proxy iş akışı kullan — düşük çözünürlükte düzenle, yüksekte dışa aktar",
+            "Auto Reframe ile video boyutunu otomatik değiştir (16:9 → 9:16 gibi)",
+            "Essential Sound paneli ile sesi tek tıkla optimize et"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vt-02",
+      "title": "Adobe After Effects",
+      "content": "After Effects, hareket grafikleri ve görsel efektler için kullanılan endüstri standardı uygulamadır. Logo animasyonları, intro'lar ve VFX için kullanılır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "After Effects Nedir?",
+          "body": "Adobe After Effects (AE), hareket grafikleri (motion graphics) ve görsel efektler (VFX) oluşturmak için kullanılan profesyonel uygulamadır. YouTube intro'ları, logo animasyonları, başlık efektleri, yeşil perde (chroma key) işlemleri ve sinematik görsel efektler için kullanılır.\n\nPremiere Pro ile birlikte kullanılır — AE'de oluşturulan animasyonlar Dynamic Link ile Premiere'e aktarılır. Premiere Pro'dan daha karmaşık bir öğrenme eğrisi vardır."
+        },
+        {
+          "type": "image",
+          "title": "After Effects Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "After Effects — kompozisyon, timeline ve efektler paneli"
+        },
+        {
+          "type": "table",
+          "title": "After Effects Temel Kavramlar",
+          "headers": ["Kavram", "Açıklama"],
+          "rows": [
+            ["Composition", "Animasyonun oluşturulduğu çalışma alanı"],
+            ["Layer", "Her nesne, video, ses bir layer'dır"],
+            ["Keyframe", "Animasyon noktaları — hareket burada tanımlanır"],
+            ["Expression", "Animasyonları otomatikleştiren JavaScript kodları"],
+            ["Pre-compose", "Katmanları gruplayıp tek comp yapmak"],
+            ["Render Queue", "Tamamlanan projeyi dışa aktarma kuyruğu"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "After Effects İpuçları",
+          "items": [
+            "P — Position, S — Scale, R — Rotation, T — Opacity kısayolları",
+            "U tuşu — tüm keyframe'leri göster",
+            "RAM Preview için Space — önce render eder sonra oynatır",
+            "Motion Bro ve AEJuice'ten ücretsiz preset'ler indir",
+            "YouTube intro için 1920x1080, 30fps, 5-10 saniye yeterli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vt-03",
+      "title": "CapCut",
+      "content": "CapCut, ByteDance tarafından geliştirilen ücretsiz ve kullanımı kolay video düzenleme uygulamasıdır. Mobil ve masaüstü versiyonu mevcuttur.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "CapCut Nedir?",
+          "body": "CapCut, TikTok'un sahibi ByteDance tarafından geliştirilen ücretsiz video düzenleme uygulamasıdır. Hem mobil (iOS/Android) hem masaüstü (Windows/Mac) ve web versiyonu mevcuttur.\n\nSosyal medya içerikleri, kısa videolar, Reels ve TikTok videoları için idealdir. AI özelliklerinin çokluğu ve kullanım kolaylığıyla öne çıkar. Temel özellikler tamamen ücretsizdir."
+        },
+        {
+          "type": "table",
+          "title": "CapCut Özellikleri",
+          "headers": ["Özellik", "Ücretsiz mi?", "Açıklama"],
+          "rows": [
+            ["Video Kesme/Birleştirme", "✓ Ücretsiz", "Temel düzenleme"],
+            ["Filtreler ve Efektler", "✓ Ücretsiz", "Yüzlerce hazır efekt"],
+            ["Metin ve Altyazı", "✓ Ücretsiz", "Otomatik altyazı da var"],
+            ["Müzik Kütüphanesi", "✓ Ücretsiz", "Telif hakkı ücretsiz müzikler"],
+            ["AI Arka Plan Kaldır", "✓ Ücretsiz", "Yeşil perde gerekmez"],
+            ["AI Ses Klonlama", "Kısmen", "Sınırlı ücretsiz kullanım"],
+            ["4K Dışa Aktarım", "✓ Ücretsiz", "Yüksek kalite export"],
+            ["Watermark", "✓ Yok", "CapCut logosu koymuyor"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "CapCut Masaüstü Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "CapCut — sade ve anlaşılır arayüz, sürükle-bırak ile düzenleme"
+        },
+        {
+          "type": "steps",
+          "title": "CapCut'ta İlk Video",
+          "items": [
+            "capcut.com adresinden masaüstü uygulamayı indir veya web versiyonunu kullan",
+            "New Project → medya dosyalarını içe aktar",
+            "Videoyu timeline'a sürükle",
+            "Kesmek için: videoyu seç → kesme noktasına git → Split (B)",
+            "Metin ekle: Text → Add text → yaz → fontu ve rengi seç",
+            "Müzik ekle: Audio → Music → ücretsiz kütüphaneden seç",
+            "Export → 1080p veya 4K → Export"
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "CapCut AI Özellikleri",
+          "items": [
+            "Auto Captions — video sesini otomatik yazıya çevirir (Türkçe dahil)",
+            "Background Remover — arka planı otomatik siler",
+            "AI Video Enhancer — düşük kaliteli videoyu iyileştirir",
+            "Beat Sync — videoyu müziğin ritmine otomatik senkronize eder",
+            "Text to Speech — yazdığın metni sese çevirir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vt-04",
+      "title": "DaVinci Resolve",
+      "content": "DaVinci Resolve, ücretsiz ama profesyonel video düzenleme ve renk düzeltme yazılımıdır. Hollywood filmlerinde kullanılan renk araçlarına ücretsiz erişim sunar.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "DaVinci Resolve Nedir?",
+          "body": "DaVinci Resolve, Blackmagic Design tarafından geliştirilen ve ücretsiz olarak sunulan profesyonel video düzenleme yazılımıdır. Hollywood filmlerinin büyük çoğunluğu DaVinci ile renk düzeltmesi yapılır.\n\nVideo düzenleme, renk grading, ses miksajı ve görsel efektler tek bir uygulamada bir arada bulunur. Ücretsiz sürümü bile Premiere Pro'nun ücretli sürümünden daha güçlü renk araçlarına sahiptir."
+        },
+        {
+          "type": "table",
+          "title": "DaVinci Resolve Sayfaları",
+          "headers": ["Sayfa", "İkon", "Ne İşe Yarar?"],
+          "rows": [
+            ["Cut", "✂️", "Hızlı basit düzenleme"],
+            ["Edit", "🎬", "Tam timeline düzenleme (Premiere gibi)"],
+            ["Fusion", "✨", "Görsel efektler (After Effects gibi)"],
+            ["Color", "🎨", "Profesyonel renk düzeltme"],
+            ["Fairlight", "🎵", "Profesyonel ses düzenleme"],
+            ["Deliver", "📤", "Dışa aktarma ayarları"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "DaVinci Color Sayfası",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "DaVinci Color — Hollywood filmlerinde kullanılan renk araçları, ücretsiz"
+        },
+        {
+          "type": "tips",
+          "title": "DaVinci Resolve İpuçları",
+          "items": [
+            "Yeni başlayanlar için Cut sayfasından başla — çok sade",
+            "Color Wheels — Lift (gölgeler), Gamma (orta tonlar), Gain (aydınlık)",
+            "Nodes sistemi renk düzeltmede çok güçlü ama öğrenmesi gerekir",
+            "DaVinci Studio (ücretli, ~400$) Magic Mask ve AI özellikler ekler",
+            "Ücretsiz sürüm zaten çoğu içerik üreticisi için fazlasıyla yeterli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vt-05",
+      "title": "OBS Studio — Kayıt ve Yayın",
+      "content": "OBS Studio, ekran kaydı ve canlı yayın için en popüler ücretsiz açık kaynaklı yazılımdır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "OBS Studio Nedir?",
+          "body": "OBS Studio (Open Broadcaster Software), ekran kaydı ve Twitch, YouTube, Facebook gibi platformlara canlı yayın için kullanılan ücretsiz ve açık kaynaklı yazılımdır.\n\nYükleme gerektiren yazılımların %90'ı OBS kullanmaktadır. Oyun yayıncılarından eğitim içerik üreticilerine, podcast kayıtlarından webinar sunumlarına kadar her türlü kullanım için uygundur."
+        },
+        {
+          "type": "table",
+          "title": "OBS Temel Kavramlar",
+          "headers": ["Kavram", "Açıklama"],
+          "rows": [
+            ["Scene", "Farklı kayıt düzenlemeleri — oyun, kamera, slayt gibi"],
+            ["Source", "Her sahneye eklenen eleman — ekran, kamera, görsel, ses"],
+            ["Mixer", "Mikrofon ve masaüstü ses seviyesini ayarla"],
+            ["Output", "Kayıt kalitesi ve yayın ayarları"],
+            ["Studio Mode", "Yayın kesilmeden sahne değiştir"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "İlk Kayıt Ayarları",
+          "items": [
+            "obsproject.com adresinden OBS'yi indir ve kur",
+            "İlk açılışta Auto-Configuration Wizard çalışır — kabul et",
+            "Kayıt için 'Optimize for recording' seç",
+            "Scenes panelinde + ile yeni sahne ekle",
+            "Sources panelinde + → Display Capture (ekran) veya Window Capture (program)",
+            "Mikrofon için: Sources → + → Audio Input Capture",
+            "Settings → Output → Recording Path seç (kayıt klasörü)",
+            "Start Recording butonuna bas!"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "OBS Studio Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "OBS — Scenes (sahneler), Sources (kaynaklar), Mixer (ses kontrolü)"
+        },
+        {
+          "type": "tips",
+          "title": "OBS Kalite Ayarları",
+          "items": [
+            "Settings → Output → Recording Format: MKV (daha güvenli) veya MP4",
+            "Encoder: NVENC (NVIDIA) veya AMF (AMD) — GPU encoding daha hızlı",
+            "CQP kalite modu: 18-23 arası — düşük = daha iyi kalite",
+            "1080p 60fps kayıt için internet bağlantısı gerekmez — yerel kayıt",
+            "Obs.ninja ile uzaktan misafir ekran görüntüsü al (ücretsiz)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vt-06",
+      "title": "Hangi Programı Seçmeliyim?",
+      "content": "İhtiyacına göre doğru video aracını seç.",
+      "sections": [
+        {
+          "type": "table",
+          "title": "Video Araçları Karşılaştırması",
+          "headers": ["Program", "Fiyat", "Zorluk", "En İyi Olduğu Alan"],
+          "rows": [
+            ["CapCut", "Ücretsiz", "Çok Kolay", "Sosyal medya, kısa video, Reels"],
+            ["DaVinci Resolve", "Ücretsiz", "Orta-Zor", "Uzun video, renk düzeltme"],
+            ["Premiere Pro", "Aylık ücretli", "Orta", "Profesyonel YouTube, film"],
+            ["After Effects", "Aylık ücretli", "Zor", "Animasyon, intro, VFX"],
+            ["OBS Studio", "Ücretsiz", "Kolay-Orta", "Ekran kaydı, canlı yayın"],
+            ["Kdenlive", "Ücretsiz", "Orta", "Linux kullanıcıları, ücretsiz PR alternatifi"],
+            ["iMovie", "Ücretsiz", "Çok Kolay", "Mac kullanıcıları, hızlı düzenleme"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Kime Hangi Program?",
+          "items": [
+            "📱 TikTok/Reels yapıyorum → CapCut (mobil veya masaüstü)",
+            "🎮 Oyun yayını/kaydı → OBS Studio",
+            "🎬 YouTube kanalı açıyorum → DaVinci Resolve (ücretsiz, güçlü)",
+            "💼 Profesyonel iş → Adobe Premiere Pro + After Effects",
+            "🎨 Logo animasyonu, intro → After Effects veya CapCut Templates",
+            "Başlangıç için → CapCut veya DaVinci Resolve (ikisi de ücretsiz)"
+          ]
+        },
+        {
+          "type": "warning",
+          "title": "Telif Hakkı Uyarısı",
+          "body": "YouTube veya diğer platformlara yüklediğin videolarda telif hakkı olan müzik kullanmak hesabının kısıtlanmasına neden olabilir. CapCut kütüphanesi, YouTube Audio Library veya Epidemic Sound gibi lisanslı müzik servislerini kullan."
+        }
+      ]
+    }
+  ]
+}
