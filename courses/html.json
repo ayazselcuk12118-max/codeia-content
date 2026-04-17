@@ -25,7 +25,7 @@
       "practice": [
         {"code": "<h1>Büyük Başlık</h1>", "output": "En büyük başlık boyutunda metin"},
         {"code": "<h3>Orta Başlık</h3>", "output": "Orta boyutlu başlık"},
-        {"code": "<p>Normal metin.</p>", "output": "Normal paragraf metni"}
+        {"code": "<p>Paragraf Metni.</p>", "output": "Normal paragraf metni"}
       ]
     },
     {
