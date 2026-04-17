@@ -1,0 +1,292 @@
+{
+  "id": "web-hosting",
+  "name": "Site Açmak ve Eklentiler",
+  "lessons": [
+    {
+      "id": "host-01",
+      "title": "Domain Nedir? Nasıl Alınır?",
+      "content": "Domain (alan adı), web sitenizin internet üzerindeki adresidir. Tıpkı bir evin adresi gibi, kullanıcılar domain adını tarayıcıya yazarak sitenize ulaşır. Örneğin 'codeia.com' bir domain adıdır. Domain almak için GoDaddy, Namecheap, İsimtescil gibi kayıt şirketlerini kullanabilirsiniz.",
+      "example": "Domain türleri:\n\n.com → Ticari siteler (en yaygın)\n.net → Ağ ve teknoloji siteleri\n.org → Organizasyonlar\n.edu → Eğitim kurumları\n.gov → Devlet kurumları\n.tr  → Türkiye (.com.tr, .net.tr)\n\nİyi domain adı:\n✓ Kısa ve akılda kalıcı (codeia.com)\n✓ Yazması kolay\n✓ Rakam ve tire içermemeli\n✓ Marka adınızla uyumlu",
+      "output": "Domain alındıktan sonra yıllık ücret ödenir. Ortalama .com domain 150-400 TL/yıl arasındadır.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "DNS (Domain Name System)", "explanation": "Domain adlarını IP adreslerine çeviren sistem. codeia.com → 93.184.216.34 gibi."},
+        {"code": "TLD (Top Level Domain)", "explanation": "Domain'in sonundaki uzantı. .com, .net, .org gibi."},
+        {"code": "Subdomain", "explanation": "Ana domain'in alt bölümü. blog.codeia.com, shop.codeia.com gibi."},
+        {"code": "WHOIS", "explanation": "Domain sahibi bilgilerini gösteren kayıt sistemi."},
+        {"code": "Domain Transferi", "explanation": "Domain'i bir kayıt şirketinden diğerine taşıma işlemi. EPP kodu gerekir."}
+      ],
+      "practice": [
+        {"code": "Namecheap.com → Domains → Search", "output": "İstediğin domain adını aratıp müsait olup olmadığını görebilirsin"},
+        {"code": "isimtescil.net → Alan Adı Sorgula", "output": "Türk kayıt şirketiyle .com.tr uzantılı domain alabilirsin"}
+      ]
+    },
+    {
+      "id": "host-02",
+      "title": "Hosting Nedir? Nasıl Seçilir?",
+      "content": "Hosting (web barındırma), web sitenizin dosyalarının saklandığı sunucu hizmetidir. Domain bir adres ise hosting o adreste duran bina gibidir. Hosting olmadan siteniz internete çıkamaz. Türleri: Shared Hosting, VPS, Dedicated Server ve Cloud Hosting.",
+      "example": "Hosting türleri karşılaştırma:\n\nShared Hosting\n  Fiyat: Ucuz (50-200 TL/ay)\n  Performans: Orta\n  Kullanım: Küçük siteler, bloglar\n  Örnek: Hostinger, Turhost\n\nVPS (Virtual Private Server)\n  Fiyat: Orta (200-1000 TL/ay)\n  Performans: İyi\n  Kullanım: Orta ölçekli siteler\n  Örnek: DigitalOcean, Linode\n\nCloud Hosting\n  Fiyat: Kullandıkça öde\n  Performans: Çok iyi\n  Kullanım: Büyük projeler\n  Örnek: AWS, Google Cloud\n\nDedicated Server\n  Fiyat: Pahalı (2000+ TL/ay)\n  Performans: En iyi\n  Kullanım: Büyük kurumlar",
+      "output": "Yeni başlayanlar için Shared Hosting yeterlidir. Hostinger yıllık ~500 TL ile iyi bir başlangıç noktasıdır.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "Shared Hosting", "explanation": "Birden fazla site aynı sunucuyu paylaşır. Ucuzdur ama performans sınırlıdır."},
+        {"code": "VPS", "explanation": "Sanal özel sunucu. Fiziksel bir sunucu parçalara ayrılarak kiralanır."},
+        {"code": "Uptime", "explanation": "Sunucunun çalışma süresi yüzdesi. %99.9 uptime ideal hedeftir."},
+        {"code": "Bant Genişliği", "explanation": "Aylık veri transfer limiti. Ziyaretçi sayısına göre seçilmeli."},
+        {"code": "SSD Disk", "explanation": "HDD'ye göre çok daha hızlı disk teknolojisi. Mutlaka tercih edilmeli."}
+      ],
+      "practice": [
+        {"code": "hostinger.com.tr → Hosting → Shared Hosting", "output": "Aylık planları karşılaştırıp en uygununu seçebilirsin"},
+        {"code": "Hostinger Panel → Files → File Manager", "output": "Dosyalarını doğrudan tarayıcıdan yönetebilirsin"}
+      ]
+    },
+    {
+      "id": "host-03",
+      "title": "SSL Sertifikası ve HTTPS",
+      "content": "SSL (Secure Sockets Layer) sertifikası, siteniz ile ziyaretçi arasındaki veri iletimini şifreler. SSL olan sitelerde adres çubuğunda kilit ikonu ve 'https://' görünür. SSL olmadan Google sitenizi güvensiz olarak işaretler ve sıralamada düşürür. Günümüzde SSL zorunluluk haline gelmiştir.",
+      "example": "SSL olmadan: http://sitem.com  ⚠️ Güvensiz\nSSL ile:     https://sitem.com  🔒 Güvenli\n\nSSL Türleri:\n\nDV (Domain Validation)\n  → En temel, ücretsiz (Let's Encrypt)\n  → Sadece domain doğrulanır\n  → Küçük siteler için ideal\n\nOV (Organization Validation)\n  → Şirket bilgileri doğrulanır\n  → Orta ölçekli işletmeler\n\nEV (Extended Validation)\n  → En güçlü doğrulama\n  → Bankalar, büyük e-ticaret\n  → Adres çubuğunda şirket adı",
+      "output": "Let's Encrypt ile ücretsiz SSL alabilirsin. Çoğu hosting paneli (cPanel, Plesk) otomatik SSL kurulumu sunar.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "HTTPS", "explanation": "HTTP'nin şifreli versiyonu. SSL/TLS sertifikası gerektirir."},
+        {"code": "Let's Encrypt", "explanation": "Ücretsiz ve otomatik SSL sertifikası sağlayıcısı. 90 günde bir yenilenir."},
+        {"code": "SSL Sertifika Yenileme", "explanation": "SSL'ler belirli sürede sona erer. Let's Encrypt otomatik yeniler."},
+        {"code": "Mixed Content", "explanation": "HTTPS sitede HTTP kaynak (resim, script) olursa güvenlik uyarısı çıkar."},
+        {"code": "301 Redirect", "explanation": "HTTP'den HTTPS'e yönlendirme. .htaccess dosyasıyla yapılır."}
+      ],
+      "practice": [
+        {"code": "cPanel → Security → SSL/TLS → Let's Encrypt", "output": "Ücretsiz SSL sertifikası kurulumu yapabilirsin"},
+        {"code": "ssllabs.com/ssltest", "output": "Sitenin SSL güvenlik puanını test edebilirsin"}
+      ]
+    },
+    {
+      "id": "host-04",
+      "title": "cPanel Kullanımı",
+      "content": "cPanel, hosting hesabınızı yönetmek için kullanılan grafik arayüzlü kontrol panelidir. Dosya yönetimi, veritabanı oluşturma, e-posta hesabı açma, SSL kurma gibi tüm işlemleri kod yazmadan yapabilirsiniz. Hosting satın aldığınızda genellikle yourdomain.com/cpanel veya panel.yourdomain.com adresinden erişilir.",
+      "example": "cPanel Ana Bölümleri:\n\n📁 Files\n  → File Manager (dosya yönetimi)\n  → Backup (yedekleme)\n  → FTP Accounts\n\n🌐 Domains\n  → Addon Domains (yeni domain ekle)\n  → Subdomains\n  → Redirects\n\n💾 Databases\n  → MySQL Databases\n  → phpMyAdmin\n\n📧 Email\n  → Email Accounts\n  → Forwarders\n  → Spam Filters\n\n🔒 Security\n  → SSL/TLS\n  → IP Blocker\n  → Password Protect Directories\n\n⚙️ Software\n  → WordPress Manager\n  → PHP Version",
+      "output": "cPanel'e yourdomain.com:2083 veya hosting şirketinin verdiği panel linkinden erişebilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "File Manager", "explanation": "Sunucudaki dosyaları tarayıcıdan yönet. public_html klasörü sitenin kök dizinidir."},
+        {"code": "public_html", "explanation": "Web sitenizin dosyalarının bulunduğu ana klasör. index.html buraya yüklenir."},
+        {"code": "phpMyAdmin", "explanation": "MySQL veritabanını görsel arayüzle yönetme aracı."},
+        {"code": "Addon Domain", "explanation": "Aynı hosting hesabına ikinci bir domain eklemek."},
+        {"code": ".htaccess", "explanation": "Apache sunucu ayar dosyası. URL yönlendirme, erişim kısıtlama için kullanılır."}
+      ],
+      "practice": [
+        {"code": "cPanel → File Manager → public_html → Upload", "output": "HTML dosyalarını sunucuya yükleyebilirsin"},
+        {"code": "cPanel → MySQL Databases → Create New Database", "output": "WordPress için veritabanı oluşturabilirsin"}
+      ]
+    },
+    {
+      "id": "host-05",
+      "title": "WordPress Kurulumu",
+      "content": "WordPress, dünyanın en popüler içerik yönetim sistemidir (CMS). Tüm web sitelerinin %43'ü WordPress ile çalışır. Kod bilgisi gerektirmeden blog, portföy, e-ticaret sitesi kurabilirsiniz. cPanel üzerinden tek tıkla kurulabilir veya manuel kurulabilir.",
+      "example": "WordPress Kurulum Adımları (cPanel ile):\n\n1. cPanel → Softaculous Apps Installer\n2. WordPress → Install\n3. Bilgileri doldur:\n   - Site URL: https://sitem.com\n   - Admin Kullanıcı: ayaz\n   - Admin Şifre: GüçlüŞifre123!\n   - Admin Email: info@sitem.com\n4. Install butonuna bas\n5. yoursite.com/wp-admin → giriş yap\n\nManuel Kurulum:\n1. wordpress.org → Download\n2. Dosyaları public_html'e yükle\n3. MySQL database ve kullanıcı oluştur\n4. wp-config.php'yi düzenle\n5. yoursite.com/wp-admin/install.php",
+      "output": "Kurulum 2-3 dakika sürer. Sonrasında yoursite.com/wp-admin'den WordPress panelinize girebilirsiniz.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "wp-admin", "explanation": "WordPress yönetim paneli adresi. Tüm site ayarları buradan yapılır."},
+        {"code": "Tema", "explanation": "Sitenin görsel tasarımı. Binlerce ücretsiz tema mevcut."},
+        {"code": "Eklenti (Plugin)", "explanation": "WordPress'e özellik ekleyen yazılım parçaları. SEO, güvenlik, form gibi."},
+        {"code": "wp-config.php", "explanation": "WordPress'in ana ayar dosyası. Veritabanı bilgileri buradadır."},
+        {"code": "Permalink", "explanation": "URL yapısı ayarı. Settings → Permalinks → Post name önerilir."}
+      ],
+      "practice": [
+        {"code": "wp-admin → Appearance → Themes → Add New", "output": "Binlerce ücretsiz tema arasından seçim yapabilirsin"},
+        {"code": "wp-admin → Plugins → Add New → 'Yoast SEO'", "output": "En popüler SEO eklentisini kurabilirsin"}
+      ]
+    },
+    {
+      "id": "host-06",
+      "title": "DNS Ayarları",
+      "content": "DNS (Domain Name System), domain adlarını IP adreslerine çeviren sistemdir. Domain aldığın şirket ile hosting farklı şirketlerse DNS kayıtlarını güncellemen gerekir. DNS kayıtları değiştikten sonra 24-48 saat içinde dünyaya yayılır (propagation).",
+      "example": "DNS Kayıt Türleri:\n\nA Kaydı\n  → Domain'i IP'ye yönlendirir\n  → codeia.com → 93.184.216.34\n\nCNAME Kaydı\n  → Domain'i başka domain'e yönlendirir\n  → www → codeia.com\n\nMX Kaydı\n  → E-posta sunucusunu belirtir\n  → mail.codeia.com → posta sunucusu\n\nTXT Kaydı\n  → Doğrulama ve güvenlik bilgisi\n  → Google, SPF, DKIM kayıtları\n\nNS Kaydı\n  → Nameserver - DNS sunucusunu belirtir\n  → ns1.hostinger.com\n\nNameserver Değiştirme:\nDomain Kayıt Şirketi → DNS/Nameservers\n→ Hosting'in verdiği NS adreslerini gir",
+      "output": "DNS değişikliklerinin yayılması (propagation) 24-48 saat sürebilir. whatsmydns.net ile takip edebilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "A Kaydı", "explanation": "En temel DNS kaydı. Domain'i sunucu IP adresine bağlar."},
+        {"code": "Nameserver (NS)", "explanation": "DNS yönetiminin hangi sunucuda olduğunu belirtir. Hosting şirketi verir."},
+        {"code": "TTL", "explanation": "Time To Live — DNS kaydının önbellekte kalma süresi (saniye cinsinden)."},
+        {"code": "DNS Propagation", "explanation": "DNS değişikliklerinin tüm dünyaya yayılma süreci. 24-48 saat sürer."},
+        {"code": "Cloudflare DNS", "explanation": "Ücretsiz, hızlı ve güvenli DNS hizmeti. Sitenizi korur ve hızlandırır."}
+      ],
+      "practice": [
+        {"code": "whatsmydns.net → Domain gir → A", "output": "DNS'in dünyaya yayılıp yayılmadığını kontrol edebilirsin"},
+        {"code": "Cloudflare → Add Site → DNS Records", "output": "Cloudflare üzerinden DNS yönetimi yapabilirsin"}
+      ]
+    },
+    {
+      "id": "host-07",
+      "title": "Font Awesome Kullanımı",
+      "content": "Font Awesome, web sitelerinde ikon kullanmak için en popüler kütüphanedir. 2000'den fazla ücretsiz ikon içerir. HTML'e bir satır link ekleyerek tüm ikonlara erişebilirsiniz. Sosyal medya, ok, kullanıcı, alışveriş sepeti gibi her türlü ikona sahiptir.",
+      "example": "<!-- Head bölümüne ekle -->\n<link rel=\"stylesheet\" \n  href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\">\n\n<!-- Kullanım -->\n<i class=\"fa-solid fa-house\"></i> Ana Sayfa\n<i class=\"fa-solid fa-user\"></i> Profil\n<i class=\"fa-solid fa-heart\"></i> Beğen\n<i class=\"fa-solid fa-star\"></i> Favori\n<i class=\"fa-brands fa-github\"></i> GitHub\n<i class=\"fa-brands fa-instagram\"></i> Instagram\n<i class=\"fa-brands fa-youtube\"></i> YouTube\n\n<!-- Boyut ayarı -->\n<i class=\"fa-solid fa-house fa-xs\"></i>\n<i class=\"fa-solid fa-house fa-sm\"></i>\n<i class=\"fa-solid fa-house\"></i>\n<i class=\"fa-solid fa-house fa-lg\"></i>\n<i class=\"fa-solid fa-house fa-2x\"></i>\n<i class=\"fa-solid fa-house fa-5x\"></i>",
+      "output": "İkonlar HTML metninin içinde görsel olarak gösterilir. fa-2x ikonu 2 kat büyütür.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "fa-solid", "explanation": "Dolu/kalın ikon stili. En yaygın kullanılan stil."},
+        {"code": "fa-regular", "explanation": "Çerçeveli/ince ikon stili."},
+        {"code": "fa-brands", "explanation": "Marka ikonları. GitHub, Instagram, YouTube, Facebook gibi."},
+        {"code": "fa-2x / fa-5x", "explanation": "İkon boyutunu 2x veya 5x büyütür."},
+        {"code": "fontawesome.com/icons", "explanation": "Tüm ikonları arayıp kod kopyalayabileceğin resmi site."}
+      ],
+      "practice": [
+        {"code": "<i class=\"fa-solid fa-house\"></i>", "output": "Ev ikonu"},
+        {"code": "<i class=\"fa-brands fa-github fa-2x\"></i>", "output": "2x boyutunda GitHub ikonu"},
+        {"code": "<i class=\"fa-solid fa-star\" style=\"color:gold\"></i>", "output": "Altın rengi yıldız ikonu"}
+      ]
+    },
+    {
+      "id": "host-08",
+      "title": "Google AdSense",
+      "content": "Google AdSense, web sitenize Google reklamları ekleyerek para kazanmanı sağlayan platformdur. Ziyaretçiler reklamlara tıkladıkça veya gördükçe para kazanırsın. Başvuru için sitenin en az 3-6 aylık içeriğe sahip, orijinal yazılar içermesi ve gizlilik politikası sayfasının olması gerekir.",
+      "example": "AdSense Başvuru Adımları:\n\n1. adsense.google.com → Başvur\n2. Site URL'ni gir\n3. AdSense kodunu sitenin <head>'ine ekle:\n\n<script async \n  src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX\"\n  crossorigin=\"anonymous\">\n</script>\n\n4. Google incelemesini bekle (1-2 hafta)\n5. Onaylandıktan sonra reklam birimi oluştur\n6. Reklam kodunu sayfaya yerleştir:\n\n<ins class=\"adsbygoogle\"\n  style=\"display:block\"\n  data-ad-client=\"ca-pub-XXXXXXXX\"\n  data-ad-slot=\"XXXXXXXX\"\n  data-ad-format=\"auto\">\n</ins>\n<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>",
+      "output": "AdSense onayı ortalama 1-4 hafta sürer. Onaydan sonra reklamlar otomatik görünmeye başlar.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "ca-pub-XXXXXXXX", "explanation": "AdSense yayıncı kimliğin. Her hesaba özgüdür."},
+        {"code": "data-ad-slot", "explanation": "Reklam birimi kimliği. Her reklam alanı için farklıdır."},
+        {"code": "data-ad-format=\"auto\"", "explanation": "Reklam boyutunu otomatik ayarlar. Responsive sayfalarda kullan."},
+        {"code": "RPM (Revenue Per Mille)", "explanation": "Bin görüntüleme başına kazanç. Türkiye için 0.5-3 USD arasındadır."},
+        {"code": "CPC (Cost Per Click)", "explanation": "Tıklama başına maliyet. Reklamverenin ödediği, senin kazandığın ücret."}
+      ],
+      "practice": [
+        {"code": "adsense.google.com → Ads → By ad unit → Display ads", "output": "Yeni reklam birimi oluşturabilirsin"},
+        {"code": "AdSense → Reports → Performance", "output": "Günlük kazanç ve tıklama istatistiklerini görebilirsin"}
+      ]
+    },
+    {
+      "id": "host-09",
+      "title": "Disqus Yorum Sistemi",
+      "content": "Disqus, web sitelerine kolayca entegre edilebilen hazır bir yorum sistemidir. Veritabanı kurmanıza gerek kalmadan yorumları yönetebilirsiniz. Spam koruması, moderasyon araçları ve sosyal medya girişi gibi özellikler sunar. Statik siteler ve WordPress için idealdir.",
+      "example": "Disqus Kurulum Adımları:\n\n1. disqus.com → Get Started → I want to install Disqus\n2. Site adını gir ve shortname oluştur (codeia-blog)\n3. Platform seç (Universal Code)\n4. Kodu sayfana ekle:\n\n<div id=\"disqus_thread\"></div>\n<script>\n  var disqus_config = function () {\n    // Sayfa URL'si\n    this.page.url = 'https://sitem.com/makale-1';\n    // Benzersiz sayfa ID\n    this.page.identifier = 'makale-1';\n  };\n  \n  (function() {\n    var d = document, s = d.createElement('script');\n    s.src = 'https://codeia-blog.disqus.com/embed.js';\n    s.setAttribute('data-timestamp', +new Date());\n    (d.head || d.body).appendChild(s);\n  })();\n</script>",
+      "output": "Kod eklendikten sonra sayfanın altında Disqus yorum kutusu görünür. Ziyaretçiler Google, Facebook veya e-posta ile yorum yapabilir.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "disqus_thread", "explanation": "Yorum kutusunun HTML'de gösterileceği alan. id mutlaka 'disqus_thread' olmalı."},
+        {"code": "shortname", "explanation": "Disqus hesabına özgü tanımlayıcı. embed.js URL'inde kullanılır."},
+        {"code": "page.identifier", "explanation": "Her sayfaya benzersiz bir ID. Yorumların doğru sayfaya bağlanmasını sağlar."},
+        {"code": "page.url", "explanation": "Yorumların bağlanacağı sayfa URL'si. Tam adres yazılmalıdır."},
+        {"code": "Moderasyon", "explanation": "disqus.com panelinden yorumları onaylayıp reddedebilirsin."}
+      ],
+      "practice": [
+        {"code": "disqus.com → Admin → Moderation", "output": "Gelen yorumları onaylayıp reddedebilirsin"},
+        {"code": "disqus.com → Settings → General → Reactions", "output": "Emoji reaksiyonlarını açıp kapatabilirsin"}
+      ]
+    },
+    {
+      "id": "host-10",
+      "title": "Google Analytics",
+      "content": "Google Analytics, web sitenizin ziyaretçi istatistiklerini takip eden ücretsiz bir araçtır. Kaç kişi geldi, nereden geldi, hangi sayfaları gördü, ne kadar kaldı gibi soruların yanıtlarını verir. Modern versiyonu Google Analytics 4 (GA4)'tür.",
+      "example": "GA4 Kurulum Adımları:\n\n1. analytics.google.com → Hesap oluştur\n2. Mülk adı gir → Web seç\n3. Site URL'ni gir\n4. Ölçüm ID'yi al (G-XXXXXXXXXX)\n5. Kodu <head>'e ekle:\n\n<!-- Google Analytics -->\n<script async \n  src=\"https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-XXXXXXXXXX');\n</script>\n\nYa da Google Tag Manager kullan:\n→ Daha kolay yönetim\n→ Kod değiştirmeden tag ekle",
+      "output": "Kurulumdan sonra 24-48 saat içinde veri gelmeye başlar. Gerçek zamanlı raporlarla anlık ziyaretçileri görebilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "G-XXXXXXXXXX", "explanation": "GA4 ölçüm kimliği. Her mülk için benzersizdir."},
+        {"code": "Oturum (Session)", "explanation": "Bir ziyaretçinin sitede geçirdiği tek sürekli ziyaret."},
+        {"code": "Hemen Çıkma (Bounce Rate)", "explanation": "Tek sayfa görüp ayrılan ziyaretçi oranı. Düşük olması iyidir."},
+        {"code": "Dönüşüm (Conversion)", "explanation": "Hedef tamamlama. Satın alma, form doldurma, kayıt gibi."},
+        {"code": "UTM Parametresi", "explanation": "Kampanya takibi için URL'e eklenen parametre. ?utm_source=instagram gibi."}
+      ],
+      "practice": [
+        {"code": "analytics.google.com → Raporlar → Gerçek Zamanlı", "output": "Şu an sitende kaç kişi olduğunu canlı görebilirsin"},
+        {"code": "Raporlar → Edinme → Trafik Edinimi", "output": "Ziyaretçilerin nereden geldiğini (Google, sosyal medya) görebilirsin"}
+      ]
+    },
+    {
+      "id": "host-11",
+      "title": "Google Search Console",
+      "content": "Google Search Console (GSC), sitenizin Google aramalarındaki performansını izlemenizi sağlar. Hangi aramalar için göründüğünüzü, tıklama sayısını, sıralamalarınızı ve teknik sorunları görebilirsiniz. Ücretsizdir ve her site sahibinin kullanması gerekir.",
+      "example": "GSC Kurulum Adımları:\n\n1. search.google.com/search-console → Başla\n2. Mülk ekle → URL öneki\n3. Site adresini gir: https://sitem.com\n4. Doğrulama yöntemi seç:\n\nHTML Dosyası:\n→ Dosyayı indir → public_html'e yükle\n\nHTML Etiketi (en kolay):\n<meta name=\"google-site-verification\" \n  content=\"XXXXXXXXXXXXXXXXXXX\">\n\nDNS Kaydı:\n→ Domain kayıt şirketinden TXT kaydı ekle\n\n5. Doğrula\n6. Sitemap gönder:\n   → Sitemaps → sitem.com/sitemap.xml",
+      "output": "Doğrulamadan sonra 2-7 gün içinde veri gelmeye başlar. Google'ın sitenizi taramasını hızlandırır.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "Sitemap.xml", "explanation": "Sitenin tüm sayfalarını listeleyen XML dosyası. Google'ın sitenizi daha hızlı taramasını sağlar."},
+        {"code": "robots.txt", "explanation": "Arama motorlarına hangi sayfaları taramasını söyleyen dosya."},
+        {"code": "Kapsam (Coverage)", "explanation": "Google'ın hangi sayfaları indekslediğini gösterir."},
+        {"code": "Core Web Vitals", "explanation": "Sayfa hızı ve kullanıcı deneyimi ölçütleri. LCP, FID, CLS gibi."},
+        {"code": "CTR (Click Through Rate)", "explanation": "Tıklama oranı. Arama sonuçlarında görünüp tıklanma yüzdesi."}
+      ],
+      "practice": [
+        {"code": "GSC → URL İnceleme → URL'ni gir → İste", "output": "Google'dan sayfanı yeniden indekslemesini isteyebilirsin"},
+        {"code": "GSC → Performans → Sorgular", "output": "Hangi arama kelimelerinde göründüğünü görebilirsin"}
+      ]
+    },
+    {
+      "id": "host-12",
+      "title": "Cloudflare CDN",
+      "content": "Cloudflare, dünyanın en büyük CDN (Content Delivery Network) ve güvenlik hizmetidir. Ücretsiz planı sitenizi hızlandırır, DDoS saldırılarından korur ve ücretsiz SSL sağlar. DNS yönetimini Cloudflare'e taşıyarak sitenizi koruma altına alabilirsiniz.",
+      "example": "Cloudflare Kurulum Adımları:\n\n1. cloudflare.com → Üye ol\n2. Add a Site → Domain adını gir\n3. Free planı seç\n4. DNS kayıtların otomatik aktarılır\n5. Domain kayıt şirketinde Nameserver'ları değiştir:\n   Eski: ns1.hostinger.com\n   Yeni: ana.ns.cloudflare.com\n        bob.ns.cloudflare.com\n6. 24-48 saat bekle\n\nCloudflare Avantajları:\n✓ Ücretsiz SSL\n✓ DDoS koruması\n✓ Global CDN (sayfa hızı)\n✓ Ücretsiz DNS yönetimi\n✓ Önbellekleme (caching)\n✓ Bant genişliği tasarrufu\n✓ Hizmet dışı kalma koruması",
+      "output": "Cloudflare aktif olunca siteniz daha hızlı yüklenir ve saldırılara karşı korunur. Performans %30-50 artabilir.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "CDN", "explanation": "Content Delivery Network. İçeriği dünya genelindeki sunuculara dağıtır. Ziyaretçiye en yakın sunucudan sunar."},
+        {"code": "DDoS Koruması", "explanation": "Distributed Denial of Service — sunucuya aşırı istek göndererek çökertme saldırısı koruması."},
+        {"code": "Önbellekleme (Cache)", "explanation": "Statik dosyaları Cloudflare sunucularında saklar. Sunucunu daha az yorar."},
+        {"code": "Orange Cloud", "explanation": "Cloudflare DNS'te turuncu bulut simgesi. Trafik Cloudflare üzerinden geçer."},
+        {"code": "Firewall Kuralları", "explanation": "Belirli IP veya ülkelerden gelen trafiği engelleme."}
+      ],
+      "practice": [
+        {"code": "Cloudflare → Speed → Optimization → Auto Minify", "output": "HTML, CSS, JS dosyalarını otomatik sıkıştırarak hızlandırabilirsin"},
+        {"code": "Cloudflare → Security → Firewall Rules", "output": "Belirli ülkelerden veya botlardan gelen trafiği engelleyebilirsin"}
+      ]
+    },
+    {
+      "id": "host-13",
+      "title": "FTP ile Dosya Yükleme",
+      "content": "FTP (File Transfer Protocol), bilgisayarınızdaki dosyaları sunucuya yüklemenin klasik yöntemidir. FileZilla gibi ücretsiz FTP istemcileri kullanarak sunucudaki dosyalarınızı kolayca yönetebilirsiniz. Büyük dosya gruplarını yüklerken cPanel File Manager'dan daha hızlıdır.",
+      "example": "FileZilla Kurulumu:\n1. filezilla-project.org → Download\n2. FileZilla Client kur\n3. Bağlantı bilgilerini gir:\n\n   Host:     sitem.com veya IP adresi\n   Username: FTP kullanıcı adı\n   Password: FTP şifresi\n   Port:     21\n\n4. Quickconnect butonuna bas\n\ncPanel'den FTP Kullanıcısı Oluşturma:\ncPanel → FTP Accounts → Yeni hesap ekle\n\nDosya Yapısı:\n/home/kullanici/\n  public_html/     ← Web dosyaları buraya\n    index.html\n    style.css\n    images/\n  mail/            ← E-posta dosyaları\n  logs/            ← Sunucu logları",
+      "output": "FileZilla sol tarafta bilgisayarını, sağ tarafta sunucuyu gösterir. Sürükle-bırak ile dosya aktarabilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "FTP Port 21", "explanation": "FTP'nin standart portu. Güvensiz bağlantı için kullanılır."},
+        {"code": "SFTP Port 22", "explanation": "Şifreli FTP bağlantısı. Daha güvenli, tercih edilmeli."},
+        {"code": "public_html", "explanation": "Web sitenizin kök dizini. index.html buraya yüklenir."},
+        {"code": "Pasif Mod", "explanation": "Güvenlik duvarı arkasındaki bağlantılarda kullanılan FTP modu."},
+        {"code": "FileZilla", "explanation": "En popüler ücretsiz FTP istemcisi. Windows, Mac ve Linux destekler."}
+      ],
+      "practice": [
+        {"code": "FileZilla → Sol panel → Dosya seç → Sağa sürükle", "output": "Dosya sunucuya yüklenir"},
+        {"code": "FileZilla → Sağ panel → Dosya seç → Sola sürükle", "output": "Dosya bilgisayara indirilir"}
+      ]
+    },
+    {
+      "id": "host-14",
+      "title": "E-posta Hesabı Oluşturma",
+      "content": "Domain adına sahip profesyonel e-posta adresleri (info@sitem.com) işletmenize güven katar. cPanel üzerinden kolayca oluşturulur. Gmail, Outlook gibi uygulamalarla kullanılabilir veya Webmail üzerinden tarayıcıda açılabilir.",
+      "example": "cPanel'den E-posta Oluşturma:\n\n1. cPanel → Email → Email Accounts\n2. Create butonuna bas\n3. Bilgileri gir:\n   Domain: @sitem.com\n   Username: info\n   Password: GüçlüŞifre\n   Storage: 500 MB\n4. Create Account\n\nOluşturulabilecek adresler:\n  info@sitem.com      (genel)\n  destek@sitem.com    (müşteri desteği)\n  siparis@sitem.com   (siparişler)\n  noreply@sitem.com   (otomatik mail)\n\nGmail'e Bağlama:\n1. Gmail → Ayarlar → Hesaplar\n2. Başka bir hesap ekle\n3. IMAP bilgilerini gir:\n   Sunucu: mail.sitem.com\n   Port: 993 (SSL)\n   Kullanıcı: info@sitem.com",
+      "output": "E-posta oluşturulduktan sonra sitem.com/webmail adresinden veya Gmail'e bağlayarak kullanabilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "IMAP", "explanation": "E-postaları sunucuda saklayan protokol. Birden fazla cihazdan erişime izin verir."},
+        {"code": "POP3", "explanation": "E-postaları cihaza indiren protokol. Tek cihaz kullanımı için."},
+        {"code": "SMTP", "explanation": "E-posta gönderme protokolü. mail.sitem.com, port 587."},
+        {"code": "SPF Kaydı", "explanation": "Spam koruması için DNS'e eklenen TXT kaydı."},
+        {"code": "Forwarder", "explanation": "Gelen mailleri başka adrese otomatik yönlendirme."}
+      ],
+      "practice": [
+        {"code": "sitem.com/webmail → Roundcube", "output": "Tarayıcıdan e-postalarını okuyabilirsin"},
+        {"code": "cPanel → Email → Forwarders → Add", "output": "info@sitem.com'a gelen mailleri Gmail'e yönlendirebilirsin"}
+      ]
+    },
+    {
+      "id": "host-15",
+      "title": "SEO Temelleri",
+      "content": "SEO (Search Engine Optimization), web sitenizin arama motorlarında üst sıralarda çıkmasını sağlayan optimizasyon tekniklerinin bütünüdür. İyi SEO sayesinde ücretli reklam vermeden organik ziyaretçi kazanabilirsiniz. Teknik SEO, içerik SEO ve link building ana üç bileşendir.",
+      "example": "Temel SEO Kontrol Listesi:\n\nTeknik SEO:\n✓ HTTPS kullan\n✓ Mobil uyumlu tasarım\n✓ Hızlı yüklenme (<3 saniye)\n✓ Sitemap.xml oluştur\n✓ robots.txt ayarla\n✓ Canonical URL'ler\n\nSayfa SEO:\n✓ Title tag (50-60 karakter)\n✓ Meta description (150-160 karakter)\n✓ H1 etiketi (sayfa başına bir)\n✓ Alt text (resimlere)\n✓ URL yapısı: /html-nedir (kısa, açıklayıcı)\n✓ İç bağlantılar\n\nİçerik SEO:\n✓ Anahtar kelime araştırması\n✓ Uzun ve değerli içerik\n✓ Düzenli güncelleme\n✓ Özgün içerik\n\n<head>\n  <title>HTML Nedir? | Codeia</title>\n  <meta name=\"description\" \n    content=\"HTML'yi sıfırdan öğren. Başlangıç seviyesi ders.\">\n</head>",
+      "output": "SEO sonuçları 3-6 ay içinde görülmeye başlar. Google Arama Konsolu ile ilerlemeyi takip edebilirsin.",
+      "video": {"url": "", "thumbnail": ""},
+      "codeExplanations": [
+        {"code": "<title>", "explanation": "Arama sonuçlarında mavi bağlantı metni olarak görünür. 50-60 karakter ideal."},
+        {"code": "meta description", "explanation": "Arama sonuçlarında başlık altındaki açıklama metni. 150-160 karakter."},
+        {"code": "H1 etiketi", "explanation": "Sayfanın ana başlığı. Her sayfada sadece bir tane olmalı."},
+        {"code": "Alt text", "explanation": "Resimlerin text açıklaması. Hem erişilebilirlik hem SEO için önemli."},
+        {"code": "Backlink", "explanation": "Başka sitelerden senin sitene gelen bağlantılar. SEO'nun en güçlü faktörlerinden."}
+      ],
+      "practice": [
+        {"code": "ahrefs.com/free-seo-tools → Keyword Generator", "output": "Ücretsiz anahtar kelime araştırması yapabilirsin"},
+        {"code": "pagespeed.web.dev → URL gir", "output": "Sayfanın hız ve SEO puanını görebilirsin"}
+      ]
+    }
+  ]
+}
