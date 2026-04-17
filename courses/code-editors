@@ -1,0 +1,304 @@
+{
+  "id": "code-editors",
+  "name": "Kod Editörleri",
+  "lessons": [
+    {
+      "id": "ce-01",
+      "title": "Visual Studio Code — Kurulum",
+      "content": "VS Code, Microsoft tarafından geliştirilen ücretsiz, hafif ve güçlü bir kod editörüdür. Web geliştirme başta olmak üzere neredeyse her dil için kullanılır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "VS Code Nedir?",
+          "body": "Visual Studio Code (VS Code), Microsoft tarafından geliştirilen açık kaynaklı ve ücretsiz bir kod editörüdür. Dünyanın en popüler kod editörüdür — geliştiricilerin %73'ü VS Code kullanır.\n\nHafif yapısı sayesinde hızlı açılır. 30.000'den fazla eklenti ile her dil ve framework için destek sağlanır. JavaScript, Python, HTML/CSS, Flutter, C# ve daha fazlası için idealdir."
+        },
+        {
+          "type": "steps",
+          "title": "VS Code Kurulum Adımları",
+          "items": [
+            "code.visualstudio.com adresine git",
+            "İşletim sistemine uygun indirme butonuna tıkla (Windows, Mac, Linux)",
+            "İndirilen kurulum dosyasını çalıştır",
+            "Kurulum sırasında 'Add to PATH' seçeneğini işaretle — çok önemli!",
+            "Kurulumu tamamla ve VS Code'u aç",
+            "Türkçe dil desteği için: Extensions (Ctrl+Shift+X) → 'Turkish Language Pack' ara → Kur"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "VS Code Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "VS Code — sol panel dosyalar, ortada editör, altta terminal"
+        },
+        {
+          "type": "table",
+          "title": "VS Code Temel Kısayolları",
+          "headers": ["Kısayol", "İşlev"],
+          "rows": [
+            ["Ctrl+Shift+X", "Eklentiler paneli"],
+            ["Ctrl+P", "Hızlı dosya aç"],
+            ["Ctrl+Shift+P", "Komut paleti — her şeye eriş"],
+            ["Ctrl+`", "Terminal aç/kapat"],
+            ["Ctrl+/", "Satırı yorum satırı yap"],
+            ["Alt+Shift+F", "Kodu otomatik formatla"],
+            ["F5", "Debug modda çalıştır"],
+            ["Ctrl+D", "Sonraki aynı kelimeyi seç"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Kurulum Sonrası Yapılacaklar",
+          "items": [
+            "Bir tema seç: Ctrl+K Ctrl+T — Dark+ veya One Dark Pro popüler",
+            "Font boyutunu ayarla: Settings → Font Size → 14 veya 15 ideal",
+            "Auto Save aç: File → Auto Save — sürekli Ctrl+S yazmaktan kurtulursun",
+            "Word Wrap aç: View → Word Wrap — uzun satırlar kırılsın"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-02",
+      "title": "VS Code — Eklentiler ve Ayarlar",
+      "content": "VS Code'un gücü eklentilerinden gelir. Doğru eklentilerle verimliliğini katlayabilirsin.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Eklentiler Nasıl Kurulur?",
+          "body": "VS Code'da eklentiler Ctrl+Shift+X kısayolu veya sol paneldeki puzzle ikonu ile açılan Extensions panelinden kurulur. Arama kutusuna eklenti adını yaz, bul ve Install butonuna bas. Eklentiler anında aktif olur, çoğu zaman yeniden başlatma gerekmez."
+        },
+        {
+          "type": "table",
+          "title": "Mutlaka Kurulması Gereken Eklentiler",
+          "headers": ["Eklenti", "Ne İşe Yarar?"],
+          "rows": [
+            ["Prettier", "Kodu otomatik formatlar — her dil için"],
+            ["ESLint", "JavaScript hata denetimi"],
+            ["Live Server", "HTML'yi anlık tarayıcıda göster"],
+            ["GitLens", "Git geçmişini satır satır gösterir"],
+            ["Auto Rename Tag", "HTML etiketi yeniden adlandırınca çiftini de değiştirir"],
+            ["Bracket Pair Colorizer", "Parantezleri renklendirir"],
+            ["Material Icon Theme", "Dosya ikonlarını güzelleştirir"],
+            ["Thunder Client", "API testleri için Postman alternatifi"],
+            ["Dart & Flutter", "Flutter geliştirme için şart"],
+            ["Python", "Python dil desteği"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "VS Code Eklenti Paneli",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Extensions paneli — arama yapıp tek tıkla eklenti kur"
+        },
+        {
+          "type": "tips",
+          "title": "Faydalı VS Code Özellikleri",
+          "items": [
+            "Çoklu imleç: Alt+Click — birden fazla yere aynı anda yaz",
+            "Emmet: HTML'de div.container>ul>li*3 yaz ve Tab'a bas",
+            "Integrated Terminal: Ctrl+` — ayrı terminal açmana gerek yok",
+            "Settings Sync: Microsoft hesabınla ayarları buluta yedekle",
+            "Remote SSH: Uzak sunucuda VS Code ile çalış"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-03",
+      "title": "Visual Studio — Kurulum",
+      "content": "Visual Studio, Microsoft'un kapsamlı IDE'sidir. C#, .NET, Unity geliştirme ve büyük kurumsal projeler için kullanılır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Visual Studio vs VS Code Farkı",
+          "body": "Visual Studio ile Visual Studio Code'u karıştırmamak gerekir. Bunlar birbirinden farklı programlardır.\n\nVisual Studio — ağır, kapsamlı IDE (Integrated Development Environment). C#, .NET, ASP.NET, Unity geliştirme için. Sadece Windows ve Mac.\n\nVisual Studio Code — hafif, hızlı kod editörü. Neredeyse her dil. Windows, Mac, Linux.\n\nWeb ve mobil geliştirme için genellikle VS Code yeterlidir. C# veya Unity için Visual Studio tercih edilir."
+        },
+        {
+          "type": "table",
+          "title": "Visual Studio Sürümleri",
+          "headers": ["Sürüm", "Fiyat", "Kimler İçin?"],
+          "rows": [
+            ["Community", "Ücretsiz", "Bireysel geliştirici, öğrenci, açık kaynak"],
+            ["Professional", "Ücretli", "Küçük ekipler"],
+            ["Enterprise", "Çok ücretli", "Büyük kurumlar"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Visual Studio Community Kurulumu",
+          "items": [
+            "visualstudio.microsoft.com adresine git",
+            "Community sürümünü ücretsiz indir",
+            "Kurulum dosyasını çalıştır — Visual Studio Installer açılır",
+            "İş yüklerini seç (Workloads):",
+            "• Web için: ASP.NET and web development",
+            "• Oyun için: Game development with Unity",
+            "• Masaüstü: .NET desktop development",
+            "Install butonuna bas — 5-20 GB kurulum (seçime göre değişir)",
+            "Microsoft hesabıyla giriş yap (isteğe bağlı ama önerilir)"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Visual Studio Installer",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Workload seçimi — sadece ihtiyacın olanları seç, disk tasarrufu yap"
+        },
+        {
+          "type": "tips",
+          "title": "Visual Studio İpuçları",
+          "items": [
+            "Sadece ihtiyacın olan Workload'ları kur — disk alanı büyük fark yaratır",
+            "Unity ile kullanıyorsan Unity Workload'u kur — otomatik entegrasyon",
+            "Ctrl+. ile Quick Actions — hızlı düzeltme önerileri",
+            "IntelliSense otomatik tamamlama çok gelişmiş — alışkanlık kazandırır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-04",
+      "title": "Cursor AI Editör",
+      "content": "Cursor, VS Code üzerine inşa edilmiş yapay zeka destekli kod editörüdür. AI ile kod yaz, düzelt ve anla.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Cursor Nedir?",
+          "body": "Cursor, VS Code'un bir fork'u (kopyası) üzerine güçlü yapay zeka özellikleri eklenmiş modern bir kod editörüdür. Claude, GPT-4 ve diğer AI modellerini doğrudan editörün içinde kullanabilirsin.\n\nVS Code'un tüm eklentileri ve kısayolları Cursor'da da çalışır. Cursor'a geçiş neredeyse sıfır öğrenme eğrisi gerektirir. Ücretsiz planında günlük sınırlı AI kullanımı vardır."
+        },
+        {
+          "type": "table",
+          "title": "Cursor'un AI Özellikleri",
+          "headers": ["Özellik", "Kısayol", "Ne Yapar?"],
+          "rows": [
+            ["Inline Edit", "Ctrl+K", "Seçili kodu AI ile düzelt veya yaz"],
+            ["Chat", "Ctrl+L", "AI ile sohbet et, kod sor"],
+            ["Composer", "Ctrl+I", "Tüm proje genelinde AI değişikliği"],
+            ["Tab Completion", "Tab", "Akıllı kod tamamlama"],
+            ["Codebase Q&A", "Ctrl+L", "Projen hakkında soru sor"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Cursor Kurulum Adımları",
+          "items": [
+            "cursor.sh adresine git",
+            "Download butonuna tıkla — işletim sistemine uygun sürüm indirilir",
+            "Kurulumu tamamla ve aç",
+            "VS Code ayarlarını import etmek isteyip istemediğini sorar — evet de",
+            "GitHub veya Google hesabıyla giriş yap",
+            "Ücretsiz plan yeterli — Pro plan için aylık ücret var",
+            "Ctrl+K ile kod seç ve AI'ya söyle ne yapmasını istediğini"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Cursor AI Chat",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Cursor'un AI chat paneli — kodun hakkında soru sor, değişiklik iste"
+        },
+        {
+          "type": "tips",
+          "title": "Cursor ile Verimli Çalışma",
+          "items": [
+            "Kodu seçip Ctrl+K ile 'Bu kodu Türkçe açıkla' yazabilirsin",
+            "Hata mesajını kopyalayıp AI'ya yapıştır — çözüm önerir",
+            "Ctrl+L ile 'Bu projede nasıl login yapabilirim?' gibi genel sorular sor",
+            "Kod yazmadan önce ne istediğini detaylı açıkla — daha iyi sonuç alırsın"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-05",
+      "title": "Android Studio",
+      "content": "Android Studio, Google'ın resmi Android uygulama geliştirme ortamıdır. Flutter ve Kotlin/Java ile Android uygulamaları geliştirmek için kullanılır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Android Studio Nedir?",
+          "body": "Android Studio, Google tarafından geliştirilen ve IntelliJ IDEA üzerine inşa edilmiş resmi Android IDE'sidir. Kotlin ve Java ile native Android uygulamaları, Flutter ile cross-platform uygulamalar geliştirmek için kullanılır.\n\nAndroid emülatörü sayesinde fiziksel telefon olmadan uygulamanı test edebilirsin. Codeia uygulaması da Android Studio ile geliştirildi!"
+        },
+        {
+          "type": "table",
+          "title": "Android Studio Sistem Gereksinimleri",
+          "headers": ["Bileşen", "Minimum", "Önerilen"],
+          "rows": [
+            ["RAM", "8 GB", "16 GB"],
+            ["Disk", "8 GB", "SSD 20 GB+"],
+            ["İşletim Sistemi", "Windows 8 / macOS 10.14", "Windows 11 / macOS 13"],
+            ["Ekran Çözünürlüğü", "1280x800", "1920x1080"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Android Studio Kurulum Adımları",
+          "items": [
+            "developer.android.com/studio adresine git",
+            "Download Android Studio butonuna tıkla",
+            "Kurulum dosyasını çalıştır",
+            "Standard kurulumu seç — gerekli SDK'lar otomatik kurulur",
+            "SDK indirme tamamlansın — birkaç GB inecek",
+            "New Project → Empty Activity → Kotlin seç",
+            "Emülatör için: Device Manager → Create Device → Pixel 7 → Finish",
+            "Run butonuna bas (Shift+F10) — emülatörde çalışır"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Android Studio Arayüzü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Android Studio — proje dosyaları, kod editörü ve Android emülatörü"
+        },
+        {
+          "type": "tips",
+          "title": "Android Studio İpuçları",
+          "items": [
+            "Emülatör yavaşsa fiziksel telefonu USB ile bağla — çok daha hızlı",
+            "Gradle Build süreleri uzunsa RAM'i artır: Help → Edit Custom VM Options",
+            "Flutter için: Plugins → Flutter'ı kur — Dart da otomatik gelir",
+            "Logcat'i kullan — uygulama hatalarını buradan takip et"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce-06",
+      "title": "Editör Karşılaştırması",
+      "content": "Hangi editörü kullanmalısın? Projen ve diline göre doğru editörü seç.",
+      "sections": [
+        {
+          "type": "table",
+          "title": "Editör Karşılaştırması",
+          "headers": ["Editör", "Fiyat", "Dil/Platform", "En İyi Olduğu Alan"],
+          "rows": [
+            ["VS Code", "Ücretsiz", "Her dil", "Web, Python, genel"],
+            ["Visual Studio", "Ücretsiz*", "C#, .NET", "Unity, Windows uygulaması"],
+            ["Cursor", "Ücretsiz*", "Her dil", "AI ile hızlı geliştirme"],
+            ["Android Studio", "Ücretsiz", "Kotlin, Java, Flutter", "Android uygulama"],
+            ["Xcode", "Ücretsiz", "Swift, Objective-C", "iOS/macOS uygulama"],
+            ["IntelliJ IDEA", "Ücretsiz*", "Java, Kotlin", "Java/Kotlin backend"],
+            ["PyCharm", "Ücretsiz*", "Python", "Python, data science"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Kime Hangi Editör?",
+          "items": [
+            "🌐 Web geliştirme → VS Code (tartışmasız en iyi)",
+            "🎮 Unity oyun → Visual Studio (Unity ile entegre)",
+            "📱 Android/Flutter → Android Studio",
+            "🤖 AI destekli → Cursor (VS Code eklentilerini de destekler)",
+            "🐍 Python/Data Science → VS Code veya PyCharm",
+            "Yeni başlıyorsan → VS Code ile başla, diğerlerine geçiş kolay"
+          ]
+        },
+        {
+          "type": "warning",
+          "title": "Hepsini İndirme!",
+          "body": "Tüm editörleri aynı anda kurmak disk ve RAM israfıdır. Hangi dil veya platformla çalışacağını belirle ve o editöre odaklan. Başlangıç için VS Code her şey için yeterlidir."
+        }
+      ]
+    }
+  ]
+}
