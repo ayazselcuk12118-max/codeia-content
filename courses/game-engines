@@ -1,0 +1,366 @@
+{
+  "id": "game-engines",
+  "name": "Oyun Motorları",
+  "lessons": [
+    {
+      "id": "ge-01",
+      "title": "Unity — Kurulum ve Panel",
+      "content": "Unity, dünyanın en yaygın kullanılan oyun motorudur. Mobil, PC, konsol ve web platformlarına oyun geliştirmek için kullanılır. C# programlama dili ile çalışır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Unity Nedir?",
+          "body": "Unity, 2005 yılında piyasaya çıkan çok platformlu oyun motorudur. Mobil oyunların %71'i Unity ile yapılmıştır. Candy Crush, Pokémon GO, Among Us gibi oyunlar Unity ile geliştirilmiştir.\n\nC# programlama dili kullanır. 2D ve 3D oyun geliştirme destekler. Ücretsiz Personal planı bireysel geliştiriciler ve küçük ekipler için yeterlidir (yıllık 200.000 $ altı gelir için)."
+        },
+        {
+          "type": "table",
+          "title": "Unity Sistem Gereksinimleri",
+          "headers": ["Bileşen", "Minimum", "Önerilen"],
+          "rows": [
+            ["İşletim Sistemi", "Windows 10 / macOS 12", "Windows 11 / macOS 13"],
+            ["RAM", "8 GB", "16 GB"],
+            ["Disk", "10 GB boş alan", "50 GB SSD"],
+            ["Ekran Kartı", "DX10 destekli", "Dedicated GPU"],
+            ["CPU", "Dört çekirdek", "Sekiz çekirdek"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Unity Kurulum Adımları",
+          "items": [
+            "unity.com/download adresine git",
+            "Unity Hub'ı indir ve kur — Unity'nin paket yöneticisi",
+            "Unity Hub'ı aç → Sign in → Unity hesabı oluştur (ücretsiz)",
+            "Installs → Install Editor butonuna tıkla",
+            "En son LTS (Long Term Support) sürümü seç — daha kararlı",
+            "Modülleri seç: Android Build Support, iOS Build Support, Visual Studio",
+            "Install butonuna bas — 10-20 dakika bekle",
+            "Projects → New Project → 2D veya 3D şablonu seç"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Unity Hub",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Unity Hub — proje ve sürüm yönetimi buradan yapılır"
+        },
+        {
+          "type": "tips",
+          "title": "Kurulum İpuçları",
+          "items": [
+            "LTS sürümünü tercih et — daha az hata içerir",
+            "Visual Studio Community editörünü Unity ile birlikte kur — ücretsiz",
+            "Android geliştirmek istiyorsan Android SDK ve JDK modüllerini ekle",
+            "SSD'ye kur — proje yüklenme hızı çok fark yaratır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ge-02",
+      "title": "Unity — Temel Kullanım",
+      "content": "Unity editörünün panellerini tanımak ve ilk projeyi oluşturmak.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Unity Editörüne Giriş",
+          "body": "Unity editörü birkaç ana panelden oluşur. Her panel farklı bir görevi üstlenir. Paneller sürükle-bırak ile yeniden düzenlenebilir. Alışmak biraz zaman alabilir ama mantığı anladıktan sonra çok verimli çalışırsın."
+        },
+        {
+          "type": "table",
+          "title": "Unity Editör Panelleri",
+          "headers": ["Panel", "Kısayol", "Ne İşe Yarar?"],
+          "rows": [
+            ["Scene", "Ctrl+1", "Oyun dünyasını görsel olarak düzenle"],
+            ["Game", "Ctrl+2", "Oyunun çalışma önizlemesi"],
+            ["Hierarchy", "Ctrl+4", "Sahnedeki tüm nesnelerin listesi"],
+            ["Project", "Ctrl+5", "Tüm dosya ve asset'lerin listesi"],
+            ["Inspector", "Ctrl+3", "Seçili nesnenin özellikleri"],
+            ["Console", "Ctrl+Shift+C", "Hata mesajları ve debug logları"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Unity Editör Panelleri",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Unity editörünün ana panelleri — Scene, Hierarchy, Inspector, Project"
+        },
+        {
+          "type": "steps",
+          "title": "İlk Nesne Oluşturma",
+          "items": [
+            "Hierarchy → sağ tıkla → 3D Object → Cube",
+            "Inspector panelinde Transform değerlerini gör (Position, Rotation, Scale)",
+            "Scene panelinde nesneyi mouse ile hareket ettir",
+            "Play butonuna bas — oyun simülasyonu başlar",
+            "Tekrar Play'e bas — simülasyon durur",
+            "C# scripti ekle: Hierarchy'de nesneyi seç → Inspector → Add Component → New Script"
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Önemli Kısayollar",
+          "items": [
+            "W — Move tool (nesneyi taşı)",
+            "E — Rotate tool (döndür)",
+            "R — Scale tool (boyutlandır)",
+            "Ctrl+Z — Geri al",
+            "Ctrl+S — Sahneyi kaydet (sık sık kaydet!)",
+            "F — Seçili nesneye odaklan (Scene'de)"
+          ]
+        },
+        {
+          "type": "warning",
+          "title": "Dikkat!",
+          "body": "Play modunda yaptığın değişiklikler kaydedilmez! Play'i durdurunca her şey sıfırlanır. Değişiklikler yapmadan önce Play'den çık."
+        }
+      ]
+    },
+    {
+      "id": "ge-03",
+      "title": "Godot — Kurulum ve Panel",
+      "content": "Godot, tamamen ücretsiz ve açık kaynaklı bir oyun motorudur. Kendi script dili GDScript ile çalışır, Python'a benzer sözdizimi vardır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Godot Nedir?",
+          "body": "Godot, MIT lisanslı tamamen ücretsiz ve açık kaynaklı bir oyun motorudur. Royalty yok, gelir paylaşımı yok — kazandığın paranın tamamı sende kalır.\n\nKendi script dili olan GDScript Python'a çok benzer ve öğrenmesi kolaydır. Ayrıca C# ve C++ desteği de mevcuttur. 2D oyun geliştirme için özellikle güçlüdür. Unity'den 2023'te yapılan lisans değişikliğinden sonra çok sayıda geliştirici Godot'a geçiş yaptı."
+        },
+        {
+          "type": "table",
+          "title": "Godot Sistem Gereksinimleri",
+          "headers": ["Bileşen", "Minimum"],
+          "rows": [
+            ["İşletim Sistemi", "Windows 7+ / macOS 10.12+ / Linux"],
+            ["RAM", "4 GB (8 GB önerilir)"],
+            ["Disk", "300 MB (çok küçük!)"],
+            ["Ekran Kartı", "OpenGL 3.3 / Vulkan destekli"],
+            ["CPU", "64-bit işlemci"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Godot Kurulum Adımları",
+          "items": [
+            "godotengine.org adresine git",
+            "Download butonuna tıkla",
+            "Godot 4 (Standard) sürümünü indir — kurulum gerektirmez!",
+            "İndirilen .exe dosyasını doğrudan çalıştır",
+            "Proje Yöneticisi açılır → New Project'e tıkla",
+            "Proje adı ve klasör seç → Create & Edit",
+            "Godot editörü açılır — hazırsın!"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Godot Editörü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Godot 4 editörü — kurulum gerektirmez, .exe'yi çalıştır ve başla"
+        },
+        {
+          "type": "tips",
+          "title": "Godot'un Avantajları",
+          "items": [
+            "Tamamen ücretsiz — Unity ve Unreal gibi gelir paylaşımı yok",
+            "Çok hafif — 300 MB disk alanı yeterli",
+            "GDScript Python'a benzer — öğrenmesi kolay",
+            "2D oyunlar için özellikle güçlü",
+            "Büyük ve yardımsever bir topluluk var"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ge-04",
+      "title": "Godot — Temel Kullanım",
+      "content": "Godot editörünün panellerini ve Node sistemi mantığını öğren.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Godot'un Node Sistemi",
+          "body": "Godot'da her şey 'Node' adı verilen yapı taşlarından oluşur. Bir sahne (Scene) birbirine bağlı node'lardan oluşur. Bu yapı Unity'deki GameObject sistemine benzer ama çok daha esnek ve organize bir yapı sunar.\n\nHer node belirli bir işlevi vardır: Sprite2D görsel gösterir, CharacterBody2D karakter fiziği sağlar, AudioStreamPlayer ses çalar gibi."
+        },
+        {
+          "type": "table",
+          "title": "Godot Editör Panelleri",
+          "headers": ["Panel", "Ne İşe Yarar?"],
+          "rows": [
+            ["Viewport", "Oyun dünyasını görsel olarak düzenle"],
+            ["Scene", "Sahnenin node ağacı (hierarchy)"],
+            ["Inspector", "Seçili node'un özellikleri"],
+            ["FileSystem", "Proje dosyaları"],
+            ["Output", "Script çıktıları ve hata mesajları"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Godot Editör Panelleri",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Godot editörü — Scene (sol), Viewport (orta), Inspector (sağ)"
+        },
+        {
+          "type": "steps",
+          "title": "İlk Sahne Oluşturma",
+          "items": [
+            "Scene → New Scene butonuna tıkla",
+            "Node2D seç — 2D sahne kök node'u",
+            "Scene panelinde Node2D'ye sağ tıkla → Add Child Node",
+            "Sprite2D seç — resim göstermek için",
+            "Inspector → Texture → Load → resim dosyası seç",
+            "Script ekle: Node'a sağ tıkla → Attach Script",
+            "GDScript seç → Create",
+            "Üstte Play butonuna bas veya F5 — oyun başlar"
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "GDScript Temeli",
+          "items": [
+            "extends Node2D — bu script hangi node tipini genişletiyor",
+            "func _ready(): — sahne yüklenince bir kez çalışır",
+            "func _process(delta): — her frame çalışır",
+            "print('Merhaba') — konsola mesaj yaz",
+            "Python gibi okunur — girintileme zorunlu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ge-05",
+      "title": "Unreal Engine — Kurulum ve Panel",
+      "content": "Unreal Engine, Epic Games'in AAA kalitesinde oyunlar için geliştirdiği güçlü oyun motorudur. C++ ve Blueprint (görsel script) kullanır.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Unreal Engine Nedir?",
+          "body": "Unreal Engine (UE), Epic Games tarafından geliştirilen profesyonel oyun motorudur. Fortnite, Valorant, Final Fantasy VII Remake gibi AAA oyunlar Unreal Engine ile yapılmıştır.\n\nC++ programlama dili ve Blueprint adlı görsel script sistemi kullanır. Blueprint sayesinde kod yazmadan da oyun mantığı oluşturulabilir. Ücretsizdir ancak yıllık 1 milyon doların üzerinde gelir elde edersen %5 royalty ödersin.\n\nDiğer motorlara göre çok daha yüksek donanım gerektirir."
+        },
+        {
+          "type": "table",
+          "title": "Unreal Engine 5 Sistem Gereksinimleri",
+          "headers": ["Bileşen", "Minimum", "Önerilen"],
+          "rows": [
+            ["İşletim Sistemi", "Windows 10 64-bit", "Windows 11 64-bit"],
+            ["RAM", "16 GB", "32 GB"],
+            ["Disk", "100 GB SSD", "200 GB NVMe SSD"],
+            ["Ekran Kartı", "GTX 1070 / RX Vega 56", "RTX 3080 / RX 6800 XT"],
+            ["CPU", "6 çekirdek", "12 çekirdek"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Unreal Engine Kurulum Adımları",
+          "items": [
+            "unrealengine.com adresine git → hesap oluştur (ücretsiz)",
+            "Epic Games Launcher'ı indir ve kur",
+            "Launcher → Unreal Engine sekmesine git",
+            "Library → Engine Versions → + butonuna tıkla",
+            "En güncel sürümü seç → Install butonuna bas",
+            "50-100 GB kurulum dosyası inecek — uzun sürer!",
+            "Kurulum bitince Launch → New Project oluştur",
+            "First Person veya Third Person şablonuyla başla"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Epic Games Launcher",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Epic Games Launcher — Unreal Engine buradan yüklenir ve güncellenir"
+        },
+        {
+          "type": "warning",
+          "title": "Yüksek Donanım Gereksinimi",
+          "body": "Unreal Engine 5 çok güçlü bir donanım gerektirir. 8 GB RAM ile çalıştırmak neredeyse imkansızdır. Başlangıç için Unity veya Godot daha uygun olabilir."
+        }
+      ]
+    },
+    {
+      "id": "ge-06",
+      "title": "Unreal Engine — Temel Kullanım",
+      "content": "Unreal Engine editörünün panellerini ve Blueprint sistemini öğren.",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Unreal Engine Editörüne Giriş",
+          "body": "Unreal Engine editörü ilk bakışta karmaşık görünebilir ancak paneller mantıklı bir şekilde organize edilmiştir. En büyük avantajı Blueprint sistemidir — görsel programlama ile kod yazmadan karmaşık oyun mantıkları oluşturulabilir."
+        },
+        {
+          "type": "table",
+          "title": "Unreal Engine Editör Panelleri",
+          "headers": ["Panel", "Ne İşe Yarar?"],
+          "rows": [
+            ["Viewport", "3D oyun dünyası görünümü"],
+            ["Outliner", "Sahnedeki tüm aktörlerin listesi (Hierarchy)"],
+            ["Details", "Seçili aktörün özellikleri (Inspector)"],
+            ["Content Browser", "Tüm proje dosyaları ve asset'ler"],
+            ["World Outliner", "Sahne hiyerarşisi"],
+            ["Output Log", "Hata ve debug mesajları"]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Blueprint Editörü",
+          "url": "RESIM_URL_BURAYA",
+          "caption": "Blueprint — düğüm ve bağlantılarla görsel programlama"
+        },
+        {
+          "type": "text",
+          "title": "Blueprint Nedir?",
+          "body": "Blueprint, Unreal Engine'in görsel script sistemidir. Kod yazmadan düğümleri (node) bağlayarak oyun mantığı oluşturursun. Örneğin 'Karakter zıplarsa ses çal' gibi bir mantığı birkaç düğümü bağlayarak kurabilirsin.\n\nC++ kadar güçlü olmasa da başlangıç için ve prototip geliştirmek için idealdir. Profesyonel oyunlarda Blueprint ve C++ birlikte kullanılır."
+        },
+        {
+          "type": "tips",
+          "title": "UE İpuçları",
+          "items": [
+            "İlk projen için şablon kullan — First Person veya Third Person",
+            "Blueprint öğrenmek için Unreal Online Learning platformunu kullan (ücretsiz)",
+            "Her şeyi kaydet: Ctrl+Shift+S — tüm asset'leri kaydet",
+            "Lumen ve Nanite özelliklerini aktif et — sinematik kalitede grafik",
+            "Content Browser'da filtreleri kullan — asset'leri daha kolay bul"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ge-07",
+      "title": "Hangi Motoru Seçmeliyim?",
+      "content": "Unity, Godot ve Unreal Engine arasındaki farkları karşılaştır ve projen için en uygununu seç.",
+      "sections": [
+        {
+          "type": "table",
+          "title": "Oyun Motorları Karşılaştırması",
+          "headers": ["Özellik", "Unity", "Godot", "Unreal Engine"],
+          "rows": [
+            ["Fiyat", "Ücretsiz*", "Tamamen ücretsiz", "Ücretsiz*"],
+            ["Dil", "C#", "GDScript / C#", "C++ / Blueprint"],
+            ["Öğrenme Zorluğu", "Orta", "Kolay", "Zor"],
+            ["2D Oyunlar", "İyi", "Çok iyi", "Zayıf"],
+            ["3D Oyunlar", "İyi", "Orta", "Mükemmel"],
+            ["Mobil", "Çok iyi", "İyi", "Zor"],
+            ["Grafik Kalitesi", "İyi", "Orta", "Mükemmel"],
+            ["Donanım Gereksinimi", "Orta", "Düşük", "Yüksek"],
+            ["Topluluk", "Çok büyük", "Büyüyen", "Büyük"],
+            ["Popüler Oyunlar", "Among Us, Pokémon GO", "Bağımsız oyunlar", "Fortnite, Valorant"]
+          ]
+        },
+        {
+          "type": "tips",
+          "title": "Kime Hangi Motor?",
+          "items": [
+            "🎮 Yeni başlayan → Godot (ücretsiz, hafif, kolay)",
+            "📱 Mobil oyun → Unity (en iyi mobil destek)",
+            "🎨 2D oyun → Godot veya Unity",
+            "🌟 AAA kalite 3D → Unreal Engine",
+            "💻 Düşük PC'de çalışıyorsan → Godot",
+            "💼 İş bulmak istiyorsan → Unity veya Unreal öğren"
+          ]
+        },
+        {
+          "type": "warning",
+          "title": "Tavsiye",
+          "body": "Başlangıç için tek bir motora odaklan. Hepsini aynı anda öğrenmeye çalışmak ilerlemeyi yavaşlatır. En basit projeyi tamamlamak, yarım kalan on projeden değerlidir."
+        }
+      ]
+    }
+  ]
+}
