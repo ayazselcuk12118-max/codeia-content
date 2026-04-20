@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Değişmeyecek bir değer tanımlamak için hangi anahtar kelime kullanılır?",
+      "codeTemplate": "___ PI = 3.14159;",
+      "choices": ["const", "var", "let", "fixed"],
+      "answer": "const"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Değişebilecek bir değer tanımlamak için modern JS'de hangisi kullanılır?",
+      "codeTemplate": "___ sayac = 0;\nsayac = 1;",
+      "choices": ["let", "const", "var", "set"],
+      "answer": "let"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Farklı veri tiplerini gösteren değişken tanımlamalarını tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>const isim = \"Ali\";<br>let yas = 25;<br>const aktif = true;</div>",
+      "codeBlocks": ["const isim = ", ";\nlet yas = 25;\nconst aktif = true;"],
+      "dragItems": ["\"Ali\"", "Ali", "'Ali'"],
+      "blankIndexes": [1],
+      "correctOrder": ["\"Ali\""]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Değişken değerini string içine gömmek için hangi yöntem kullanılır?",
+      "codeTemplate": "const isim = \"Ali\";\nconsole.log(___Merhaba ${isim}!___);",
+      "choices": ["`...`", "\"...\"", "'...'", "[...]"],
+      "answer": "`...`"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "typeof operatörünü kullanan yapıyı tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>typeof 42 → \"number\"<br>typeof \"Ali\" → \"string\"<br>typeof true → \"boolean\"</div>",
+      "codeBlocks": ["console.log(", " 42);     // number\nconsole.log(typeof \"Ali\"); // string"],
+      "dragItems": ["typeof", "typeis", "getType"],
+      "blankIndexes": [1],
+      "correctOrder": ["typeof"]
+    }
+  ]
+}
