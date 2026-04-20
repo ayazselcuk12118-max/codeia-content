@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Flexbox'ı aktif etmek için hangi display değeri kullanılır?",
+      "codeTemplate": ".kutu {\n  display: ___;\n}",
+      "choices": ["flex", "flexbox", "inline", "block"],
+      "answer": "flex"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Flex elemanlarını yatayda ortaya almak için hangi özellik kullanılır?",
+      "codeTemplate": ".kutu {\n  display: flex;\n  ___: center;\n}",
+      "choices": ["justify-content", "align-items", "text-align", "margin"],
+      "answer": "justify-content"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Elemanları dikey olarak sıralayan flex yapısını tamamla",
+      "previewHtml": "<div style='display:flex;flex-direction:column;gap:8px'><div style='background:#1A6FD4;color:white;padding:8px;border-radius:6px;text-align:center'>1</div><div style='background:#1A6FD4;color:white;padding:8px;border-radius:6px;text-align:center'>2</div><div style='background:#1A6FD4;color:white;padding:8px;border-radius:6px;text-align:center'>3</div></div>",
+      "codeBlocks": [".liste {\n  display: flex;\n  flex-direction: ", ";\n  gap: 8px;\n}"],
+      "dragItems": ["column", "row", "vertical"],
+      "blankIndexes": [1],
+      "correctOrder": ["column"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Flex elemanlarını dikeyde ortaya almak için hangi özellik kullanılır?",
+      "codeTemplate": ".kutu {\n  display: flex;\n  ___: center;\n}",
+      "choices": ["align-items", "justify-content", "vertical-align", "align-self"],
+      "answer": "align-items"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Elemanlar arasında boşluk bırakan flex yapısını tamamla",
+      "previewHtml": "<div style='display:flex;justify-content:space-between;background:#f3f4f6;padding:10px;border-radius:8px'><span style='background:#1A6FD4;color:white;padding:6px 12px;border-radius:6px'>Sol</span><span style='background:#1A6FD4;color:white;padding:6px 12px;border-radius:6px'>Orta</span><span style='background:#1A6FD4;color:white;padding:6px 12px;border-radius:6px'>Sağ</span></div>",
+      "codeBlocks": [".bar {\n  display: flex;\n  justify-content: ", ";\n}"],
+      "dragItems": ["space-between", "space-around", "center"],
+      "blankIndexes": [1],
+      "correctOrder": ["space-between"]
+    }
+  ]
+}
