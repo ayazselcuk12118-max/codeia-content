@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "ID'ye göre HTML elementi seçmek için hangi metot kullanılır?",
+      "codeTemplate": "const baslik = document.___('baslik');",
+      "choices": ["getElementById", "querySelector", "getElement", "findById"],
+      "answer": "getElementById"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Bir elementin metin içeriğini değiştirmek için hangi özellik kullanılır?",
+      "codeTemplate": "const baslik = document.getElementById('baslik');\nbaslik.___ = \"Yeni Başlık\";",
+      "choices": ["textContent", "innerHTML", "value", "text"],
+      "answer": "textContent"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Butona tıklanınca renk değiştiren yapıyı tamamla",
+      "previewHtml": "<button onclick=\"this.style.background='#30D97A';this.textContent='Tıklandı!'\" style='background:#1A6FD4;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer'>Tıkla!</button>",
+      "codeBlocks": ["const buton = document.getElementById('btn');\nbuton.", "('click', () => {\n  buton.style.background = '#30D97A';\n});"],
+      "dragItems": ["addEventListener", "onClick", "addEvent"],
+      "blankIndexes": [1],
+      "correctOrder": ["addEventListener"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "CSS class eklemek için hangi özellik kullanılır?",
+      "codeTemplate": "const kutu = document.getElementById('kutu');\nkutu.___.add('aktif');",
+      "choices": ["classList", "class", "className", "style"],
+      "answer": "classList"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Yeni bir HTML elementi oluşturup sayfaya ekleyen yapıyı tamamla",
+      "previewHtml": "<div id='liste'><p style='background:#f3f4f6;padding:8px;border-radius:6px;margin:0'>Dinamik Eleman ✓</p></div>",
+      "codeBlocks": ["const p = document.", "('p');\np.textContent = 'Dinamik Eleman';\ndocument.getElementById('liste').", "(p);"],
+      "dragItems": ["createElement", "appendChild", "querySelector"],
+      "blankIndexes": [1, 2],
+      "correctOrder": ["createElement", "appendChild"]
+    }
+  ]
+}
