@@ -2,19 +2,42 @@
   "questions": [
     {
       "type": "fill_blank",
-      "instruction": "Boşluğa gelen etiket nedir?",
-      "codeTemplate": "<!DOCTYPE html>\n<___>\n</___>",
-      "choices": ["<html>", "<head>", "<body>", "<div>"],
+      "instruction": "Altı çizili yerde olması gereken etiket nedir?",
+      "codeTemplate": "<!DOCTYPE html>\n<___>\n  <head></head>\n  <body></body>\n</___>",
+      "choices": ["<html>", "<head>", "<body>", "<main>"],
       "answer": "<html>"
     },
     {
       "type": "drag_drop",
-      "instruction": "Merhaba Dünya başlığını oluştur",
-      "previewHtml": "<h1>Merhaba Dünya</h1>",
-      "codeBlocks": ["", "<h1>Merhaba Dünya</h1>", ""],
+      "instruction": "Merhaba Dünya başlığı ve bir paragraf içeren yapıyı tamamla",
+      "previewHtml": "<h1>Merhaba Dünya</h1><p>Bu bir paragraftır.</p>",
+      "codeBlocks": ["", "\n  <h1>Merhaba Dünya</h1>\n  <p>Bu bir paragraftır.</p>\n", ""],
       "dragItems": ["<body>", "</body>", "<footer>"],
       "blankIndexes": [0, 2],
       "correctOrder": ["<body>", "</body>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Bir bağlantı oluşturmak için hangi etiket kullanılır?",
+      "codeTemplate": "<___ href=\"https://codeia.app\">Codeia</___ >",
+      "choices": ["<a>", "<link>", "<p>", "<span>"],
+      "answer": "<a>"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Resim eklemek için hangi etiket kullanılır?",
+      "codeTemplate": "<___ src=\"logo.png\" alt=\"Logo\">",
+      "choices": ["<img>", "<image>", "<src>", "<pic>"],
+      "answer": "<img>"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Sırasız bir liste oluşturan yapıyı tamamla",
+      "previewHtml": "<ul><li>Elma</li><li>Armut</li><li>Muz</li></ul>",
+      "codeBlocks": ["", "\n  <li>Elma</li>\n  <li>Armut</li>\n  <li>Muz</li>\n", ""],
+      "dragItems": ["<ul>", "</ul>", "<ol>"],
+      "blankIndexes": [0, 2],
+      "correctOrder": ["<ul>", "</ul>"]
     }
   ]
 }
