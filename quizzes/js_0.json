@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Konsola mesaj yazdırmak için hangi ifade kullanılır?",
+      "codeTemplate": "___.log(\"Merhaba Dünya!\");",
+      "choices": ["console", "print", "log", "debug"],
+      "answer": "console"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Kullanıcıya uyarı kutusu göstermek için hangi fonksiyon kullanılır?",
+      "codeTemplate": "___(\"Hoş geldiniz!\");",
+      "choices": ["alert", "popup", "show", "message"],
+      "answer": "alert"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Sayfaya JavaScript eklemek için doğru yapıyı tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>&lt;script src=\"script.js\"&gt;&lt;/script&gt;</div>",
+      "codeBlocks": ["<body>\n  <h1>Sayfa</h1>\n  ", "\n</body>"],
+      "dragItems": ["<script src=\"script.js\"></script>", "<javascript src=\"script.js\">", "<js href=\"script.js\">"],
+      "blankIndexes": [1],
+      "correctOrder": ["<script src=\"script.js\"></script>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "JavaScript'te tek satır yorum nasıl yazılır?",
+      "codeTemplate": "___ Bu bir yorum satırı",
+      "choices": ["//", "/*", "#", "<!--"],
+      "answer": "//"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Kullanıcıdan girdi alan yapıyı tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>const isim = prompt('Adın ne?');<br>console.log('Merhaba', isim);</div>",
+      "codeBlocks": ["const isim = ", "('Adın ne?');\nconsole.log('Merhaba', isim);"],
+      "dragItems": ["prompt", "input", "alert"],
+      "blankIndexes": [1],
+      "correctOrder": ["prompt"]
+    }
+  ]
+}
