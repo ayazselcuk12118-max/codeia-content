@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Sunucudan veri çekmek için hangi fonksiyon kullanılır?",
+      "codeTemplate": "___(\"https://api.codeia.app/data\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+      "choices": ["fetch", "get", "request", "http"],
+      "answer": "fetch"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "fetch yanıtını JSON'a çevirmek için hangi metot kullanılır?",
+      "codeTemplate": "fetch(url)\n  .then(res => res.___())\n  .then(data => console.log(data));",
+      "choices": ["json", "parse", "text", "data"],
+      "answer": "json"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "async/await ile fetch kullanan yapıyı tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>async function veriCek() {<br>&nbsp;&nbsp;const res = await fetch(url);<br>&nbsp;&nbsp;const data = await res.json();<br>}</div>",
+      "codeBlocks": ["async function veriCek() {\n  const res = ", " fetch(url);\n  const data = await res.json();\n  return data;\n}"],
+      "dragItems": ["await", "async", "then"],
+      "blankIndexes": [1],
+      "correctOrder": ["await"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "POST isteği göndermek için method değeri ne olmalı?",
+      "codeTemplate": "fetch(url, {\n  method: '___',\n  body: JSON.stringify(veri)\n});",
+      "choices": ["POST", "SEND", "PUT", "GET"],
+      "answer": "POST"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Hata yönetimli fetch yapısını tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>fetch(url)<br>&nbsp;&nbsp;.then(res => res.json())<br>&nbsp;&nbsp;.catch(err => console.error(err))</div>",
+      "codeBlocks": ["fetch(url)\n  .then(res => res.json())\n  .then(data => console.log(data))\n  .", "(err => console.error(err));"],
+      "dragItems": ["catch", "error", "finally"],
+      "blankIndexes": [1],
+      "correctOrder": ["catch"]
+    }
+  ]
+}
