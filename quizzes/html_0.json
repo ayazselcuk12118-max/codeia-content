@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Her HTML sayfasının ilk satırında olması gereken ifade nedir?",
+      "codeTemplate": "___\n<html>\n  <head></head>\n  <body></body>\n</html>",
+      "choices": ["<!DOCTYPE html>", "<html5>", "<!HTML>", "<doctype>"],
+      "answer": "<!DOCTYPE html>"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Temel bir HTML sayfa iskeletini tamamla",
+      "previewHtml": "<h2 style='margin:0'>Merhaba!</h2><p>İlk sayfam.</p>",
+      "codeBlocks": ["<!DOCTYPE html>\n<html>\n  ", "\n  <body>\n    <h2>Merhaba!</h2>\n  </body>\n", ""],
+      "dragItems": ["<head><title>Sayfa</title></head>", "</html>", "<footer></footer>"],
+      "blankIndexes": [1, 2],
+      "correctOrder": ["<head><title>Sayfa</title></head>", "</html>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Tarayıcı sekmesinde görünen başlık için hangi etiket kullanılır?",
+      "codeTemplate": "<head>\n  <___>Codeia</___ >\n</head>",
+      "choices": ["title", "h1", "header", "meta"],
+      "answer": "title"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Sayfa içeriği hangi etiketin içine yazılır?",
+      "codeTemplate": "<html>\n  <head></head>\n  <___>\n    <p>İçerik</p>\n  </___ >\n</html>",
+      "choices": ["body", "main", "div", "section"],
+      "answer": "body"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Karakter kodlamasını belirten meta etiketini doğru yere yerleştir",
+      "previewHtml": "<p style='font-family:monospace;font-size:13px'>✓ UTF-8 karakter seti tanımlandı</p>",
+      "codeBlocks": ["<head>\n  ", "\n  <title>Sayfa</title>\n</head>"],
+      "dragItems": ["<meta charset=\"UTF-8\">", "<meta name=\"author\">", "<link rel=\"icon\">"],
+      "blankIndexes": [1],
+      "correctOrder": ["<meta charset=\"UTF-8\">"]
+    }
+  ]
+}
