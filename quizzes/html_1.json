@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "En büyük başlık etiketi hangisidir?",
+      "codeTemplate": "<___>Ana Başlık</___ >",
+      "choices": ["h1", "h6", "header", "title"],
+      "answer": "h1"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Bağlantı (link) oluşturmak için hangi etiket kullanılır?",
+      "codeTemplate": "<___ href=\"https://codeia.app\">Codeia</___ >",
+      "choices": ["a", "link", "href", "url"],
+      "answer": "a"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Resim ve altına açıklama ekleyen yapıyı tamamla",
+      "previewHtml": "<figure><img src='https://picsum.photos/200/80' alt='Örnek' style='border-radius:8px;width:100%'><figcaption style='text-align:center;margin-top:6px;color:#666'>Örnek Resim</figcaption></figure>",
+      "codeBlocks": ["<figure>\n  <img src=\"resim.jpg\" alt=\"Örnek\">\n  ", "\n</figure>"],
+      "dragItems": ["<figcaption>Örnek Resim</figcaption>", "<caption>Örnek Resim</caption>", "<p>Örnek Resim</p>"],
+      "blankIndexes": [1],
+      "correctOrder": ["<figcaption>Örnek Resim</figcaption>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Paragraf oluşturmak için hangi etiket kullanılır?",
+      "codeTemplate": "<___>Bu bir paragraftır.</___ >",
+      "choices": ["p", "para", "text", "span"],
+      "answer": "p"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Navigasyon menüsü yapısını tamamla",
+      "previewHtml": "<nav style='background:#1E1E2E;padding:10px;border-radius:8px'><a href='#' style='color:#60a5fa;margin-right:16px'>Ana Sayfa</a><a href='#' style='color:#60a5fa;margin-right:16px'>Hakkında</a><a href='#' style='color:#60a5fa'>İletişim</a></nav>",
+      "codeBlocks": ["", "\n  <a href=\"#\">Ana Sayfa</a>\n  <a href=\"#\">Hakkında</a>\n  <a href=\"#\">İletişim</a>\n", ""],
+      "dragItems": ["<nav>", "</nav>", "<header>"],
+      "blankIndexes": [0, 2],
+      "correctOrder": ["<nav>", "</nav>"]
+    }
+  ]
+}
