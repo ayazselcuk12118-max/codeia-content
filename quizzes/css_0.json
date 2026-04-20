@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "CSS dosyasını HTML'e bağlamak için hangi etiket kullanılır?",
+      "codeTemplate": "<___ rel=\"stylesheet\" href=\"style.css\">",
+      "choices": ["link", "style", "css", "import"],
+      "answer": "link"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Metin rengini kırmızı yapmak için doğru CSS hangisidir?",
+      "codeTemplate": "p {\n  ___: red;\n}",
+      "choices": ["color", "text-color", "font-color", "background"],
+      "answer": "color"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Bir paragrafı mavi arka plan ile stillendir",
+      "previewHtml": "<p style='background:#1A6FD4;color:white;padding:12px;border-radius:8px;margin:0'>Mavi arka plan</p>",
+      "codeBlocks": ["p {\n  ", ";\n  color: white;\n  padding: 12px;\n}"],
+      "dragItems": ["background: #1A6FD4", "color: #1A6FD4", "border: 1px solid #1A6FD4"],
+      "blankIndexes": [1],
+      "correctOrder": ["background: #1A6FD4"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "CSS'de yorum satırı nasıl yazılır?",
+      "codeTemplate": "___ Bu bir yorum ___ ",
+      "choices": ["/* ... */", "// ... //", "<!-- ... -->", "# ... #"],
+      "answer": "/* ... */"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Temel sayfa reset stilini tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>* { margin: 0; padding: 0; box-sizing: border-box; }</div>",
+      "codeBlocks": ["* {\n  margin: 0;\n  padding: 0;\n  ", ";\n}"],
+      "dragItems": ["box-sizing: border-box", "display: block", "overflow: hidden"],
+      "blankIndexes": [1],
+      "correctOrder": ["box-sizing: border-box"]
+    }
+  ]
+}
