@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Normal fonksiyon tanımlamak için hangi anahtar kelime kullanılır?",
+      "codeTemplate": "___ topla(a, b) {\n  return a + b;\n}",
+      "choices": ["function", "func", "def", "fn"],
+      "answer": "function"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Arrow function sözdizimi hangisidir?",
+      "codeTemplate": "const carp = (a, b) ___ a * b;",
+      "choices": ["=>", "->", "::", ">>"],
+      "answer": "=>"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "İki sayıyı toplayan ve sonucu döndüren fonksiyonu tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>function topla(a, b) {<br>&nbsp;&nbsp;return a + b;<br>}<br>console.log(topla(3, 5)); // 8</div>",
+      "codeBlocks": ["function topla(a, b) {\n  ", " a + b;\n}\nconsole.log(topla(3, 5));"],
+      "dragItems": ["return", "yield", "output"],
+      "blankIndexes": [1],
+      "correctOrder": ["return"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Fonksiyon içinde fonksiyon çağırmaya ne denir?",
+      "codeTemplate": "function selam() {\n  console.log(\"Merhaba!\");\n}\n\nselam(); // fonksiyonu ___",
+      "choices": ["çağırmak", "tanımlamak", "yazmak", "silmek"],
+      "answer": "çağırmak"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Varsayılan parametre değeri kullanan fonksiyonu tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>selam(); // Merhaba, Kullanıcı!<br>selam(\"Ali\"); // Merhaba, Ali!</div>",
+      "codeBlocks": ["function selam(isim ", " \"Kullanıcı\") {\n  console.log(`Merhaba, ${isim}!`);\n}"],
+      "dragItems": ["=", ":", "=="],
+      "blankIndexes": [1],
+      "correctOrder": ["="]
+    }
+  ]
+}
