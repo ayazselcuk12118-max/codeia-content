@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Tablo oluşturmak için hangi etiket kullanılır?",
+      "codeTemplate": "<___>\n  <tr><td>Hücre</td></tr>\n</___ >",
+      "choices": ["table", "grid", "tablo", "list"],
+      "answer": "table"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Tablo başlık hücresi için hangi etiket kullanılır?",
+      "codeTemplate": "<tr>\n  <___>İsim</___ >\n  <___>Yaş</___ >\n</tr>",
+      "choices": ["th", "td", "tr", "thead"],
+      "answer": "th"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "2 sütunlu tablo satırını tamamla",
+      "previewHtml": "<table style='border-collapse:collapse;width:100%'><tr><td style='border:1px solid #d1d5db;padding:10px;font-weight:600'>Ali</td><td style='border:1px solid #d1d5db;padding:10px'>25</td></tr></table>",
+      "codeBlocks": ["<tr>\n  ", "\n  <td>25</td>\n</tr>"],
+      "dragItems": ["<td>Ali</td>", "<th>Ali</th>", "<td><b>Ali</b></td>"],
+      "blankIndexes": [1],
+      "correctOrder": ["<td>Ali</td>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Tablonun gövde kısmı için hangi etiket kullanılır?",
+      "codeTemplate": "<table>\n  <thead>...</thead>\n  <___>\n    <tr>...</tr>\n  </___ >\n</table>",
+      "choices": ["tbody", "body", "tfoot", "content"],
+      "answer": "tbody"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Eksiksiz bir tablo yapısını tamamla",
+      "previewHtml": "<table style='border-collapse:collapse;width:100%'><thead><tr><th style='background:#1E1E2E;color:white;padding:8px;border:1px solid #444'>Ders</th><th style='background:#1E1E2E;color:white;padding:8px;border:1px solid #444'>XP</th></tr></thead><tbody><tr><td style='padding:8px;border:1px solid #d1d5db'>HTML</td><td style='padding:8px;border:1px solid #d1d5db'>10</td></tr></tbody></table>",
+      "codeBlocks": ["<table>\n  ", "\n    <tr><th>Ders</th><th>XP</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>HTML</td><td>10</td></tr>\n  </tbody>\n", ""],
+      "dragItems": ["<thead>", "</table>", "<tfoot>"],
+      "blankIndexes": [1, 2],
+      "correctOrder": ["<thead>", "</table>"]
+    }
+  ]
+}
