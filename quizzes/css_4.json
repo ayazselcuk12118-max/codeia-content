@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "CSS animasyonu tanımlamak için hangi kural kullanılır?",
+      "codeTemplate": "@___ don {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}",
+      "choices": ["keyframes", "animation", "frames", "motion"],
+      "answer": "keyframes"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Animasyonu bir elemana uygulamak için hangi özellik kullanılır?",
+      "codeTemplate": ".donen {\n  ___: don 2s infinite;\n}",
+      "choices": ["animation", "keyframes", "transition", "motion"],
+      "answer": "animation"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Hover'da renk geçişi yapan transition stilini tamamla",
+      "previewHtml": "<button style='background:#1A6FD4;color:white;border:none;padding:10px 20px;border-radius:8px;transition:background 0.3s;cursor:pointer'>Hover Et</button>",
+      "codeBlocks": ["button {\n  background: #1A6FD4;\n  ", ": background 0.3s;\n}\nbutton:hover {\n  background: #0F2444;\n}"],
+      "dragItems": ["transition", "animation", "transform"],
+      "blankIndexes": [1],
+      "correctOrder": ["transition"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Elemanı yatayda kaydırmak için hangi transform fonksiyonu kullanılır?",
+      "codeTemplate": ".kayan {\n  transform: ___(100px);\n}",
+      "choices": ["translateX", "moveX", "shiftX", "slideX"],
+      "answer": "translateX"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Soldan sağa kayan animasyonu tamamla",
+      "previewHtml": "<div style='overflow:hidden;background:#f3f4f6;padding:8px;border-radius:8px'><div style='background:#1A6FD4;color:white;padding:8px 16px;border-radius:6px;display:inline-block'>→ Kayan kutu</div></div>",
+      "codeBlocks": ["@keyframes kayma {\n  from { transform: ", "(−100%); }\n  to { transform: translateX(0); }\n}\n.kutu {\n  animation: kayma 1s ease;\n}"],
+      "dragItems": ["translateX", "translateY", "rotate"],
+      "blankIndexes": [1],
+      "correctOrder": ["translateX"]
+    }
+  ]
+}
