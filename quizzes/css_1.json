@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Class seçici nasıl yazılır?",
+      "codeTemplate": "___baslik {\n  color: blue;\n}",
+      "choices": [".", "#", ":", "::"],
+      "answer": "."
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "ID seçici nasıl yazılır?",
+      "codeTemplate": "___menu {\n  background: black;\n}",
+      "choices": ["#", ".", ":", "@"],
+      "answer": "#"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Hover durumunda renk değiştiren butonu tamamla",
+      "previewHtml": "<button style='background:#1A6FD4;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:14px'>Üzerime gel</button>",
+      "codeBlocks": ["button", " {\n  background: darkblue;\n  cursor: pointer;\n}"],
+      "dragItems": [":hover", "::hover", ".hover"],
+      "blankIndexes": [1],
+      "correctOrder": [":hover"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Bir elementin ilk çocuğunu seçmek için hangi pseudo-class kullanılır?",
+      "codeTemplate": "li:___-child {\n  font-weight: bold;\n}",
+      "choices": ["first", "begin", "start", "top"],
+      "answer": "first"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "CSS değişkeni tanımlayan yapıyı tamamla",
+      "previewHtml": "<div style='background:#1E1E2E;padding:12px;border-radius:8px;color:#CDD6F4;font-family:monospace;font-size:12px'>:root { --ana-renk: #1A6FD4; }<br>h1 { color: var(--ana-renk); }</div>",
+      "codeBlocks": ["", " {\n  --ana-renk: #1A6FD4;\n}\nh1 {\n  color: var(--ana-renk);\n}"],
+      "dragItems": [":root", "body", "html"],
+      "blankIndexes": [0],
+      "correctOrder": [":root"]
+    }
+  ]
+}
