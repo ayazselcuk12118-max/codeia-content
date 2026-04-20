@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Sayfanın üst bölümü için hangi semantic etiket kullanılır?",
+      "codeTemplate": "<___>\n  <h1>Logo</h1>\n  <nav>...</nav>\n</___ >",
+      "choices": ["header", "top", "head", "div"],
+      "answer": "header"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Sayfanın alt bölümü için hangi semantic etiket kullanılır?",
+      "codeTemplate": "<___>\n  <p>© 2024 Codeia</p>\n</___ >",
+      "choices": ["footer", "bottom", "end", "div"],
+      "answer": "footer"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Blog yazısı yapısını semantic etiketlerle tamamla",
+      "previewHtml": "<article style='border:1px solid #e5e7eb;border-radius:10px;padding:14px'><h2 style='margin:0 0 8px'>Flutter Nedir?</h2><p style='color:#666;margin:0'>Flutter, Google tarafından geliştirilen bir UI framework'tür.</p></article>",
+      "codeBlocks": ["", "\n  <h2>Flutter Nedir?</h2>\n  <p>Flutter, Google tarafından geliştirilen bir UI framework'tür.</p>\n", ""],
+      "dragItems": ["<article>", "</article>", "<section>"],
+      "blankIndexes": [0, 2],
+      "correctOrder": ["<article>", "</article>"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Ana içerik bölümü için hangi semantic etiket kullanılır?",
+      "codeTemplate": "<body>\n  <header>...</header>\n  <___>\n    <p>Ana içerik</p>\n  </___ >\n  <footer>...</footer>\n</body>",
+      "choices": ["main", "content", "body", "section"],
+      "answer": "main"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Yan içerik (reklam, widget) için doğru yapıyı tamamla",
+      "previewHtml": "<div style='display:flex;gap:12px'><main style='flex:2;background:#f3f4f6;padding:12px;border-radius:8px'><p style='margin:0'>Ana içerik</p></main><aside style='flex:1;background:#e0f2fe;padding:12px;border-radius:8px'><p style='margin:0'>Yan panel</p></aside></div>",
+      "codeBlocks": ["<main>\n  <p>Ana içerik</p>\n</main>\n", "\n  <p>Yan panel</p>\n", ""],
+      "dragItems": ["<aside>", "</aside>", "<div>"],
+      "blankIndexes": [1, 2],
+      "correctOrder": ["<aside>", "</aside>"]
+    }
+  ]
+}
