@@ -1,0 +1,20 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Boşluğa gelen etiket nedir?",
+      "codeTemplate": "<!DOCTYPE html>\n<___>\n</___>",
+      "choices": ["<html>", "<head>", "<body>", "<div>"],
+      "answer": "<html>"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Merhaba Dünya başlığını oluştur",
+      "previewHtml": "<h1>Merhaba Dünya</h1>",
+      "codeBlocks": ["", "<h1>Merhaba Dünya</h1>", ""],
+      "dragItems": ["<body>", "</body>", "<footer>"],
+      "blankIndexes": [0, 2],
+      "correctOrder": ["<body>", "</body>"]
+    }
+  ]
+}
