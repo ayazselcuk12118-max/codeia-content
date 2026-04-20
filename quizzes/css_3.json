@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "CSS Grid'i aktif etmek için hangi display değeri kullanılır?",
+      "codeTemplate": ".kapsayici {\n  display: ___;\n}",
+      "choices": ["grid", "table", "flex", "block"],
+      "answer": "grid"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "3 eşit sütun oluşturmak için hangi değer kullanılır?",
+      "codeTemplate": ".grid {\n  display: grid;\n  grid-template-columns: ___;\n}",
+      "choices": ["repeat(3, 1fr)", "3fr", "col(3)", "3 * 1fr"],
+      "answer": "repeat(3, 1fr)"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Grid öğeleri arası boşluk bırakan yapıyı tamamla",
+      "previewHtml": "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:10px'><div style='background:#1A6FD4;height:50px;border-radius:8px'></div><div style='background:#1A6FD4;height:50px;border-radius:8px'></div><div style='background:#1A6FD4;height:50px;border-radius:8px'></div></div>",
+      "codeBlocks": [".grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  ", ": 10px;\n}"],
+      "dragItems": ["gap", "margin", "padding"],
+      "blankIndexes": [1],
+      "correctOrder": ["gap"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Grid'de satır tanımlamak için hangi özellik kullanılır?",
+      "codeTemplate": ".grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  ___: 100px 100px;\n}",
+      "choices": ["grid-template-rows", "grid-rows", "row-template", "rows"],
+      "answer": "grid-template-rows"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Bir öğenin 2 sütunu kaplamasını sağlayan yapıyı tamamla",
+      "previewHtml": "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:8px'><div style='background:#E8610A;height:50px;border-radius:8px;grid-column:span 2'></div><div style='background:#1A6FD4;height:50px;border-radius:8px'></div><div style='background:#1A6FD4;height:50px;border-radius:8px'></div><div style='background:#1A6FD4;height:50px;border-radius:8px'></div></div>",
+      "codeBlocks": [".genis {\n  grid-column: ", " 2;\n}"],
+      "dragItems": ["span", "stretch", "extend"],
+      "blankIndexes": [1],
+      "correctOrder": ["span"]
+    }
+  ]
+}
