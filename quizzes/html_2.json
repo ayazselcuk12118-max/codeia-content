@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "type": "fill_blank",
+      "instruction": "Form oluşturmak için hangi etiket kullanılır?",
+      "codeTemplate": "<___ action=\"/gonder\" method=\"POST\">\n  ...\n</___ >",
+      "choices": ["form", "input", "submit", "field"],
+      "answer": "form"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Kullanıcıdan metin alan bir form alanı oluştur",
+      "previewHtml": "<div style='padding:4px'><label style='display:block;margin-bottom:6px;font-weight:600'>Ad Soyad</label><input type='text' placeholder='Adınızı girin' style='border:1.5px solid #d1d5db;border-radius:8px;padding:8px 12px;width:100%;font-size:14px'></div>",
+      "codeBlocks": ["<label for=\"ad\">Ad Soyad</label>\n", ""],
+      "dragItems": ["<input type=\"text\" id=\"ad\" placeholder=\"Adınızı girin\">", "<input type=\"email\" id=\"ad\">", "<textarea id=\"ad\"></textarea>"],
+      "blankIndexes": [1],
+      "correctOrder": ["<input type=\"text\" id=\"ad\" placeholder=\"Adınızı girin\">"]
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "Formu gönderen butonu oluşturmak için type değeri ne olmalı?",
+      "codeTemplate": "<button type=\"___\">Gönder</button>",
+      "choices": ["submit", "send", "post", "button"],
+      "answer": "submit"
+    },
+    {
+      "type": "fill_blank",
+      "instruction": "E-posta girişi için input type değeri ne olmalı?",
+      "codeTemplate": "<input type=\"___\" placeholder=\"mail@codeia.app\">",
+      "choices": ["email", "mail", "text", "input"],
+      "answer": "email"
+    },
+    {
+      "type": "drag_drop",
+      "instruction": "Açılır liste (dropdown) oluşturan yapıyı tamamla",
+      "previewHtml": "<select style='border:1.5px solid #d1d5db;border-radius:8px;padding:8px 12px;font-size:14px;width:100%'><option>HTML</option><option>CSS</option><option>JavaScript</option></select>",
+      "codeBlocks": ["", "\n  <option>HTML</option>\n  <option>CSS</option>\n  <option>JavaScript</option>\n", ""],
+      "dragItems": ["<select>", "</select>", "<dropdown>"],
+      "blankIndexes": [0, 2],
+      "correctOrder": ["<select>", "</select>"]
+    }
+  ]
+}
