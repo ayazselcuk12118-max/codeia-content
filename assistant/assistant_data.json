@@ -1,0 +1,277 @@
+[
+  {
+    "keywords": ["merhaba", "selam", "hey", "hi", "hello", "nasılsın", "naber"],
+    "topic": "genel",
+    "answer": "Merhaba! Ben kodlama asistanınım. HTML, CSS, JavaScript, Python, Flutter ve daha fazlası hakkında sorularını yanıtlayabilirim. Ne öğrenmek istiyorsun?"
+  },
+  {
+    "keywords": ["html nedir", "html ne", "html hakkında", "html tanım"],
+    "topic": "html",
+    "answer": "HTML (HyperText Markup Language), web sayfalarının iskeletini oluşturan işaretleme dilidir. Tarayıcıya içeriğin nasıl görüntüleneceğini söyler. Başlıklar, paragraflar, resimler, bağlantılar gibi tüm yapısal elemanlar HTML etiketleriyle tanımlanır."
+  },
+  {
+    "keywords": ["html etiketi", "etiket nedir", "tag nedir", "tag ne işe yarar"],
+    "topic": "html",
+    "answer": "HTML etiketleri (tag), içeriği saran açılış ve kapanış işaretçileridir. Örneğin <p>Bu bir paragraf</p>. Açılış etiketi <p>, kapanış etiketi </p> şeklindedir. Bazı etiketler kendi kendine kapanır: <br>, <img>, <input>."
+  },
+  {
+    "keywords": ["div nedir", "div ne işe yarar", "div etiketi", "div kullanımı"],
+    "topic": "html",
+    "answer": "div, HTML'de içerikleri gruplamak için kullanılan blok düzeyinde bir kapsayıcı elementidir. Kendi başına görsel bir etkisi yoktur, CSS ile stil vermek veya JavaScript ile seçmek için kullanılır. Sayfayı bölümlere ayırmada yaygın olarak tercih edilir."
+  },
+  {
+    "keywords": ["span nedir", "span ne işe yarar", "span kullanımı"],
+    "topic": "html",
+    "answer": "span, satır içi (inline) bir kapsayıcı elementidir. div'in aksine yeni satır başlatmaz. Bir metin içinde belirli kelimeleri veya karakterleri CSS ile stillemek istediğinde kullanılır."
+  },
+  {
+    "keywords": ["head nedir", "head etiketi", "head ne içerir"],
+    "topic": "html",
+    "answer": "head etiketi, sayfanın meta bilgilerini içerir. Kullanıcı tarafından görünmez. İçinde title (sekme başlığı), meta etiketleri, CSS linkleri ve JavaScript dosya referansları bulunur."
+  },
+  {
+    "keywords": ["body nedir", "body etiketi", "body ne içerir"],
+    "topic": "html",
+    "answer": "body etiketi, sayfada kullanıcının gördüğü tüm içeriği kapsar. Başlıklar, paragraflar, resimler, butonlar — kısacası ekranda görünen her şey body içinde yer alır."
+  },
+  {
+    "keywords": ["form nedir", "html form", "form etiketi", "form kullanımı"],
+    "topic": "html",
+    "answer": "form etiketi, kullanıcıdan veri toplamak için kullanılır. İçinde input, textarea, select, button gibi form elemanları bulunur. action özelliği verinin gönderileceği URL'yi, method özelliği ise GET veya POST yöntemini belirtir."
+  },
+  {
+    "keywords": ["input nedir", "input türleri", "input types", "input kullanımı"],
+    "topic": "html",
+    "answer": "input, kullanıcıdan veri girişi almak için kullanılan öz kapanışlı bir elementidir. type özelliğiyle farklı giriş türleri elde edilir: text, password, email, number, checkbox, radio, file, submit vb."
+  },
+  {
+    "keywords": ["tablo nedir", "html tablo", "table etiketi", "tr td th"],
+    "topic": "html",
+    "answer": "HTML'de tablo oluşturmak için table etiketi kullanılır. tr (table row) satırları, td (table data) hücreleri, th (table header) başlık hücrelerini tanımlar. thead, tbody, tfoot ile tablo bölümlere ayrılabilir."
+  },
+  {
+    "keywords": ["liste nedir", "ul ol li", "html liste", "sıralı liste", "sırasız liste"],
+    "topic": "html",
+    "answer": "HTML'de iki tür liste vardır: ul (unordered list) madde işaretli liste, ol (ordered list) numaralı listedir. Her iki türde de liste öğeleri li etiketi ile tanımlanır."
+  },
+  {
+    "keywords": ["bağlantı nedir", "link nedir", "a etiketi", "href nedir", "hyperlink"],
+    "topic": "html",
+    "answer": "a etiketi bağlantı (link) oluşturmak için kullanılır. href özelliği gidilecek URL'yi belirtir. target='_blank' eklenirse bağlantı yeni sekmede açılır. Örnek: <a href='https://google.com' target='_blank'>Google</a>"
+  },
+  {
+    "keywords": ["resim eklemek", "img etiketi", "image html", "resim html", "src alt"],
+    "topic": "html",
+    "answer": "img etiketi resim eklemek için kullanılır. src özelliği resmin yolunu, alt özelliği resim yüklenemediğinde gösterilecek alternatif metni belirtir. Örnek: <img src='resim.jpg' alt='Açıklama'>"
+  },
+  {
+    "keywords": ["semantik html", "semantic nedir", "header footer nav article section"],
+    "topic": "html",
+    "answer": "Semantik HTML etiketleri, içeriğin anlamını açıkça belirtir. header (üst alan), nav (navigasyon), main (ana içerik), section (bölüm), article (makale), aside (yan içerik), footer (alt alan) gibi etiketler hem okunabilirliği artırır hem de SEO'ya katkı sağlar."
+  },
+  {
+    "keywords": ["css nedir", "css ne işe yarar", "css tanım", "css hakkında"],
+    "topic": "css",
+    "answer": "CSS (Cascading Style Sheets), HTML elementlerine görsel stil vermek için kullanılan stil dilidir. Renk, yazı tipi, boyut, konum, animasyon gibi tüm görsel özellikler CSS ile tanımlanır. HTML yapıyı, CSS görünümü yönetir."
+  },
+  {
+    "keywords": ["css seçici", "selector nedir", "css selector", "class id seçici"],
+    "topic": "css",
+    "answer": "CSS seçiciler, stilin hangi HTML elementlerine uygulanacağını belirtir. Temel seçiciler: element (p {}), class (.buton {}), id (#baslik {}), evrensel (* {}). Birleşik seçiciler: div p (iç içe), div > p (doğrudan çocuk), div + p (bitişik kardeş)."
+  },
+  {
+    "keywords": ["box model nedir", "kutu modeli", "margin padding border", "box model css"],
+    "topic": "css",
+    "answer": "CSS kutu modeli her elementi bir dikdörtgen kutu olarak ele alır. İçten dışa: content (içerik), padding (iç boşluk), border (çerçeve), margin (dış boşluk). box-sizing: border-box kullanılırsa padding ve border toplam genişliğe dahil edilir."
+  },
+  {
+    "keywords": ["flexbox nedir", "flex nedir", "display flex", "flexbox kullanımı", "flex container"],
+    "topic": "css",
+    "answer": "Flexbox, elementleri tek yönde (yatay veya dikey) düzenlemek için kullanılan CSS düzen sistemidir. display: flex ile aktif olur. justify-content (ana eksen hizalama), align-items (çapraz eksen hizalama), flex-wrap (satır kırma) en çok kullanılan özelliklerdir."
+  },
+  {
+    "keywords": ["grid nedir", "css grid", "display grid", "grid layout", "grid kullanımı"],
+    "topic": "css",
+    "answer": "CSS Grid, iki boyutlu (satır ve sütun) düzen oluşturmak için kullanılır. display: grid ile aktif olur. grid-template-columns ve grid-template-rows ile yapı tanımlanır. Örnek: grid-template-columns: repeat(3, 1fr) — üç eşit sütun oluşturur."
+  },
+  {
+    "keywords": ["position nedir", "css position", "relative absolute fixed sticky"],
+    "topic": "css",
+    "answer": "CSS position özelliği elementin sayfa üzerindeki konumunu belirler. static (varsayılan), relative (normal akışa göre), absolute (en yakın positioned ataya göre), fixed (viewport'a göre sabit), sticky (scroll ile değişen) değerlerini alır."
+  },
+  {
+    "keywords": ["z-index nedir", "z index", "üst üste gelme", "katman sırası"],
+    "topic": "css",
+    "answer": "z-index, konumlandırılmış (position: relative/absolute/fixed/sticky) elementlerin üst üste gelme sırasını belirler. Yüksek z-index değeri elementi öne getirir. Varsayılan değer auto'dur."
+  },
+  {
+    "keywords": ["css animasyon", "animation css", "keyframes", "transition nedir"],
+    "topic": "css",
+    "answer": "CSS'te iki tür geçiş efekti vardır. transition: belirli bir özelliğin değer değişimini animasyonlu yapar (hover efektleri için ideal). animation + @keyframes: daha karmaşık, çok adımlı animasyonlar tanımlar. duration, timing-function, delay, iteration-count özellikleriyle kontrol edilir."
+  },
+  {
+    "keywords": ["media query nedir", "responsive tasarım", "mobil uyumluluk", "ekran boyutu css"],
+    "topic": "css",
+    "answer": "Media query, farklı ekran boyutlarına göre farklı CSS kuralları uygulamayı sağlar. Örnek: @media (max-width: 768px) { ... } — 768px ve altındaki ekranlar için geçerlidir. Responsive (duyarlı) tasarımın temelidir."
+  },
+  {
+    "keywords": ["css değişken", "custom property", "var nedir", "css variable", ":root"],
+    "topic": "css",
+    "answer": "CSS değişkenleri (custom properties), tekrar kullanılacak değerleri saklar. :root seçicisi içinde --renk: #3498db şeklinde tanımlanır, var(--renk) ile kullanılır. Tema değişikliklerinde çok işe yarar."
+  },
+  {
+    "keywords": ["javascript nedir", "js nedir", "javascript ne işe yarar", "js hakkında"],
+    "topic": "javascript",
+    "answer": "JavaScript, web sayfalarına etkileşim ve dinamik davranış kazandıran programlama dilidir. HTML yapıyı, CSS görünümü, JavaScript davranışı yönetir. Tarayıcıda çalışır, Node.js ile sunucu tarafında da kullanılabilir."
+  },
+  {
+    "keywords": ["değişken nedir", "var let const", "js değişken", "değişken tanımlama"],
+    "topic": "javascript",
+    "answer": "JavaScript'te değişken tanımlamak için let, const ve var kullanılır. const: değeri değişmeyen sabitler için. let: değeri değişebilen değişkenler için. var: eski yöntem, function scope'ludur, günümüzde önerilmez. Örnek: const isim = 'Ali'; let yas = 25;"
+  },
+  {
+    "keywords": ["fonksiyon nedir", "function nedir", "js fonksiyon", "arrow function", "ok fonksiyonu"],
+    "topic": "javascript",
+    "answer": "Fonksiyon, belirli bir işi yapan ve tekrar kullanılabilen kod bloğudur. Tanımlama: function selamla(isim) { return 'Merhaba ' + isim; } Arrow function (ok fonksiyonu): const selamla = (isim) => 'Merhaba ' + isim;"
+  },
+  {
+    "keywords": ["dizi nedir", "array nedir", "js dizi", "array metotları", "push pop map filter"],
+    "topic": "javascript",
+    "answer": "Array (dizi), birden fazla değeri sıralı tutan veri yapısıdır. Örnek: const sayilar = [1, 2, 3, 4, 5]. Temel metotlar: push() eleman ekle, pop() son elemanı sil, map() her elemana işlem uygula, filter() koşulu sağlayanları al, find() ilk eşleşeni bul, forEach() döngü."
+  },
+  {
+    "keywords": ["nesne nedir", "object nedir", "js object", "js nesne", "key value"],
+    "topic": "javascript",
+    "answer": "Object (nesne), anahtar-değer (key-value) çiftlerini tutan veri yapısıdır. Örnek: const kisi = { isim: 'Ali', yas: 25, sehir: 'İstanbul' }. Erişim: kisi.isim veya kisi['isim']. Metot eklenebilir: kisi.selamla = () => 'Merhaba'."
+  },
+  {
+    "keywords": ["döngü nedir", "for nedir", "while nedir", "js döngü", "for loop", "foreach"],
+    "topic": "javascript",
+    "answer": "Döngüler, belirli bir kodu tekrar tekrar çalıştırır. for döngüsü: for (let i = 0; i < 5; i++) { ... }. while döngüsü: while (kosul) { ... }. for...of: dizi elemanları için. for...in: nesne anahtarları için. forEach: dizi metodu."
+  },
+  {
+    "keywords": ["koşul nedir", "if else nedir", "js if", "ternary operator", "switch nedir"],
+    "topic": "javascript",
+    "answer": "Koşul ifadeleri, programa karar verme yeteneği kazandırır. if-else: if (yas >= 18) { console.log('Yetişkin'); } else { console.log('Çocuk'); }. Ternary: yas >= 18 ? 'Yetişkin' : 'Çocuk'. Switch: çok seçenekli durumlar için kullanılır."
+  },
+  {
+    "keywords": ["dom nedir", "dom manipülasyon", "document object model", "getelementbyid", "queryselector"],
+    "topic": "javascript",
+    "answer": "DOM (Document Object Model), HTML belgesinin programatik temsilidir. JavaScript ile DOM'u değiştirerek sayfayı dinamik hale getirebilirsin. document.getElementById('id') veya document.querySelector('.class') ile element seçilir, innerHTML, style, classList ile değiştirilir."
+  },
+  {
+    "keywords": ["event nedir", "olay nedir", "addeventlistener", "click event", "js olaylar"],
+    "topic": "javascript",
+    "answer": "Event (olay), kullanıcı etkileşimlerini yakalar. addEventListener ile dinlenir. Örnek: buton.addEventListener('click', function() { alert('Tıklandı!'); }). Yaygın olaylar: click, mouseover, keydown, keyup, submit, load, change."
+  },
+  {
+    "keywords": ["promise nedir", "async await nedir", "asenkron js", "fetch nedir", "then catch"],
+    "topic": "javascript",
+    "answer": "Promise, asenkron işlemlerin sonucunu temsil eder. then() başarılı, catch() hatalı durumu işler. async/await ile daha okunabilir yazılır: async function veriCek() { const sonuc = await fetch(url); const data = await sonuc.json(); return data; }"
+  },
+  {
+    "keywords": ["localstorage nedir", "sessionstorage", "cookie nedir", "tarayıcı depolama"],
+    "topic": "javascript",
+    "answer": "localStorage, tarayıcıda kalıcı veri saklar (sayfa kapansa bile durur). sessionStorage, oturum boyunca saklar (sekme kapanınca silinir). Kullanım: localStorage.setItem('anahtar', 'deger'), localStorage.getItem('anahtar'). JSON için JSON.stringify() ve JSON.parse() kullanılır."
+  },
+  {
+    "keywords": ["python nedir", "python ne işe yarar", "python hakkında", "python tanım"],
+    "topic": "python",
+    "answer": "Python, okunması ve yazması kolay, genel amaçlı bir programlama dilidir. Web geliştirme, veri bilimi, yapay zeka, otomasyon, bilimsel hesaplama gibi pek çok alanda kullanılır. Temiz sözdizimi ve geniş kütüphane ekosistemiyle başlangıç için ideal bir dildir."
+  },
+  {
+    "keywords": ["python değişken", "python veri tipleri", "int str float bool", "python tip"],
+    "topic": "python",
+    "answer": "Python'da değişken tanımlarken tür belirtmek gerekmez. Temel veri tipleri: int (tam sayı), float (ondalıklı), str (metin), bool (True/False), NoneType (None). Örnek: isim = 'Ali', yas = 25, pi = 3.14, aktif = True."
+  },
+  {
+    "keywords": ["python liste", "python list", "append remove", "liste metotları", "python dizi"],
+    "topic": "python",
+    "answer": "Python listesi köşeli parantezle tanımlanır: sayilar = [1, 2, 3]. Temel metotlar: append() eleman ekle, remove() eleman sil, pop() son elemanı al ve sil, sort() sırala, len() uzunluk, insert() belirli konuma ekle. Listelere index ile erişilir: sayilar[0]."
+  },
+  {
+    "keywords": ["python sözlük", "dictionary nedir", "dict python", "python dict", "anahtar değer python"],
+    "topic": "python",
+    "answer": "Python dictionary (sözlük), anahtar-değer çiftlerini saklar. Süslü parantezle tanımlanır: kisi = {'isim': 'Ali', 'yas': 25}. Erişim: kisi['isim']. Metotlar: keys(), values(), items(), get(), update(). Python 3.7+ sürümünde sıra korunur."
+  },
+  {
+    "keywords": ["python fonksiyon", "def nedir", "python def", "python metot", "return python"],
+    "topic": "python",
+    "answer": "Python'da fonksiyon def anahtar kelimesiyle tanımlanır. def topla(a, b): return a + b. Varsayılan parametreler: def selamla(isim='Dünya'). *args değişken sayıda argüman, **kwargs anahtar-değer argümanları için kullanılır."
+  },
+  {
+    "keywords": ["python döngü", "for python", "while python", "range nedir", "python loop"],
+    "topic": "python",
+    "answer": "Python'da for döngüsü: for i in range(5): print(i). Listeler üzerinde: for eleman in liste: print(eleman). while döngüsü: while kosul: .... break döngüyü kırar, continue bir sonraki iterasyona geçer. enumerate() index ile birlikte döngü için kullanılır."
+  },
+  {
+    "keywords": ["python sınıf", "class python", "oop python", "nesne yönelimli python", "__init__"],
+    "topic": "python",
+    "answer": "Python'da sınıf class anahtar kelimesiyle tanımlanır. __init__ kurucu metoddur. self, nesnenin kendisini temsil eder. Örnek: class Araba: def __init__(self, marka): self.marka = marka. Kalıtım: class ElektrikliAraba(Araba): ..."
+  },
+  {
+    "keywords": ["python hata yönetimi", "try except python", "exception python", "hata yakalama python"],
+    "topic": "python",
+    "answer": "Python'da hata yönetimi try-except bloğuyla yapılır. try: riskli kod. except ValueError as e: hata işleme. else: hata olmazsa çalışır. finally: her durumda çalışır. raise ile özel hata fırlatılabilir."
+  },
+  {
+    "keywords": ["flutter nedir", "flutter ne işe yarar", "flutter hakkında", "flutter tanım"],
+    "topic": "flutter",
+    "answer": "Flutter, Google tarafından geliştirilen açık kaynaklı bir UI framework'üdür. Tek kod tabanıyla iOS, Android, Web, Windows, macOS ve Linux için uygulama geliştirilmesini sağlar. Dart programlama dili kullanılır. Yüksek performansı ve zengin widget kütüphanesiyle öne çıkar."
+  },
+  {
+    "keywords": ["widget nedir", "flutter widget", "stateless stateful", "widget türleri"],
+    "topic": "flutter",
+    "answer": "Flutter'da her şey bir widget'tır. StatelessWidget: durumu değişmeyen, bir kez çizilen widget. StatefulWidget: durumu değişebilen, setState() ile yeniden çizilen widget. Temel widget'lar: Text, Container, Row, Column, Scaffold, AppBar, ListView, GestureDetector."
+  },
+  {
+    "keywords": ["dart nedir", "dart dili", "dart programlama", "dart hakkında"],
+    "topic": "dart",
+    "answer": "Dart, Google tarafından geliştirilen nesne yönelimli bir programlama dilidir. Flutter'ın temel dilidir. Hem JIT (geliştirme için hızlı) hem AOT (üretim için optimize) derlemeyi destekler. JavaScript'e benzer sözdizimiyle kolay öğrenilir."
+  },
+  {
+    "keywords": ["dart değişken", "dart tip", "var final const dart", "dart veri tipleri"],
+    "topic": "dart",
+    "answer": "Dart'ta değişken tanımlama: var (tip çıkarımı), int, double, String, bool, List, Map. final: runtime'da bir kez atanır. const: derleme zamanında sabit. Nullable: String? nullable tip, String! null olamaz. Örnek: String isim = 'Ali'; int? yas;"
+  },
+  {
+    "keywords": ["git nedir", "git ne işe yarar", "versiyon kontrol", "git hakkında"],
+    "topic": "git",
+    "answer": "Git, kaynak kod değişikliklerini takip eden dağıtık bir versiyon kontrol sistemidir. Ekip çalışmasını, kod geçmişini ve farklı sürümleri yönetmeyi sağlar. GitHub, GitLab gibi platformlarla uzak depolarda saklanabilir."
+  },
+  {
+    "keywords": ["git commit", "git push", "git pull", "git clone", "git temel komutlar"],
+    "topic": "git",
+    "answer": "Temel Git komutları: git init (repo başlat), git clone (kopyala), git add . (değişiklikleri hazırla), git commit -m 'mesaj' (kaydet), git push (uzağa gönder), git pull (uzaktan al), git branch (dal listesi), git checkout (dal değiştir), git merge (dalları birleştir)."
+  },
+  {
+    "keywords": ["api nedir", "rest api", "api ne işe yarar", "endpoint nedir"],
+    "topic": "genel",
+    "answer": "API (Application Programming Interface), iki yazılımın birbiriyle konuşmasını sağlayan arayüzdür. REST API, HTTP protokolü üzerinden JSON formatında veri alışverişi yapar. GET (veri al), POST (veri gönder), PUT (güncelle), DELETE (sil) metotları kullanılır."
+  },
+  {
+    "keywords": ["json nedir", "json ne işe yarar", "json format", "json yapısı"],
+    "topic": "genel",
+    "answer": "JSON (JavaScript Object Notation), veri saklamak ve iletmek için kullanılan hafif bir veri formatıdır. Anahtar-değer çiftlerinden oluşur, dizileri destekler. Örnek: {\"isim\": \"Ali\", \"yas\": 25, \"diller\": [\"Python\", \"JavaScript\"]}. Neredeyse tüm programlama dilleri JSON'u destekler."
+  },
+  {
+    "keywords": ["veritabanı nedir", "database nedir", "sql nedir", "nosql nedir"],
+    "topic": "genel",
+    "answer": "Veritabanı, verileri düzenli şekilde saklayan sistemdir. SQL veritabanları (MySQL, PostgreSQL, SQLite) tablolara dayalı ilişkisel yapı kullanır. NoSQL veritabanları (Firebase, MongoDB) daha esnek, belge tabanlı yapı sunar. Hangi tür seçileceği projenin gereksinimlerine bağlıdır."
+  },
+  {
+    "keywords": ["algorithm nedir", "algoritma nedir", "big o notation", "zaman karmaşıklığı"],
+    "topic": "genel",
+    "answer": "Algoritma, belirli bir problemi çözmek için adım adım izlenen talimatlardır. Big O notasyonu, algoritmanın veri büyüklüğüne göre ne kadar yavaşladığını gösterir. O(1) sabit, O(n) doğrusal, O(n²) karesel karmaşıklık anlamına gelir. İyi bir algoritmacı olmak, doğru veri yapısını seçmekle başlar."
+  },
+  {
+    "keywords": ["teşekkür", "teşekkürler", "sağol", "eyvallah", "thanks"],
+    "topic": "genel",
+    "answer": "Rica ederim! Başka soruların olursa buradayım. Kodlamada başarılar! 🚀"
+  },
+  {
+    "keywords": ["kim sin", "sen kimsin", "ne yapabilirsin", "hakkında", "yeteneklerin"],
+    "topic": "genel",
+    "answer": "Ben bu uygulamanın kodlama asistanıyım. HTML, CSS, JavaScript, Python, Flutter, Dart ve genel programlama kavramları hakkında sorularını yanıtlayabilirim. Bir konuyu öğrenmek veya anlamakta zorlandığın bir şey varsa sormaktan çekinme!"
+  }
+]
